@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AIMSV2.props" />
+</Project>

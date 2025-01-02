@@ -1,0 +1,133 @@
+[
+  {
+    "ContainingType": "AIMSV3.Controllers.UserController",
+    "Method": "GetUsers",
+    "RelativePath": "api/User/GetAllUsers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AIMSV3.Controllers.UserController",
+    "Method": "GetUserDetailByEmailID",
+    "RelativePath": "api/User/GetUserDetailByEmailID",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginRequest",
+        "Type": "AIMSV2.Models.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AIMSV3.Controllers.UserController",
+    "Method": "UpdateAvailableQuantity",
+    "RelativePath": "api/User/UpdateAvailableQuantity",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AIMSV3.Controllers.UserController",
+    "Method": "UpdateAvailableQuantityAndUseQuantity",
+    "RelativePath": "api/User/UpdateAvailableQuantityAndUseQuantity",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AIMSV3.Controllers.UserController",
+    "Method": "UpdateUseQuantity",
+    "RelativePath": "api/User/UpdateUseQuantity",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AIMSV3.Controllers.UserController",
+    "Method": "UpdateUserPermissions",
+    "RelativePath": "api/User/UpdateUserPermissions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AIMSV3.Controllers.UserProductController",
+    "Method": "GetAllUserProduct",
+    "RelativePath": "api/UserProduct/GetAllUserProduct",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AIMSV3.Controllers.UserProductController",
+    "Method": "GetAllUserProduct1",
+    "RelativePath": "api/UserProduct/GetAllUserProduct1",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AIMSV2.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[AIMSV2.WeatherForecast, AIMSV2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

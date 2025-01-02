@@ -1,5 +1,15 @@
 [
   {
+    "ContainingType": "AIMSV3.Controllers.CityController",
+    "Method": "GetAllCities",
+    "RelativePath": "api/City/GetAllCities",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AIMSV3.Controllers.UserController",
     "Method": "GetUsers",
     "RelativePath": "api/User/GetAllUsers",

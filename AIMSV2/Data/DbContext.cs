@@ -1,4 +1,4 @@
-﻿using Entities;
+﻿using AIMSV2.Models;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -9,6 +9,7 @@ namespace AIMSV2.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
         //Table
         public DbSet<Entities.Users> Users { get; set; }
+        public DbSet<Entities.Cities> Cities { get; set; }
         //public DbSet<Entities.UserProducts> UserProducts { get; set; }
         public virtual DbSet<Entities.UserProducts> UserProducts => Set<Entities.UserProducts>();
         //public virtual DbSet<Entities.Users> Users => Set<Entities.Users>();

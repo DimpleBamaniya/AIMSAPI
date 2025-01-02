@@ -1,0 +1,360 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|c:\\users\\5038\\onedrive - shivohm\\desktop\\inventory-management\\aimsapi\\aimsv2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|solutionrelative:aimsv2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|c:\\users\\5038\\onedrive - shivohm\\desktop\\inventory-management\\aimsapi\\aimsv2\\services\\cityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|solutionrelative:aimsv2\\services\\cityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|c:\\users\\5038\\onedrive - shivohm\\desktop\\inventory-management\\aimsapi\\aimsv2\\services\\icityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|solutionrelative:aimsv2\\services\\icityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|c:\\users\\5038\\onedrive - shivohm\\desktop\\inventory-management\\aimsapi\\aimsv2\\repositories\\cityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|solutionrelative:aimsv2\\repositories\\cityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|c:\\users\\5038\\onedrive - shivohm\\desktop\\inventory-management\\aimsapi\\aimsv2\\controllers\\citycontrolller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|solutionrelative:aimsv2\\controllers\\citycontrolller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|c:\\users\\5038\\onedrive - shivohm\\desktop\\inventory-management\\aimsapi\\aimsv2\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|solutionrelative:aimsv2\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|c:\\users\\5038\\onedrive - shivohm\\desktop\\inventory-management\\aimsapi\\aimsv2\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|solutionrelative:aimsv2\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|c:\\users\\5038\\onedrive - shivohm\\desktop\\inventory-management\\aimsapi\\aimsv2\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|solutionrelative:aimsv2\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|c:\\users\\5038\\onedrive - shivohm\\desktop\\inventory-management\\aimsapi\\aimsv2\\repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|solutionrelative:aimsv2\\repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|c:\\users\\5038\\onedrive - shivohm\\desktop\\inventory-management\\aimsapi\\aimsv2\\data\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|solutionrelative:aimsv2\\data\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|c:\\users\\5038\\onedrive - shivohm\\desktop\\inventory-management\\aimsapi\\aimsv2\\repositories\\icityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|solutionrelative:aimsv2\\repositories\\icityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|c:\\users\\5038\\onedrive - shivohm\\desktop\\inventory-management\\aimsapi\\aimsv2\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|solutionrelative:aimsv2\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|c:\\users\\5038\\onedrive - shivohm\\desktop\\inventory-management\\aimsapi\\aimsv2\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|solutionrelative:aimsv2\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|c:\\users\\5038\\onedrive - shivohm\\desktop\\inventory-management\\aimsapi\\aimsv2\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|solutionrelative:aimsv2\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|c:\\users\\5038\\onedrive - shivohm\\desktop\\inventory-management\\aimsapi\\aimsv2\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|solutionrelative:aimsv2\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|c:\\users\\5038\\onedrive - shivohm\\desktop\\inventory-management\\aimsapi\\aimsv2\\models\\userdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|solutionrelative:aimsv2\\models\\userdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|c:\\users\\5038\\onedrive - shivohm\\desktop\\inventory-management\\aimsapi\\aimsv2\\entities\\cities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|solutionrelative:aimsv2\\entities\\cities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|c:\\users\\5038\\onedrive - shivohm\\desktop\\inventory-management\\aimsapi\\aimsv2\\entities\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|solutionrelative:aimsv2\\entities\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|c:\\users\\5038\\onedrive - shivohm\\desktop\\inventory-management\\aimsapi\\aimsv2\\models\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|solutionrelative:aimsv2\\models\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|c:\\users\\5038\\onedrive - shivohm\\desktop\\inventory-management\\aimsapi\\aimsv2\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEEED8D-8AA7-44FC-BD07-088385A55E82}|AIMSV2\\AIMSV2.csproj|solutionrelative:aimsv2\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Repositories\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "AIMSV2\\Repositories\\IProductRepository.cs",
+              "ToolTip": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Repositories\\IProductRepository.cs",
+              "RelativeToolTip": "AIMSV2\\Repositories\\IProductRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T12:48:34.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CityService.cs",
+              "DocumentMoniker": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Services\\CityService.cs",
+              "RelativeDocumentMoniker": "AIMSV2\\Services\\CityService.cs",
+              "ToolTip": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Services\\CityService.cs",
+              "RelativeToolTip": "AIMSV2\\Services\\CityService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAvwAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T11:58:20.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ICityRepository.cs",
+              "DocumentMoniker": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Repositories\\ICityRepository.cs",
+              "RelativeDocumentMoniker": "AIMSV2\\Repositories\\ICityRepository.cs",
+              "ToolTip": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Repositories\\ICityRepository.cs",
+              "RelativeToolTip": "AIMSV2\\Repositories\\ICityRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T11:58:10.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Services\\IUserService.cs",
+              "RelativeDocumentMoniker": "AIMSV2\\Services\\IUserService.cs",
+              "ToolTip": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Services\\IUserService.cs",
+              "RelativeToolTip": "AIMSV2\\Services\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T12:05:13.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ICityService.cs",
+              "DocumentMoniker": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Services\\ICityService.cs",
+              "RelativeDocumentMoniker": "AIMSV2\\Services\\ICityService.cs",
+              "ToolTip": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Services\\ICityService.cs",
+              "RelativeToolTip": "AIMSV2\\Services\\ICityService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T11:59:03.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CityControlller.cs",
+              "DocumentMoniker": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Controllers\\CityControlller.cs",
+              "RelativeDocumentMoniker": "AIMSV2\\Controllers\\CityControlller.cs",
+              "ToolTip": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Controllers\\CityControlller.cs",
+              "RelativeToolTip": "AIMSV2\\Controllers\\CityControlller.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T11:59:41.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Program.cs",
+              "RelativeDocumentMoniker": "AIMSV2\\Program.cs",
+              "ToolTip": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Program.cs",
+              "RelativeToolTip": "AIMSV2\\Program.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAlwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T12:22:11.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "AIMSV2\\Services\\ProductService.cs",
+              "ToolTip": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Services\\ProductService.cs",
+              "RelativeToolTip": "AIMSV2\\Services\\ProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T12:48:36.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CityRepository.cs",
+              "DocumentMoniker": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Repositories\\CityRepository.cs",
+              "RelativeDocumentMoniker": "AIMSV2\\Repositories\\CityRepository.cs",
+              "ToolTip": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Repositories\\CityRepository.cs",
+              "RelativeToolTip": "AIMSV2\\Repositories\\CityRepository.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAvwA4AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T11:57:44.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "AIMSV2\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "AIMSV2\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T12:03:31.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "AIMSV2\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Controllers\\UserController.cs",
+              "RelativeToolTip": "AIMSV2\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T11:10:54.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Repositories\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "AIMSV2\\Repositories\\ProductRepository.cs",
+              "ToolTip": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Repositories\\ProductRepository.cs",
+              "RelativeToolTip": "AIMSV2\\Repositories\\ProductRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T12:48:35.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Repositories\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "AIMSV2\\Repositories\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Repositories\\IUserRepository.cs",
+              "RelativeToolTip": "AIMSV2\\Repositories\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T12:04:37.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DbContext.cs",
+              "DocumentMoniker": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Data\\DbContext.cs",
+              "RelativeDocumentMoniker": "AIMSV2\\Data\\DbContext.cs",
+              "ToolTip": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Data\\DbContext.cs",
+              "RelativeToolTip": "AIMSV2\\Data\\DbContext.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAA8wAEAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T12:03:07.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "AIMSV2\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Services\\UserService.cs",
+              "RelativeToolTip": "AIMSV2\\Services\\UserService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAqwBcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T12:05:32.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Users.cs",
+              "DocumentMoniker": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Entities\\Users.cs",
+              "RelativeDocumentMoniker": "AIMSV2\\Entities\\Users.cs",
+              "ToolTip": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Entities\\Users.cs",
+              "RelativeToolTip": "AIMSV2\\Entities\\Users.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T12:14:40.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UserDetails.cs",
+              "DocumentMoniker": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Models\\UserDetails.cs",
+              "RelativeDocumentMoniker": "AIMSV2\\Models\\UserDetails.cs",
+              "ToolTip": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Models\\UserDetails.cs",
+              "RelativeToolTip": "AIMSV2\\Models\\UserDetails.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T12:23:06.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "City.cs",
+              "DocumentMoniker": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Models\\City.cs",
+              "RelativeDocumentMoniker": "AIMSV2\\Models\\City.cs",
+              "ToolTip": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Models\\City.cs",
+              "RelativeToolTip": "AIMSV2\\Models\\City.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T12:02:00.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Cities.cs",
+              "DocumentMoniker": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Entities\\Cities.cs",
+              "RelativeDocumentMoniker": "AIMSV2\\Entities\\Cities.cs",
+              "ToolTip": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Entities\\Cities.cs",
+              "RelativeToolTip": "AIMSV2\\Entities\\Cities.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T12:16:45.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "AIMSV2\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\5038\\OneDrive - Shivohm\\Desktop\\Inventory-Management\\AIMSAPI\\AIMSV2\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "AIMSV2\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T12:01:03.529Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

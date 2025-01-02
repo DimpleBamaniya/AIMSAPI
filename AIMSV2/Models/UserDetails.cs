@@ -9,8 +9,7 @@ namespace AIMSV2.Models
             public string LastName { get; set; }
             public string EmailID { get; set; }
             public string Password { get; set; }
-            public string? City { get; set; }
-            public int? EducationID { get; set; }
+            public string? CityID { get; set; }
             public int? DepartmentID { get; set; }
             public bool Permissions { get; set; } = false;
             public DateOnly Created { get; set; }

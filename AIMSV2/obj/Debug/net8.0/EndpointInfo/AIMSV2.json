@@ -5,6 +5,18 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/City/GetAllCities": {
+      "post": {
+        "tags": [
+          "City"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/User/GetAllUsers": {
       "post": {
         "tags": [

@@ -34,6 +34,8 @@ builder.Services.AddScoped<IUserProductRepository, UserProductRepository>();
 builder.Services.AddScoped<IUserProductService, UserProductService>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<ICityRepository, CityRepository>();
+builder.Services.AddScoped<ICityService, CityService>();
 
 var app = builder.Build();
 

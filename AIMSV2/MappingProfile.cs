@@ -1,4 +1,6 @@
-﻿using AutoMapper;
+﻿using AIMSV2.Models;
+using AutoMapper;
+using Entities;
 
 namespace AIMSAPI.Api
 {
@@ -8,9 +10,8 @@ namespace AIMSAPI.Api
         {
             AllowNullCollections = true;
             AllowNullDestinationValues = true;
-
-            //CreateMap<UserDetails, Users>().ReverseMap();
-            //CreateMap<UserDto, Users>().ReverseMap();
+            CreateMap<Users, UserDetails>().ReverseMap();
+            CreateMap<UserDetails, Users>().ReverseMap();
         }
     }
 }

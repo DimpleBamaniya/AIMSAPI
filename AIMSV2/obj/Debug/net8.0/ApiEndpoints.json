@@ -10,6 +10,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AIMSV3.Controllers.DepartmentController",
+    "Method": "GetAllDepartments",
+    "RelativePath": "api/Department/GetAllDepartments",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AIMSV3.Controllers.UserController",
     "Method": "GetUsers",
     "RelativePath": "api/User/GetAllUsers",
@@ -30,6 +40,38 @@
       {
         "Name": "loginRequest",
         "Type": "AIMSV2.Models.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AIMSV3.Controllers.UserController",
+    "Method": "GetUserDetailByID",
+    "RelativePath": "api/User/GetUserDetailByID",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userIdRequest",
+        "Type": "AIMSV2.Models.UserIdRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AIMSV3.Controllers.UserController",
+    "Method": "SaveUser",
+    "RelativePath": "api/User/SaveUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accountModel",
+        "Type": "AIMSV2.Models.UserDto",
         "IsRequired": true
       }
     ],

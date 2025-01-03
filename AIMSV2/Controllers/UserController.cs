@@ -55,5 +55,19 @@ namespace AIMSV3.Controllers
             Result result = await _userService.GetUserDetailByEmailID(loginRequest);
             return Ok(result.ApiResult);
         }
+
+        [HttpPost("GetUserDetailByID")]
+        public async Task<IActionResult> GetUserDetailByID([FromBody] UserIdRequest userIdRequest)
+        {
+            Result result = await _userService.GetUserDetailByID(userIdRequest.Id);
+            return Ok(result.ApiResult);
+        }
+
+        [HttpPost("SaveUser")]
+        public async Task<IActionResult> SaveUser(UserDto accountModel)
+        {
+            Result result = await _userService.SaveUser(accountModel);
+            return Ok(result.ApiResult);
+        }
     }
 }

@@ -44,5 +44,28 @@ namespace AIMSV2.Repositories
         {
             return await _context.Users.FirstOrDefaultAsync(u => u.EmailID == emailID && !u.IsDeleted);
         }
+        public async Task<Users> GetUserDetailByID(int id)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.ID == id && !u.IsDeleted);
+        }
+
+        public async Task<Entities.Users> SaveUser(Entities.Users account)
+        {
+            DateTime utcNow = DateTime.UtcNow;
+            DateOnly currentUtcDate = DateOnly.FromDateTime(utcNow);
+            if (account.ID == 0)
+            {
+                account.Created = currentUtcDate;
+                _context.Users.Add(account);
+            }
+            else
+            {
+                account.Modified = currentUtcDate;
+                _context.Users.Update(account);
+            }
+
+            await _context.SaveChangesAsync();
+            return account;
+        }
     }
 }

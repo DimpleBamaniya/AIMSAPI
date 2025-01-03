@@ -8,6 +8,8 @@ namespace AIMSV2.Services
     {
         Task<IEnumerable<Users>> GetAllUsers();
         Task<Result> GetUserDetailByEmailID(LoginDto loginRequest);
+        Task<Result> GetUserDetailByID(int id);
+        Task<Result> SaveUser(UserDto accountModel);
         Task<bool> ExecuteUpdateUserPermissions();
         Task<bool> ExecuteUpdateUseQuantity();
         Task<bool> ExecuteUpdateAvailableQuantity();

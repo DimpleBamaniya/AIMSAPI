@@ -10,6 +10,8 @@ namespace AIMSV2.Data
         //Table
         public DbSet<Entities.Users> Users { get; set; }
         public DbSet<Entities.Cities> Cities { get; set; }
+        public DbSet<Entities.Departments> Departments { get; set; }
+
         //public DbSet<Entities.UserProducts> UserProducts { get; set; }
         public virtual DbSet<Entities.UserProducts> UserProducts => Set<Entities.UserProducts>();
         //public virtual DbSet<Entities.Users> Users => Set<Entities.Users>();

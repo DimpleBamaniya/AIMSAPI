@@ -137,5 +137,90 @@ namespace AIMSV2.Services
 
             return new Result();
         }
+        public async Task<Result> GetUserDetailByID(int id)
+        {
+            try
+            {
+                #region API Validations
+                Result validationResult = await ValiadationFieldsToGetUserDetailByID(id);
+                if (validationResult.HasError && (HttpStatusCode)validationResult.StatusCode == HttpStatusCode.BadRequest)
+                {
+                    return validationResult;
+                }
+                #endregion
+
+                Users users = await _userRepository.GetUserDetailByID(id);
+                if (users == null)
+                {
+                    return new Result($"User is not Exists.", "Accounts.AccountNotExists", HttpStatusCode.BadRequest);
+                }
+                else
+                {
+                    UserDetails loginUserDetails = _mapper.Map<Users, UserDetails>(users);
+                    return new Result { ResultObject = loginUserDetails };
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+                return new Result($"{ex.Message}", "Accounts.AccountNotExists", HttpStatusCode.BadRequest);
+            }
+
+        }
+
+        private async Task<Result> ValiadationFieldsToGetUserDetailByID(int id)
+        {
+            if (id == null)
+            {
+                return new Result($"ID is null", "Accounts.IDIsRequired", HttpStatusCode.BadRequest);
+            }
+            return new Result();
+        }
+
+        public async Task<Result> SaveUser(UserDto userModel)
+        {
+            try
+            {
+
+                Entities.Users? user = null;
+
+                if (userModel.ID > 0)
+                {
+                    user = await _userRepository.GetUserDetailByID(userModel.ID);
+
+                    if (user == null)
+                    {
+                        return new Result("User not exists", "Users.UserNotExists", HttpStatusCode.BadRequest);
+                    }
+
+                    //user = _mapper.Map<UserDetails, Entities.Users>(user);
+
+                    user.ModifiedBy = userModel.ID;
+                }
+                else
+                {
+                    user = new Entities.Users
+                    {
+                        CreatedBy = userModel.ID,
+                        IsDeleted = false
+                    };
+                }
+                user.FirstName = userModel.FirstName;
+                user.LastName = userModel.LastName;
+                user.EmailID = userModel.EmailID;
+                user.Password = userModel.Password;
+                user.CityID = userModel.CityID;
+                user.DepartmentID = userModel.DepartmentID;
+
+                user = await _userRepository.SaveUser(user);
+                // letter change
+                user.CreatedBy = user.ID;
+                return new Result { ResultObject = user };
+            }
+            catch (Exception ex)
+            {
+                return new Result("An error occurred while save user detail", "Users.UnknownError", HttpStatusCode.InternalServerError, ex);
+            }
+        }
     }
 }

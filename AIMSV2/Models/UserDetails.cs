@@ -11,7 +11,7 @@ namespace AIMSV2.Models
             public string Password { get; set; }
             public string? CityID { get; set; }
             public int? DepartmentID { get; set; }
-            public bool Permissions { get; set; } = false;
+            public bool? Permissions { get; set; } = false;
             public DateOnly Created { get; set; }
             public int CreatedBy { get; set; }
             public DateOnly? Modified { get; set; }

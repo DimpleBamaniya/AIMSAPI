@@ -1,4 +1,6 @@
-﻿using AIMSV2.Models;
+﻿using AIMSV2.Entities;
+using AIMSV2.Models;
+using Entities;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -8,23 +10,25 @@ namespace AIMSV2.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
         //Table
-        public DbSet<Entities.Users> Users { get; set; }
-        public DbSet<Entities.Cities> Cities { get; set; }
-        public DbSet<Entities.Departments> Departments { get; set; }
+        public DbSet<Users> Users { get; set; }
+        public DbSet<Cities> Cities { get; set; }
+        public DbSet<Departments> Departments { get; set; }
+        public virtual DbSet<UserDetailsList> vw_Users => Set<UserDetailsList>();
 
-        //public DbSet<Entities.UserProducts> UserProducts { get; set; }
-        public virtual DbSet<Entities.UserProducts> UserProducts => Set<Entities.UserProducts>();
-        //public virtual DbSet<Entities.Users> Users => Set<Entities.Users>();
+        //public DbSet<UserProducts> UserProducts { get; set; }
+        public virtual DbSet<UserProducts> UserProducts => Set<UserProducts>();
+        //public virtual DbSet<Users> Users => Set<Entities.Users>();
 
         //View Table
         //public virtual DbSet<UserDetails> vw_Users => Set<UserDetails>();
 
         //Store Procedure
 
-        public virtual DbSet<Entities.Users> usp_UpdateUserPermissions => Set<Entities.Users>();
-        public virtual DbSet<Entities.Users> usp_UpdateUseQuantity => Set<Entities.Users>();
-        public virtual DbSet<Entities.Users> usp_UpdateAvailableQuantityAndUseQuantity => Set<Entities.Users>();
-        public virtual DbSet<Entities.Users> usp_UpdateAvailableQuantity => Set<Entities.Users>();
+        public virtual DbSet<Users> usp_UpdateUserPermissions => Set<Users>();
+        public virtual DbSet<Users> usp_UpdateUseQuantity => Set<Users>();
+        public virtual DbSet<Users> usp_UpdateAvailableQuantityAndUseQuantity => Set<Users>();
+        public virtual DbSet<Users> usp_UpdateAvailableQuantity => Set<Users>();
+        public virtual DbSet<UserDetailsList> usp_GetUsersWithPagination => Set<UserDetailsList>();
 
         //public virtual DbSet<UsersWithPagination> usp_GetUsersWithPagination => Set<UsersWithPagination>();
 

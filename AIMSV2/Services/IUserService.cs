@@ -1,4 +1,5 @@
-﻿using AIMSV2.Models;
+﻿using AIMSV2.Entities;
+using AIMSV2.Models;
 using AIMSV2.Utility;
 using Entities;
 
@@ -14,6 +15,6 @@ namespace AIMSV2.Services
         Task<bool> ExecuteUpdateUseQuantity();
         Task<bool> ExecuteUpdateAvailableQuantity();
         Task<bool> ExecuteUpdateAvailableQuantityAndUseQuantity();
-
+        Task<Result> GetAllUserDetails(Pagination pagination);
     }
 }

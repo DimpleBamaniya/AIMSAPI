@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using AIMSV2.Data;
+using AIMSV2.Entities;
 using AIMSV2.Models;
 using AIMSV2.Repositories;
 using AIMSV2.Utility;
@@ -19,7 +20,7 @@ namespace AIMSV2.Repositories
         {
             _context = context;
         }
-        public async Task<IEnumerable<Entities.Users>> GetAllUsers()
+        public async Task<IEnumerable<Users>> GetAllUsers()
         {
              return await _context.Users.ToListAsync();
         }
@@ -49,7 +50,7 @@ namespace AIMSV2.Repositories
             return await _context.Users.FirstOrDefaultAsync(u => u.ID == id && !u.IsDeleted);
         }
 
-        public async Task<Entities.Users> SaveUser(Entities.Users account)
+        public async Task<Users> SaveUser(Users account)
         {
             DateTime utcNow = DateTime.UtcNow;
             DateOnly currentUtcDate = DateOnly.FromDateTime(utcNow);
@@ -67,5 +68,21 @@ namespace AIMSV2.Repositories
             await _context.SaveChangesAsync();
             return account;
         }
-    }
+        //public async Task<IEnumerable<UserDetailsList>> GetAllUserDetails()
+        //{
+        //    return await _context.vw_Users.ToListAsync();
+        //}
+
+        public async Task<List<UserDetailsList>> GetAllUserDetails(Pagination pagination)
+        {
+            return await _context.usp_GetUsersWithPagination
+                .FromSqlRaw("Exec usp_GetUsersWithPagination @SearchString={0},@PageNo={1}, @PageSize={2}, @SortColumn={3}, @SortOrder={4}",
+                    pagination.SearchString ?? string.Empty,
+                    pagination.PageNo,
+                    pagination.PageSize,
+                    pagination.SortColumn ?? string.Empty,
+                    pagination.SortOrder ?? string.Empty)
+                .ToListAsync();
+        }
+    } 
 }

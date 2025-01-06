@@ -69,5 +69,12 @@ namespace AIMSV3.Controllers
             Result result = await _userService.SaveUser(accountModel);
             return Ok(result.ApiResult);
         }
+
+        [HttpPost("GetAllUserDetails")]
+        public async Task<IActionResult> GetAllUserDetails([FromBody] Pagination pagination)
+        {
+            Result result = await _userService.GetAllUserDetails(pagination);
+            return Ok(result.ApiResult);
+        }
     }
 }

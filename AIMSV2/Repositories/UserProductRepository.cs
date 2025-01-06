@@ -14,7 +14,7 @@ namespace AIMSAPI.Repositories
         {
             _context = context;
         }
-        public async Task<IEnumerable<Entities.UserProducts>> GetAllUserProduct()
+        public async Task<IEnumerable<UserProducts>> GetAllUserProduct()
         {
             return await _context.UserProducts.ToListAsync();
         }

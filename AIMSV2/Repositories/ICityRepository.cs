@@ -1,7 +1,9 @@
-﻿namespace AIMSV2.Repositories
+﻿using Entities;
+
+namespace AIMSV2.Repositories
 {
     public interface ICityRepository
     {
-        Task<IEnumerable<Entities.Cities>> GetAllCities();
+        Task<IEnumerable<Cities>> GetAllCities();
     }
 }

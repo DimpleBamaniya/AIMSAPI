@@ -4,6 +4,7 @@ using AIMSV2.Utility;
 using AutoMapper;
 using Entities;
 using AIMSV2.Models;
+using AIMSV2.Entities;
 
 namespace AIMSV2.Services
 {
@@ -18,7 +19,7 @@ namespace AIMSV2.Services
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<Entities.Users>> GetAllUsers()
+        public async Task<IEnumerable<Users>> GetAllUsers()
         {
             return await _userRepository.GetAllUsers();
         }
@@ -182,7 +183,7 @@ namespace AIMSV2.Services
             try
             {
 
-                Entities.Users? user = null;
+                Users? user = null;
 
                 if (userModel.ID > 0)
                 {
@@ -199,7 +200,7 @@ namespace AIMSV2.Services
                 }
                 else
                 {
-                    user = new Entities.Users
+                    user = new Users
                     {
                         CreatedBy = userModel.ID,
                         IsDeleted = false
@@ -220,6 +221,18 @@ namespace AIMSV2.Services
             catch (Exception ex)
             {
                 return new Result("An error occurred while save user detail", "Users.UnknownError", HttpStatusCode.InternalServerError, ex);
+            }
+        }
+        public async Task<Result> GetAllUserDetails(Pagination pagination)
+        {
+            try
+            {
+                List<UserDetailsList> userData = (await _userRepository.GetAllUserDetails(pagination)).ToList();
+                return new Result { ResultObject = userData };
+            }
+            catch (Exception ex)
+            {
+                return new Result("An error occurred while fetching all accounts, ERROR: " + ex.Message, "Accounts.UnknownError", HttpStatusCode.InternalServerError, ex);
             }
         }
     }

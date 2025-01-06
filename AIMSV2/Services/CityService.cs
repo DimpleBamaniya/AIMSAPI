@@ -1,5 +1,6 @@
 ﻿using AIMSV2.Repositories;
 using AutoMapper;
+using Entities;
 
 namespace AIMSV2.Services
 {
@@ -12,7 +13,7 @@ namespace AIMSV2.Services
             _cityRepository = cityRepository ?? throw new ArgumentNullException(nameof(cityRepository));
         }
 
-        public async Task<IEnumerable<Entities.Cities>> GetAllCities()
+        public async Task<IEnumerable<Cities>> GetAllCities()
         {
             return await _cityRepository.GetAllCities();
         }

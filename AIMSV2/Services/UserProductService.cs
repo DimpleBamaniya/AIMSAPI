@@ -16,7 +16,7 @@ namespace AIMSV2.Services
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<Entities.UserProducts>> GetAllUserProduct()
+        public async Task<IEnumerable<UserProducts>> GetAllUserProduct()
         {
             return await _userProductRepository.GetAllUserProduct();
         }

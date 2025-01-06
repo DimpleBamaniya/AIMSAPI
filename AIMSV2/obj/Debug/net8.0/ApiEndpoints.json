@@ -21,6 +21,22 @@
   },
   {
     "ContainingType": "AIMSV3.Controllers.UserController",
+    "Method": "GetAllUserDetails",
+    "RelativePath": "api/User/GetAllUserDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pagination",
+        "Type": "Pagination",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AIMSV3.Controllers.UserController",
     "Method": "GetUsers",
     "RelativePath": "api/User/GetAllUsers",
     "HttpMethod": "POST",

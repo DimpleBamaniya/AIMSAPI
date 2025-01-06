@@ -1,4 +1,5 @@
 ﻿using AIMSV2.Data;
+using Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace AIMSV2.Repositories
@@ -12,7 +13,7 @@ namespace AIMSV2.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Entities.Cities>> GetAllCities()
+        public async Task<IEnumerable<Cities>> GetAllCities()
         {
             return await _context.Cities.ToListAsync();
         }

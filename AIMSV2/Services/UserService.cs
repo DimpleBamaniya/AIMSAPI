@@ -195,8 +195,7 @@ namespace AIMSV2.Services
                     }
 
                     //user = _mapper.Map<UserDetails, Entities.Users>(user);
-
-                    user.ModifiedBy = userModel.ID;
+                    user.ModifiedBy = userModel.ModifiedBy;
                 }
                 else
                 {

@@ -28,6 +28,8 @@ namespace AIMSV2.Data
         public virtual DbSet<Users> usp_UpdateUseQuantity => Set<Users>();
         public virtual DbSet<Users> usp_UpdateAvailableQuantityAndUseQuantity => Set<Users>();
         public virtual DbSet<Users> usp_UpdateAvailableQuantity => Set<Users>();
+        public virtual DbSet<Users> usp_UpdateUserCodes => Set<Users>();
+        
         public virtual DbSet<UserDetailsList> usp_GetUsersWithPagination => Set<UserDetailsList>();
 
         //public virtual DbSet<UsersWithPagination> usp_GetUsersWithPagination => Set<UsersWithPagination>();

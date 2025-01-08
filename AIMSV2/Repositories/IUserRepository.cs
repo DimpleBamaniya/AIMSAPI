@@ -14,6 +14,7 @@ namespace AIMSV2.Repositories
         Task ExecuteUpdateUseQuantity();
         Task ExecuteUpdateAvailableQuantity();
         Task ExecuteUpdateAvailableQuantityAndUseQuantity();
+        Task ExecuteUpdateUserCodes();
         Task<List<UserDetailsList>> GetAllUserDetails(Pagination pagination);
     }
 }

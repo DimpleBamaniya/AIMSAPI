@@ -120,6 +120,18 @@
         }
       }
     },
+    "/api/User/ExecuteUpdateUserCodes": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/User/GetUserDetailByID": {
       "post": {
         "tags": [

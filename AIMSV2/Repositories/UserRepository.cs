@@ -27,19 +27,27 @@ namespace AIMSV2.Repositories
 
         public async Task ExecuteUpdateUserPermissions()
         {
-            await _context.Database.ExecuteSqlRawAsync("EXEC [dbo].[usp.UpdateUserPermissions]");
+            await _context.Database.ExecuteSqlRawAsync("EXEC [dbo].[usp_UpdateUserPermissions]");
         }
+
         public async Task ExecuteUpdateUseQuantity()
         {
-            await _context.Database.ExecuteSqlRawAsync("EXEC [dbo].[usp.UpdateUseQuantity]");
+            await _context.Database.ExecuteSqlRawAsync("EXEC [dbo].[usp_UpdateUseQuantity]");
         }
+
         public async Task ExecuteUpdateAvailableQuantity()
         {
-            await _context.Database.ExecuteSqlRawAsync("EXEC [dbo].[usp.UpdateAvailableQuantity]");
+            await _context.Database.ExecuteSqlRawAsync("EXEC [dbo].[usp_UpdateAvailableQuantity]");
         }
+
         public async Task ExecuteUpdateAvailableQuantityAndUseQuantity()
         {
-            await _context.Database.ExecuteSqlRawAsync("EXEC [dbo].[usp.UpdateAvailableQuantityAndUseQuantity]");
+            await _context.Database.ExecuteSqlRawAsync("EXEC [dbo].[usp_UpdateAvailableQuantityAndUseQuantity]");
+        }
+
+        public async Task ExecuteUpdateUserCodes()
+        {
+            await _context.Database.ExecuteSqlRawAsync("EXEC [dbo].[usp_UpdateUserCodes]");
         }
         public async Task<Users> GetUserDetailByEmailID(string emailID)
         {

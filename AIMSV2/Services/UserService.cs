@@ -80,6 +80,20 @@ namespace AIMSV2.Services
             }
         }
 
+        public async Task<bool> ExecuteUpdateUserCodes()
+        {
+            try
+            {
+                await _userRepository.ExecuteUpdateUserCodes();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+                return false;
+            }
+        }
+
         public async Task<Result> GetUserDetailByEmailID(LoginDto loginModel)
         {
             try
@@ -157,8 +171,8 @@ namespace AIMSV2.Services
                 }
                 else
                 {
-                    UserDetails loginUserDetails = _mapper.Map<Users, UserDetails>(users);
-                    return new Result { ResultObject = loginUserDetails };
+                    //UserDetails loginUserDetails = _mapper.Map<Users, UserDetails>(users);
+                    return new Result { ResultObject = users };
                 }
             }
             catch (Exception ex)
@@ -184,6 +198,7 @@ namespace AIMSV2.Services
             {
 
                 Users? user = null;
+                UserDetails userDetails = null;
 
                 if (userModel.ID > 0)
                 {
@@ -201,7 +216,7 @@ namespace AIMSV2.Services
                 {
                     user = new Users
                     {
-                        CreatedBy = userModel.ID,
+                        CreatedBy = userModel.CreatedBy,
                         IsDeleted = false
                     };
                 }
@@ -209,12 +224,13 @@ namespace AIMSV2.Services
                 user.LastName = userModel.LastName;
                 user.EmailID = userModel.EmailID;
                 user.Password = userModel.Password;
-                user.CityID = userModel.CityID;
-                user.DepartmentID = userModel.DepartmentID;
+                user.CityID = userModel?.CityID;
+                user.DepartmentID = userModel?.DepartmentID;
 
                 user = await _userRepository.SaveUser(user);
+                await ExecuteUpdateUserPermissions();
+                await ExecuteUpdateUserCodes();
                 // letter change
-                user.CreatedBy = user.ID;
                 return new Result { ResultObject = user };
             }
             catch (Exception ex)

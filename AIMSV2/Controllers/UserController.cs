@@ -56,6 +56,12 @@ namespace AIMSV3.Controllers
             return Ok(result.ApiResult);
         }
 
+        [HttpPost("ExecuteUpdateUserCodes")]
+        public Task ExecuteUpdateUserCodes()
+        {
+            return _userService.ExecuteUpdateUserCodes();
+        }
+
         [HttpPost("GetUserDetailByID")]
         public async Task<IActionResult> GetUserDetailByID([FromBody] UserIdRequest userIdRequest)
         {

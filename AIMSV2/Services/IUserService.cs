@@ -15,6 +15,7 @@ namespace AIMSV2.Services
         Task<bool> ExecuteUpdateUseQuantity();
         Task<bool> ExecuteUpdateAvailableQuantity();
         Task<bool> ExecuteUpdateAvailableQuantityAndUseQuantity();
+        Task<bool> ExecuteUpdateUserCodes();
         Task<Result> GetAllUserDetails(Pagination pagination);
     }
 }

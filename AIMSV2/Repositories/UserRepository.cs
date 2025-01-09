@@ -29,22 +29,6 @@ namespace AIMSV2.Repositories
         {
             await _context.Database.ExecuteSqlRawAsync("EXEC [dbo].[usp_UpdateUserPermissions]");
         }
-
-        public async Task ExecuteUpdateUseQuantity()
-        {
-            await _context.Database.ExecuteSqlRawAsync("EXEC [dbo].[usp_UpdateUseQuantity]");
-        }
-
-        public async Task ExecuteUpdateAvailableQuantity()
-        {
-            await _context.Database.ExecuteSqlRawAsync("EXEC [dbo].[usp_UpdateAvailableQuantity]");
-        }
-
-        public async Task ExecuteUpdateAvailableQuantityAndUseQuantity()
-        {
-            await _context.Database.ExecuteSqlRawAsync("EXEC [dbo].[usp_UpdateAvailableQuantityAndUseQuantity]");
-        }
-
         public async Task ExecuteUpdateUserCodes()
         {
             await _context.Database.ExecuteSqlRawAsync("EXEC [dbo].[usp_UpdateUserCodes]");
@@ -76,10 +60,11 @@ namespace AIMSV2.Repositories
             await _context.SaveChangesAsync();
             return account;
         }
-        //public async Task<IEnumerable<UserDetailsList>> GetAllUserDetails()
-        //{
-        //    return await _context.vw_Users.ToListAsync();
-        //}
+
+        public async Task<IEnumerable<UserDetailsList>> GetAllUserDetails()
+        {
+            return await _context.vw_Users.ToListAsync();
+        }
 
         public async Task<List<UserDetailsList>> GetAllUserDetails(Pagination pagination)
         {

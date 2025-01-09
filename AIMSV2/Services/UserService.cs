@@ -37,49 +37,6 @@ namespace AIMSV2.Services
                 return false;
             }
         }
-
-        public async Task<bool> ExecuteUpdateUseQuantity()
-        {
-            try
-            {
-                await _userRepository.ExecuteUpdateUseQuantity();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"An error occurred: {ex.Message}");
-                return false;
-            }
-        }
-
-        public async Task<bool> ExecuteUpdateAvailableQuantity()
-        {
-            try
-            {
-                await _userRepository.ExecuteUpdateAvailableQuantity();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"An error occurred: {ex.Message}");
-                return false;
-            }
-        }
-
-        public async Task<bool> ExecuteUpdateAvailableQuantityAndUseQuantity()
-        {
-            try
-            {
-                await _userRepository.ExecuteUpdateAvailableQuantityAndUseQuantity();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"An error occurred: {ex.Message}");
-                return false;
-            }
-        }
-
         public async Task<bool> ExecuteUpdateUserCodes()
         {
             try

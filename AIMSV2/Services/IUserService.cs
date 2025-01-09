@@ -12,9 +12,6 @@ namespace AIMSV2.Services
         Task<Result> GetUserDetailByID(int id);
         Task<Result> SaveUser(UserDto accountModel);
         Task<bool> ExecuteUpdateUserPermissions();
-        Task<bool> ExecuteUpdateUseQuantity();
-        Task<bool> ExecuteUpdateAvailableQuantity();
-        Task<bool> ExecuteUpdateAvailableQuantityAndUseQuantity();
         Task<bool> ExecuteUpdateUserCodes();
         Task<Result> GetAllUserDetails(Pagination pagination);
     }

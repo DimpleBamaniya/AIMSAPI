@@ -10,7 +10,6 @@ namespace AIMSV3.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
         private readonly IUserService _userService;
 
         public UserController(IUserService userService)
@@ -30,25 +29,7 @@ namespace AIMSV3.Controllers
         {
             return _userService.ExecuteUpdateUserPermissions();
         }
-
-        [HttpPost("UpdateUseQuantity")]
-        public Task UpdateUseQuantity()
-        {
-            return _userService.ExecuteUpdateUseQuantity();
-        }
-
-        [HttpPost("UpdateAvailableQuantity")]
-        public Task UpdateAvailableQuantity()
-        {
-            return _userService.ExecuteUpdateAvailableQuantity();
-        }
-
-        [HttpPost("UpdateAvailableQuantityAndUseQuantity")]
-        public Task UpdateAvailableQuantityAndUseQuantity()
-        {
-            return _userService.ExecuteUpdateAvailableQuantityAndUseQuantity();
-        }
-
+        
         [HttpPost("GetUserDetailByEmailID")]
         public async Task<IActionResult> GetUserDetailByEmailID([FromBody] LoginDto loginRequest)
         {

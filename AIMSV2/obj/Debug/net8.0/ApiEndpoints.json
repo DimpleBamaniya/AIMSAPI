@@ -20,6 +20,86 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AIMSV3.Controllers.ProductController",
+    "Method": "GetAllProductDetails",
+    "RelativePath": "api/Product/GetAllProductDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pagination",
+        "Type": "Pagination",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AIMSV3.Controllers.ProductController",
+    "Method": "GetProductDetailByID",
+    "RelativePath": "api/Product/GetProductDetailByID",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productIdRequest",
+        "Type": "AIMSV2.Models.ProductIdRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AIMSV3.Controllers.ProductController",
+    "Method": "UpdateAvailableQuantity",
+    "RelativePath": "api/Product/UpdateAvailableQuantity",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AIMSV3.Controllers.ProductController",
+    "Method": "UpdateAvailableQuantityAndUseQuantity",
+    "RelativePath": "api/Product/UpdateAvailableQuantityAndUseQuantity",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AIMSV3.Controllers.ProductController",
+    "Method": "UpdateUseQuantity",
+    "RelativePath": "api/Product/UpdateUseQuantity",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "AIMSV3.Controllers.UserController",
     "Method": "ExecuteUpdateUserCodes",
     "RelativePath": "api/User/ExecuteUpdateUserCodes",
@@ -108,54 +188,6 @@
       }
     ],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AIMSV3.Controllers.UserController",
-    "Method": "UpdateAvailableQuantity",
-    "RelativePath": "api/User/UpdateAvailableQuantity",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AIMSV3.Controllers.UserController",
-    "Method": "UpdateAvailableQuantityAndUseQuantity",
-    "RelativePath": "api/User/UpdateAvailableQuantityAndUseQuantity",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AIMSV3.Controllers.UserController",
-    "Method": "UpdateUseQuantity",
-    "RelativePath": "api/User/UpdateUseQuantity",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
   },
   {
     "ContainingType": "AIMSV3.Controllers.UserController",

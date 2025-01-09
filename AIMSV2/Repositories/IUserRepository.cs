@@ -11,9 +11,6 @@ namespace AIMSV2.Repositories
         Task<Users> SaveUser(Users user);
         Task<Users> GetUserDetailByEmailID(string emailID);
         Task ExecuteUpdateUserPermissions();
-        Task ExecuteUpdateUseQuantity();
-        Task ExecuteUpdateAvailableQuantity();
-        Task ExecuteUpdateAvailableQuantityAndUseQuantity();
         Task ExecuteUpdateUserCodes();
         Task<List<UserDetailsList>> GetAllUserDetails(Pagination pagination);
     }

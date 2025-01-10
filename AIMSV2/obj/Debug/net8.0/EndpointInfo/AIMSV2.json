@@ -5,6 +5,18 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/Brand/GetActiveBrands": {
+      "get": {
+        "tags": [
+          "Brand"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/City/GetAllCities": {
       "post": {
         "tags": [
@@ -120,6 +132,18 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ProductCategory/GetActiveProductCategories": {
+      "get": {
+        "tags": [
+          "ProductCategory"
+        ],
         "responses": {
           "200": {
             "description": "OK"

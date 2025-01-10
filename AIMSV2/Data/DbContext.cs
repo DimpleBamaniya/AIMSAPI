@@ -14,6 +14,8 @@ namespace AIMSV2.Data
         public DbSet<Cities> Cities { get; set; }
         public DbSet<Departments> Departments { get; set; }
         public DbSet<Products> Products { get; set; }
+        public DbSet<ProductCategory> Categories { get; set; }
+        public DbSet<Brand> Brands { get; set; }
 
         public virtual DbSet<UserDetailsList> vw_Users => Set<UserDetailsList>();
         public virtual DbSet<ProductDetails> vw_Products => Set<ProductDetails>();

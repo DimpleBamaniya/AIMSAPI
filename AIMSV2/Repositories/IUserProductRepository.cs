@@ -7,5 +7,6 @@ namespace AIMSV2.Repositories
     {
         Task<IEnumerable<UserProducts>> GetAllUserProduct();
         Task<List<UserProducts>> GetAllUserProductAsync();
+        Task<List<ProductByUserID>> GetProductListbyUserID(int id);
     }
 }

@@ -1,7 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using AIMSV2.Data;
 using AIMSV2.Services;
+using AIMSV2.Models;
 using AutoMapper;
+using System.Net;
+using AIMSV2.Entities;
+using AIMSV2.Models;
+using AIMSV2.Repositories;
+using AIMSV2.Utility;
+using AutoMapper;
+using Entities;
 
 namespace AIMSV3.Controllers
 {
@@ -29,6 +37,13 @@ namespace AIMSV3.Controllers
         {
             var userProducts = await _userProductService.GetAllUserProductAsync();
             return Ok(userProducts);
+        }
+
+        [HttpPost("GetProductListbyUserID")]
+        public async Task<IActionResult> GetProductListbyUserID([FromBody] UserIdRequest userIdRequest)
+        {
+            Result result = await _userProductService.GetProductListbyUserID(userIdRequest.Id);
+            return Ok(result.ApiResult);
         }
     }
 }

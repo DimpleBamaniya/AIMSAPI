@@ -17,9 +17,4 @@
         public int? ModifiedBy { get; set; }
     }
 
-    public class ProductIdRequest
-    {
-        public int Id { get; set; }
-    }
-
 }

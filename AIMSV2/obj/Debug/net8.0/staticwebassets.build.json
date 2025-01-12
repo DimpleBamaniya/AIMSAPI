@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "iv/2PX0x0mebDW15++e8GYI/77xKPuNCaqopvuFUMkk=",
+  "Hash": "bhjXAwgbFkAzyUSgIsfT/WPx2FlcusE4o7l37wFe30w=",
   "Source": "AIMSV2",
   "BasePath": "_content/AIMSV2",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }

@@ -11,5 +11,12 @@ namespace AIMSV2.Repositories
         Task ExecuteUpdateAvailableQuantityAndUseQuantity();
         Task<Products> GetProductDetailByID(int id);
         Task<List<ProductDetails>> GetAllProductDetails(Pagination pagination);
+        Task<Products> SaveProduct(Products product);
+        Task<bool> IsProductExistAsync(int categoryId,int brandId);
+        Task ExecuteUpdateProductCodes();
+        Task<List<UserByProductID>> GetUserListByProductID(int productId);
+        Task<Products> DeleteProduct(Products product);
+
+
     }
 }

@@ -42,23 +42,23 @@ namespace AIMSV2.Repositories
             return await _context.Users.FirstOrDefaultAsync(u => u.ID == id && !u.IsDeleted);
         }
 
-        public async Task<Users> SaveUser(Users account)
+        public async Task<Users> SaveUser(Users user)
         {
             DateTime utcNow = DateTime.UtcNow;
             DateOnly currentUtcDate = DateOnly.FromDateTime(utcNow);
-            if (account.ID == 0)
+            if (user.ID == 0)
             {
-                account.Created = currentUtcDate;
-                _context.Users.Add(account);
+                user.Created = currentUtcDate;
+                _context.Users.Add(user);
             }
             else
             {
-                account.Modified = currentUtcDate;
-                _context.Users.Update(account);
+                user.Modified = currentUtcDate;
+                _context.Users.Update(user);
             }
 
             await _context.SaveChangesAsync();
-            return account;
+            return user;
         }
 
         public async Task<IEnumerable<UserDetailsList>> GetAllUserDetails()

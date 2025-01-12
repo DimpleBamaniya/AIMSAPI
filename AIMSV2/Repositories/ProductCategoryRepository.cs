@@ -16,23 +16,6 @@ namespace AIMSV2.Repositories
             _context = context;
         }
 
-        //public async Task<Products> GetProductDetailByID(int id)
-        //{
-        //    return await _context.Products.FirstOrDefaultAsync(u => u.ID == id && !u.IsDeleted);
-        //}
-
-        //public async Task<List<ProductDetails>> GetAllProductDetails(Pagination pagination)
-        //{
-        //    return await _context.usp_GetProductsWithPagination
-        //        .FromSqlRaw("Exec usp_GetProductsWithPagination @SearchString={0},@PageNo={1}, @PageSize={2}, @SortColumn={3}, @SortOrder={4}",
-        //            pagination.SearchString ?? string.Empty,
-        //            pagination.PageNo,
-        //            pagination.PageSize,
-        //            pagination.SortColumn ?? string.Empty,
-        //            pagination.SortOrder ?? string.Empty)
-        //        .ToListAsync();
-        //}
-
         public IEnumerable<ProductCategoryDto> GetActiveProductCategories()
         {
             return _context.Categories

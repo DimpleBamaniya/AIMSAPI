@@ -22,6 +22,11 @@ namespace AIMSAPI.Repositories
         {
             return await _context.UserProducts.ToListAsync();
         }
-
+        public async Task<List<ProductByUserID>> GetProductListbyUserID(int id)
+        {
+            return await _context.usp_getProductListbyUserID
+                .FromSqlRaw("Exec usp_getProductListbyUserID @UserID={0}",id)
+                .ToListAsync();
+        }
     }
 }

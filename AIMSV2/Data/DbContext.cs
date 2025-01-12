@@ -31,30 +31,26 @@ namespace AIMSV2.Data
 
         //Store Procedure
 
-        public virtual DbSet<Users> usp_UpdateUserPermissions => Set<Users>();
-        public virtual DbSet<Users> usp_UpdateUseQuantity => Set<Users>();
-        public virtual DbSet<Users> usp_UpdateAvailableQuantityAndUseQuantity => Set<Users>();
-        public virtual DbSet<Users> usp_UpdateAvailableQuantity => Set<Users>();
-        public virtual DbSet<Users> usp_UpdateUserCodes => Set<Users>();
-        
+        public virtual DbSet<SqlResult> usp_UpdateUserPermissions => Set<SqlResult>();
+        public virtual DbSet<SqlResult> usp_UpdateUseQuantity => Set<SqlResult>();
+        public virtual DbSet<SqlResult> usp_UpdateAvailableQuantity => Set<SqlResult>();
+        public virtual DbSet<SqlResult> usp_UpdateUserCodes => Set<SqlResult>();
+        public virtual DbSet<SqlResult> usp_IsExistProductResult => Set<SqlResult>();
+        public virtual DbSet<SqlResult> usp_UpdateAvailableQuantityAndUseQuantity => Set<SqlResult>();
+        public virtual DbSet<SqlResult> usp_UpdateProductCodes => Set<SqlResult>();
+        //pagination
         public virtual DbSet<UserDetailsList> usp_GetUsersWithPagination => Set<UserDetailsList>();
         public virtual DbSet<ProductDetails> usp_GetProductsWithPagination => Set<ProductDetails>();
+        public virtual DbSet<UserByProductID> usp_getUserListbyProductID => Set<UserByProductID>();
+        public virtual DbSet<ProductByUserID> usp_getProductListbyUserID => Set<ProductByUserID>();
 
-        //public virtual DbSet<UsersWithPagination> usp_GetUsersWithPagination => Set<UsersWithPagination>();
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            //// Configure the "Users" table
-            //modelBuilder.Entity<Users>()
-            //    .HasKey(u => u.ID); // Define Id as the primary key
 
-            //modelBuilder.Entity<Users>()
-            //    .HasKey(u => u.Name); // Define Id as the primary key
-
-            //modelBuilder.Entity<Users>()
-            //    .Property(u => u.ID)
-            //    .ValueGeneratedOnAdd(); // Configure Id to auto-increment
-        }
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        // You can configure more entities here if necessary.
+        modelBuilder.Entity<SqlResult>().HasNoKey();
+    }
     }
 }
 

@@ -81,6 +81,7 @@ namespace AIMSV2.Services
                     LoginUserDetailsDto loginUserDetailsDto = new LoginUserDetailsDto();
                     loginUserDetailsDto.ID = users.ID;
                     loginUserDetailsDto.Permissions = users.Permissions;
+                    loginUserDetailsDto.FirstName = users.FirstName;
                     return new Result { ResultObject = loginUserDetailsDto };
                 }
             }

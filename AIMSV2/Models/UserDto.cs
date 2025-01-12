@@ -28,10 +28,8 @@
     {
         public int? ID { get; set; }
         public bool? Permissions { get; set; } = false;
+        public string FirstName { get; set; }
     }
 
-    public class UserIdRequest
-    {
-        public int Id { get; set; }
-    }
+
 }

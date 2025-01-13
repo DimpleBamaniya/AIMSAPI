@@ -208,5 +208,33 @@ namespace AIMSV2.Services
                 return new Result("An error occurred while fetching all accounts, ERROR: " + ex.Message, "Accounts.UnknownError", HttpStatusCode.InternalServerError, ex);
             }
         }
+
+        public async Task<Result> DeleteUser(DeleteUserDto userModel)
+        {
+            try
+            {
+
+                Users? user = null;
+
+                if (userModel.ID > 0)
+                {
+                    user = await _userRepository.GetUserDetailByID(userModel.ID);
+
+                    if (user == null)
+                    {
+                        return new Result("User not exists", "Users.UserNotExists", HttpStatusCode.BadRequest);
+                    }
+
+                    user.DeletedBy = userModel.DeletedBy;
+                }
+
+                user = await _userRepository.DeleteUser(user);
+                return new Result { ResultObject = user };
+            }
+            catch (Exception ex)
+            {
+                return new Result("An error occurred while save user detail", "Users.UnknownError", HttpStatusCode.InternalServerError, ex);
+            }
+        }
     }
 }

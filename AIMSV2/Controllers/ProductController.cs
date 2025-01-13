@@ -55,7 +55,7 @@ namespace AIMSV3.Controllers
         return Ok(result); // Will return true or false based on stored procedure result
     }
 
-    [HttpPost("SaveProduct")]
+        [HttpPost("SaveProduct")]
         public async Task<IActionResult> SaveProduct(SaveProductDto productModel)
         {
             Result result = await _productService.SaveProduct(productModel);
@@ -68,11 +68,32 @@ namespace AIMSV3.Controllers
             Result result = await _productService.GetUserListByProductID(productIdRequest.Id);
             return Ok(result.ApiResult);
         }
+
         [HttpPost("DeleteProduct")]
         public async Task<IActionResult> DeleteProduct([FromBody] DeleteProductDto productModel)
         {
             Result result = await _productService.DeleteProduct(productModel);
             return Ok(result.ApiResult);
         }
+
+        [HttpPost("GetProductIds")]
+        public async Task<IActionResult> GetProductIds([FromBody] ProductDto request)
+        {
+            if (request == null || request.CategoryID <= 0 || request.BrandID <= 0)
+            {
+                return BadRequest("Invalid input parameters.");
+            }
+
+            var productIds = await _productService.GetProductIdsByCategoryAndBrandAsync(request.CategoryID, request.BrandID);
+
+            if (productIds == null || productIds.Count == 0)
+            {
+                return NotFound("No products found for the provided category and brand.");
+            }
+
+            return Ok(productIds);
+        }
+
+
     }
 }

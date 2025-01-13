@@ -77,5 +77,17 @@ namespace AIMSV2.Repositories
                     pagination.SortOrder ?? string.Empty)
                 .ToListAsync();
         }
+
+        public async Task<Users> DeleteUser(Users user)
+        {
+            DateTime utcNow = DateTime.UtcNow;
+            DateOnly currentUtcDate = DateOnly.FromDateTime(utcNow);
+                user.Deleted = currentUtcDate;
+            user.IsDeleted = true;
+                _context.Users.Update(user);
+
+            await _context.SaveChangesAsync();
+            return user;
+        }
     } 
 }

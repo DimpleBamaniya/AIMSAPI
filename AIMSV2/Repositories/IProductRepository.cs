@@ -15,6 +15,7 @@ namespace AIMSV2.Repositories
         Task<bool> IsProductExistAsync(int categoryId,int brandId);
         Task ExecuteUpdateProductCodes();
         Task<List<UserByProductID>> GetUserListByProductID(int productId);
+        Task<List<int>> GetProductIdsByCategoryAndBrandAsync(int categoryId, int brandId);
         Task<Products> DeleteProduct(Products product);
 
 

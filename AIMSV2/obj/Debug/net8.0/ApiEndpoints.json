@@ -31,6 +31,43 @@
   },
   {
     "ContainingType": "AIMSV3.Controllers.ProductController",
+    "Method": "CheckProductExists",
+    "RelativePath": "api/Product/CheckProductExists",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoryId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "brandId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AIMSV3.Controllers.ProductController",
+    "Method": "DeleteProduct",
+    "RelativePath": "api/Product/DeleteProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productModel",
+        "Type": "AIMSV2.Models.DeleteProductDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AIMSV3.Controllers.ProductController",
     "Method": "GetAllProductDetails",
     "RelativePath": "api/Product/GetAllProductDetails",
     "HttpMethod": "POST",
@@ -56,6 +93,54 @@
       {
         "Name": "productIdRequest",
         "Type": "AIMSV2.Models.ProductIdRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AIMSV3.Controllers.ProductController",
+    "Method": "GetProductIds",
+    "RelativePath": "api/Product/GetProductIds",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "AIMSV2.Models.ProductDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AIMSV3.Controllers.ProductController",
+    "Method": "GetUserListByProductID",
+    "RelativePath": "api/Product/GetUserListByProductID",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productIdRequest",
+        "Type": "AIMSV2.Models.ProductIdRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AIMSV3.Controllers.ProductController",
+    "Method": "SaveProduct",
+    "RelativePath": "api/Product/SaveProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productModel",
+        "Type": "AIMSV2.Models.SaveProductDto",
         "IsRequired": true
       }
     ],
@@ -117,6 +202,22 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AIMSV3.Controllers.UserController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/User/DeleteUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userModel",
+        "Type": "AIMSV2.Models.DeleteUserDto",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -202,7 +303,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "accountModel",
+        "Name": "userModel",
         "Type": "AIMSV2.Models.UserDto",
         "IsRequired": true
       }
@@ -227,6 +328,22 @@
   },
   {
     "ContainingType": "AIMSV3.Controllers.UserProductController",
+    "Method": "DeleteUserProduct",
+    "RelativePath": "api/UserProduct/DeleteUserProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userProductIdRequest",
+        "Type": "AIMSV2.Models.UserProductIdRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AIMSV3.Controllers.UserProductController",
     "Method": "GetAllUserProduct",
     "RelativePath": "api/UserProduct/GetAllUserProduct",
     "HttpMethod": "GET",
@@ -243,6 +360,38 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AIMSV3.Controllers.UserProductController",
+    "Method": "GetProductListbyUserID",
+    "RelativePath": "api/UserProduct/GetProductListbyUserID",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userIdRequest",
+        "Type": "AIMSV2.Models.UserIdRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AIMSV3.Controllers.UserProductController",
+    "Method": "SaveUserProducts",
+    "RelativePath": "api/UserProduct/SaveUserProducts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userProductModel",
+        "Type": "AIMSV2.Models.SaveUserProduct",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

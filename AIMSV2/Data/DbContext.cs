@@ -18,6 +18,7 @@ namespace AIMSV2.Data
         public DbSet<Brand> Brands { get; set; }
 
         public virtual DbSet<UserDetailsList> vw_Users => Set<UserDetailsList>();
+        public virtual DbSet<UserProducts> vw_UserProducts => Set<UserProducts>();
         public virtual DbSet<ProductDetails> vw_Products => Set<ProductDetails>();
 
 
@@ -42,8 +43,7 @@ namespace AIMSV2.Data
         public virtual DbSet<UserDetailsList> usp_GetUsersWithPagination => Set<UserDetailsList>();
         public virtual DbSet<ProductDetails> usp_GetProductsWithPagination => Set<ProductDetails>();
         public virtual DbSet<UserByProductID> usp_getUserListbyProductID => Set<UserByProductID>();
-        public virtual DbSet<ProductByUserID> usp_getProductListbyUserID => Set<ProductByUserID>();
-
+        public virtual DbSet<ProductByUserID> usp_GetProductListbyUserID => Set<ProductByUserID>();
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

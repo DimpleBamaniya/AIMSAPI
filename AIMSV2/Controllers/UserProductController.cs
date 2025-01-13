@@ -42,7 +42,25 @@ namespace AIMSV3.Controllers
         [HttpPost("GetProductListbyUserID")]
         public async Task<IActionResult> GetProductListbyUserID([FromBody] UserIdRequest userIdRequest)
         {
-            Result result = await _userProductService.GetProductListbyUserID(userIdRequest.Id);
+            Result result = await _userProductService.GetProductListbyUserID(userIdRequest.ID);
+            return Ok(result.ApiResult);
+        }
+
+        [HttpPost("DeleteUserProduct")]
+        public async Task<IActionResult> DeleteUserProduct([FromBody] UserProductIdRequest userProductIdRequest)
+        {
+            var result = await _userProductService.DeleteUserProductAsync(userProductIdRequest.ID);
+
+            if (result)
+                return Ok(new { Message = "UserProduct deleted successfully." });
+
+            return NotFound(new { Message = "UserProduct not found." });
+        }
+
+        [HttpPost("SaveUserProducts")]
+        public async Task<IActionResult> SaveUserProducts([FromBody] SaveUserProduct userProductModel)
+        {
+            Result result = await _userProductService.SaveUserProducts(userProductModel);
             return Ok(result.ApiResult);
         }
     }

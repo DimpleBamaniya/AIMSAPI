@@ -15,5 +15,6 @@ namespace AIMSV2.Services
         Task<bool> ExecuteUpdateProductCodes();
         Task<Result> GetUserListByProductID(int id);
         Task<Result> DeleteProduct(DeleteProductDto productModel);
+        Task<List<int>> GetProductIdsByCategoryAndBrandAsync(int categoryId, int brandId);
     }
 }

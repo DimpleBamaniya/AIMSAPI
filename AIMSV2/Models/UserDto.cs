@@ -7,7 +7,7 @@
         public string? LastName { get; set; }
         public string EmailID { get; set; }
         public string Password { get; set; }
-        public int? CityID { get; set; }
+        public int? CityID { get; set; } = null;
         public int? DepartmentID { get; set; }
         public DateOnly Created { get; set; }
         public int CreatedBy { get; set; }
@@ -31,5 +31,10 @@
         public string FirstName { get; set; }
     }
 
+    public class DeleteUserDto
+    {
+        public int ID { get; set; }
+        public int DeletedBy { get; set; }
+    }
 
 }

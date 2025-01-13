@@ -48,7 +48,7 @@ namespace AIMSV2.Repositories
                     pagination.SortOrder ?? string.Empty)
                 .ToListAsync();
         }
-public async Task<Products> SaveProduct(Products product)
+        public async Task<Products> SaveProduct(Products product)
         {
             DateTime utcNow = DateTime.UtcNow;
             DateOnly currentUtcDate = DateOnly.FromDateTime(utcNow);
@@ -67,23 +67,23 @@ public async Task<Products> SaveProduct(Products product)
             return product;
         }
 
-        
-public async Task<bool> IsProductExistAsync(int categoryId, int brandId)
-    {
-       // Define parameters for the stored procedure
-        var categoryIdParam = new SqlParameter("@CategoryID", categoryId);
-        var brandIdParam = new SqlParameter("@BrandID", brandId);
 
-        // Execute the stored procedure using FromSqlRaw and map the result to the SqlResult class
-        var result = await _context.usp_IsExistProductResult
-            .FromSqlRaw("EXEC [dbo].[usp_IsExistProduct] @BrandID = {0}, @CategoryID = {1}", brandId, categoryId)
-            .ToListAsync();
+        public async Task<bool> IsProductExistAsync(int categoryId, int brandId)
+        {
+            // Define parameters for the stored procedure
+            var categoryIdParam = new SqlParameter("@CategoryID", categoryId);
+            var brandIdParam = new SqlParameter("@BrandID", brandId);
 
-        // Return the first result's boolean value if present
-        return result.Count > 0 && result[0].Result;
-    }
+            // Execute the stored procedure using FromSqlRaw and map the result to the SqlResult class
+            var result = await _context.usp_IsExistProductResult
+                .FromSqlRaw("EXEC [dbo].[usp_IsExistProduct] @BrandID = {0}, @CategoryID = {1}", brandId, categoryId)
+                .ToListAsync();
 
-    public async Task ExecuteUpdateProductCodes()
+            // Return the first result's boolean value if present
+            return result.Count > 0 && result[0].Result;
+        }
+
+        public async Task ExecuteUpdateProductCodes()
         {
             await _context.Database.ExecuteSqlRawAsync("EXEC [dbo].[usp_UpdateProductCodes]");
         }
@@ -91,7 +91,7 @@ public async Task<bool> IsProductExistAsync(int categoryId, int brandId)
         public async Task<List<UserByProductID>> GetUserListByProductID(int id)
         {
             return await _context.usp_getUserListbyProductID
-                .FromSqlRaw("Exec usp_getUserListbyProductID @ProductID={0}",id)
+                .FromSqlRaw("Exec usp_getUserListbyProductID @ProductID={0}", id)
                 .ToListAsync();
         }
 
@@ -102,12 +102,21 @@ public async Task<bool> IsProductExistAsync(int categoryId, int brandId)
             if (product.ID != 0 || product.ID != null)
             {
                 product.Deleted = currentUtcDate;
-                product.IsDeleted  = true;
+                product.IsDeleted = true;
                 _context.Products.Update(product);
             }
 
             await _context.SaveChangesAsync();
             return product;
+        }
+
+        public async Task<List<int>> GetProductIdsByCategoryAndBrandAsync(int categoryId, int brandId)
+        {
+            // Query the view and filter by CategoryID and BrandID
+            return await _context.Products
+                                 .Where(p => p.CategoryID == categoryId && p.BrandID == brandId && p.IsDeleted == false)
+                                 .Select(p => p.ID)
+                                 .ToListAsync();
         }
 
 

@@ -133,34 +133,37 @@ namespace AIMSV2.Services
 
         public async Task<Result> SaveProduct(SaveProductDto productModel)
         {
-           try
+            try
             {
 
                 Products? product = null;
-#region API Validations
+                #region API Validations
                 Result validationResult = await ValiadationFields(productModel);
                 if (validationResult.HasError && (HttpStatusCode)validationResult.StatusCode == HttpStatusCode.BadRequest)
                 {
                     return validationResult;
                 }
                 #endregion
-                if(productModel.ID == 0){
-                bool isProductExist = await CheckIfProductExistsAsync(productModel.CategoryID,productModel.BrandID);
-                if(isProductExist){
-                    return new Result("product is already exists", "products.productIsExists", HttpStatusCode.BadRequest);
-                }
+                if (productModel.ID == 0)
+                {
+                    bool isProductExist = await CheckIfProductExistsAsync(productModel.CategoryID, productModel.BrandID);
+                    if (isProductExist)
+                    {
+                        return new Result("product is already exists", "products.productIsExists", HttpStatusCode.BadRequest);
+                    }
                 }
 
                 if (productModel.ID > 0)
                 {
                     product = await _productRepository.GetProductDetailByID(productModel.ID);
-                    
+
                     if (product == null)
                     {
                         return new Result("product not exists", "products.productNotExists", HttpStatusCode.BadRequest);
                     }
 
-                    if(productModel.Quantity < product.UseQuantity){
+                    if (productModel.Quantity < product.UseQuantity)
+                    {
                         return new Result("Quantity should not less than used Quantity", "products.productQuantityIsLessUseQuantity", HttpStatusCode.BadRequest);
                     }
                     product.ModifiedBy = productModel.ModifiedBy;
@@ -174,7 +177,7 @@ namespace AIMSV2.Services
                     };
                 }
                 product.Quantity = productModel.Quantity;
-                product.CategoryID  = productModel.CategoryID;
+                product.CategoryID = productModel.CategoryID;
                 product.BrandID = productModel.BrandID;
                 product = await _productRepository.SaveProduct(product);
                 await ExecuteUpdateAvailableQuantityAndUseQuantity();
@@ -187,11 +190,11 @@ namespace AIMSV2.Services
                 return new Result("An error occurred while save user detail", "Users.UnknownError", HttpStatusCode.InternalServerError, ex);
             }
         }
-public async Task<bool> CheckIfProductExistsAsync(int categoryId, int brandId)
-    {
-        // Call the repository method and return the result
-        return await _productRepository.IsProductExistAsync(categoryId, brandId);
-    }
+        public async Task<bool> CheckIfProductExistsAsync(int categoryId, int brandId)
+        {
+            // Call the repository method and return the result
+            return await _productRepository.IsProductExistAsync(categoryId, brandId);
+        }
 
         public async Task<bool> ExecuteUpdateProductCodes()
         {
@@ -206,7 +209,7 @@ public async Task<bool> CheckIfProductExistsAsync(int categoryId, int brandId)
                 return false;
             }
         }
-public async Task<Result> GetUserListByProductID(int id)
+        public async Task<Result> GetUserListByProductID(int id)
         {
             try
             {
@@ -221,32 +224,33 @@ public async Task<Result> GetUserListByProductID(int id)
 
         public async Task<Result> DeleteProduct(DeleteProductDto productModel)
         {
-           try
+            try
             {
 
-            Products? product = null;
-            if (productModel == null)
-            {
-                return new Result($"product Model is null.", "Products.productModelIsNull", HttpStatusCode.BadRequest);
-            }
+                Products? product = null;
+                if (productModel == null)
+                {
+                    return new Result($"product Model is null.", "Products.productModelIsNull", HttpStatusCode.BadRequest);
+                }
 
-            if (productModel.Id == null)
-            {
-                return new Result($"productId is mandatory.", "Products.productIdIsMandatory", HttpStatusCode.BadRequest);
-            }
+                if (productModel.Id == null)
+                {
+                    return new Result($"productId is mandatory.", "Products.productIdIsMandatory", HttpStatusCode.BadRequest);
+                }
 
-                    product = await _productRepository.GetProductDetailByID(productModel.Id);
-                    
-                    if (product == null)
-                    {
-                        return new Result("product not exists", "products.productNotExists", HttpStatusCode.BadRequest);
-                    }
+                product = await _productRepository.GetProductDetailByID(productModel.Id);
 
-                    if(product.UseQuantity >=1){
-                        return new Result("Product is already assign to user.", "products.productIsAssignedToUser", HttpStatusCode.BadRequest);
-                    }
-                    product.DeletedBy = productModel.DeletedBy;
-    
+                if (product == null)
+                {
+                    return new Result("product not exists", "products.productNotExists", HttpStatusCode.BadRequest);
+                }
+
+                if (product.UseQuantity >= 1)
+                {
+                    return new Result("Product is already assign to user.", "products.productIsAssignedToUser", HttpStatusCode.BadRequest);
+                }
+                product.DeletedBy = productModel.DeletedBy;
+
                 product = await _productRepository.DeleteProduct(product);
                 await ExecuteUpdateAvailableQuantityAndUseQuantity();
                 await ExecuteUpdateProductCodes();
@@ -257,6 +261,10 @@ public async Task<Result> GetUserListByProductID(int id)
             {
                 return new Result("An error occurred while save user detail", "Users.UnknownError", HttpStatusCode.InternalServerError, ex);
             }
+        }
+        public async Task<List<int>> GetProductIdsByCategoryAndBrandAsync(int categoryId, int brandId)
+        {
+            return await _productRepository.GetProductIdsByCategoryAndBrandAsync(categoryId, brandId);
         }
     }
 

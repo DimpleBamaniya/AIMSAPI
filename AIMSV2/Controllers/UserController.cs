@@ -46,14 +46,14 @@ namespace AIMSV3.Controllers
         [HttpPost("GetUserDetailByID")]
         public async Task<IActionResult> GetUserDetailByID([FromBody] UserIdRequest userIdRequest)
         {
-            Result result = await _userService.GetUserDetailByID(userIdRequest.Id);
+            Result result = await _userService.GetUserDetailByID(userIdRequest.ID);
             return Ok(result.ApiResult);
         }
 
         [HttpPost("SaveUser")]
-        public async Task<IActionResult> SaveUser(UserDto accountModel)
+        public async Task<IActionResult> SaveUser(UserDto userModel)
         {
-            Result result = await _userService.SaveUser(accountModel);
+            Result result = await _userService.SaveUser(userModel);
             return Ok(result.ApiResult);
         }
 
@@ -61,6 +61,13 @@ namespace AIMSV3.Controllers
         public async Task<IActionResult> GetAllUserDetails([FromBody] Pagination pagination)
         {
             Result result = await _userService.GetAllUserDetails(pagination);
+            return Ok(result.ApiResult);
+        }
+
+        [HttpPost("DeleteUser")]
+        public async Task<IActionResult> DeleteUser(DeleteUserDto userModel)
+        {
+            Result result = await _userService.DeleteUser(userModel);
             return Ok(result.ApiResult);
         }
     }

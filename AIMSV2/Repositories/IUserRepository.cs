@@ -13,5 +13,7 @@ namespace AIMSV2.Repositories
         Task ExecuteUpdateUserPermissions();
         Task ExecuteUpdateUserCodes();
         Task<List<UserDetailsList>> GetAllUserDetails(Pagination pagination);
+        Task<Users> DeleteUser(Users user);
+
     }
 }

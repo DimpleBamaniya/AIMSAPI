@@ -9,7 +9,7 @@
         public string Password { get; set; }
         public int? CityID { get; set; } = null;
         public int? DepartmentID { get; set; }
-        public DateOnly Created { get; set; }
+        public DateOnly? Created { get; set; }
         public int CreatedBy { get; set; }
         public DateOnly? Modified { get; set; }
         public int? ModifiedBy { get; set; }

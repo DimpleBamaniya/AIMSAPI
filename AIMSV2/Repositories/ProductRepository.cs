@@ -75,7 +75,7 @@ namespace AIMSV2.Repositories
             var brandIdParam = new SqlParameter("@BrandID", brandId);
 
             // Execute the stored procedure using FromSqlRaw and map the result to the SqlResult class
-            var result = await _context.usp_IsExistProductResult
+            var result = await _context.usp_IsExistProduct
                 .FromSqlRaw("EXEC [dbo].[usp_IsExistProduct] @BrandID = {0}, @CategoryID = {1}", brandId, categoryId)
                 .ToListAsync();
 

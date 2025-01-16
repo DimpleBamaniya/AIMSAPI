@@ -162,7 +162,7 @@ namespace AIMSV2.Services
                         return new Result("product not exists", "products.productNotExists", HttpStatusCode.BadRequest);
                     }
 
-                    if (productModel.Quantity < product.UseQuantity)
+                    if (productModel.Quantity <= product.UseQuantity)
                     {
                         return new Result("Quantity should not less than used Quantity", "products.productQuantityIsLessUseQuantity", HttpStatusCode.BadRequest);
                     }

@@ -838,7 +838,8 @@
           },
           "created": {
             "type": "string",
-            "format": "date"
+            "format": "date",
+            "nullable": true
           },
           "createdBy": {
             "type": "integer",

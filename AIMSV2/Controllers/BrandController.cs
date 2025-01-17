@@ -1,5 +1,7 @@
 ﻿using AIMSV2.Services;
+using AIMSV2.Utility;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace AIMSV2.Controllers
 {
@@ -17,12 +19,21 @@ namespace AIMSV2.Controllers
         [HttpGet("GetActiveBrands")]
         public IActionResult GetActiveBrands()
         {
-            var brands = _brandService.GetActiveBrands();
-            if (!brands.Any())
+
+            try
             {
-                return NotFound("No active brands found.");
+                var brands = _brandService.GetActiveBrands();
+                if (!brands.Any())
+                {
+                    return NotFound("No active brands found.");
+                }
+                return Ok(brands);
             }
-            return Ok(brands);
+            catch (Exception ex)
+            {
+                throw;
+            }
+
         }
     }
 }

@@ -6,6 +6,8 @@ using AIMSV2.Services;
 using AutoMapper;
 using AutoMapper.Internal;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
+using AIMSV2.Utility;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -43,6 +45,17 @@ builder.Services.AddScoped<IProductCategoryService, ProductCategoryService>();
 builder.Services.AddScoped<IBrandRepository, BrandRepository>();
 builder.Services.AddScoped<IBrandService, BrandService>();
 
+// Configure logging
+builder.Logging.ClearProviders(); // Optional: Clear default providers if you want to add custom ones
+builder.Logging.AddConsole();    // Add console logging
+builder.Logging.AddDebug();
+// Configure Serilog (before builder.Build())
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("logs/log2025.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
+builder.Host.UseSerilog(); // Replace default logging with Serilog
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

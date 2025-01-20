@@ -1,5 +1,7 @@
-﻿using AIMSV2.Models;
+﻿using System.Net;
+using AIMSV2.Models;
 using AIMSV2.Repositories;
+using AIMSV2.Utility;
 using AutoMapper;
 
 namespace AIMSV2.Services
@@ -28,6 +30,20 @@ namespace AIMSV2.Services
             _logger.LogInformation("Completed GetActiveBrands()");
 
             return result;
+        }
+
+
+        public async Task<Result> GetBrandsByCategoryID(int categoryID)
+        {
+            try
+            {
+                List<BrandDto> result = (await _brandRepository.GetBrandsByCategoryID(categoryID)).ToList();
+                return new Result { ResultObject = result };
+            }
+            catch (Exception ex)
+            {
+                return new Result("An error occurred while fetching all accounts, ERROR: " + ex.Message, "Accounts.UnknownError", HttpStatusCode.InternalServerError, ex);
+            }
         }
     }
 }

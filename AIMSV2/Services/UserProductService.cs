@@ -49,7 +49,9 @@ namespace AIMSV2.Services
 
         public async Task<bool> DeleteUserProductAsync(int id)
         {
-            return await _userProductRepository.DeleteUserProductAsync(id);
+            var result = await _userProductRepository.DeleteUserProductAsync(id);
+            await _productService.ExecuteUpdateAvailableQuantityAndUseQuantity();
+            return result;
         }
 
         public async Task<Result> SaveUserProducts(SaveUserProduct userProductModel)

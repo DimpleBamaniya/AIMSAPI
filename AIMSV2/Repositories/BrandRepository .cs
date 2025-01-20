@@ -27,6 +27,14 @@ namespace AIMSV2.Repositories
                 })
                 .ToList();
         }
+ 
+        public async Task<List<BrandDto>> GetBrandsByCategoryID(int categoryID)
+        {
+            return await _context.usp_GetBrandsByCategoryAndAvailability
+                .FromSqlRaw("Exec usp_GetBrandsByCategoryAndAvailability @CategoryID={0}",
+                    categoryID)
+                .ToListAsync();
+        }
 
     }
 }

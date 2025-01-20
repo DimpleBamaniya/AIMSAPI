@@ -10,6 +10,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AIMSV2.Controllers.BrandController",
+    "Method": "GetBrandsByCategoryID",
+    "RelativePath": "api/Brand/GetBrandsByCategoryID",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoryIdRequest",
+        "Type": "AIMSV2.Models.CategoryIdRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AIMSV3.Controllers.CityController",
     "Method": "GetAllCities",
     "RelativePath": "api/City/GetAllCities",

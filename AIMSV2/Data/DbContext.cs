@@ -39,6 +39,7 @@ namespace AIMSV2.Data
         public virtual DbSet<SqlResult> usp_IsExistProduct => Set<SqlResult>();
         public virtual DbSet<SqlResult> usp_UpdateAvailableQuantityAndUseQuantity => Set<SqlResult>();
         public virtual DbSet<SqlResult> usp_UpdateProductCodes => Set<SqlResult>();
+        public virtual DbSet<BrandDto> usp_GetBrandsByCategoryAndAvailability => Set<BrandDto>();
         //pagination
         public virtual DbSet<UserDetailsList> usp_GetUsersWithPagination => Set<UserDetailsList>();
         public virtual DbSet<ProductDetails> usp_GetProductsWithPagination => Set<ProductDetails>();

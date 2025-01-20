@@ -182,6 +182,7 @@ namespace AIMSV2.Services
                 product = await _productRepository.SaveProduct(product);
                 await ExecuteUpdateAvailableQuantityAndUseQuantity();
                 await ExecuteUpdateProductCodes();
+                product = await _productRepository.GetProductDetailByID(product.ID);
                 // letter change
                 return new Result { ResultObject = product };
             }

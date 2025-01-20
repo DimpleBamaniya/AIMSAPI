@@ -1,4 +1,5 @@
-﻿using AIMSV2.Services;
+﻿using AIMSV2.Models;
+using AIMSV2.Services;
 using AIMSV2.Utility;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -34,6 +35,13 @@ namespace AIMSV2.Controllers
                 throw;
             }
 
+        }
+
+        [HttpPost("GetBrandsByCategoryID")]
+        public async Task<IActionResult> GetBrandsByCategoryID([FromBody] CategoryIdRequest categoryIdRequest)
+        {
+            Result result = await _brandService.GetBrandsByCategoryID(categoryIdRequest.ID);
+            return Ok(result.ApiResult);
         }
     }
 }

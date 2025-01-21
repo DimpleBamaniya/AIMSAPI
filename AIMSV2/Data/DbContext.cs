@@ -45,13 +45,15 @@ namespace AIMSV2.Data
         public virtual DbSet<ProductDetails> usp_GetProductsWithPagination => Set<ProductDetails>();
         public virtual DbSet<UserByProductID> usp_getUserListbyProductID => Set<UserByProductID>();
         public virtual DbSet<ProductByUserID> usp_GetProductListbyUserID => Set<ProductByUserID>();
+        public virtual DbSet<CheckUserProductCategoryMatchDto> usp_CheckUserProductCategoryMatch => Set<CheckUserProductCategoryMatchDto>();
 
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         // You can configure more entities here if necessary.
         modelBuilder.Entity<SqlResult>().HasNoKey();
-    }
+        modelBuilder.Entity<CheckUserProductCategoryMatchDto>().HasNoKey();
+        }
     }
 }
 

@@ -70,24 +70,31 @@ namespace AIMSV2.Services
                 #endregion
 
                 List<int> productID = await _productService.GetProductIdsByCategoryAndBrandAsync(userProductModel.CategoryID, userProductModel.BrandID);
-                if(productID.Count == 0)
+                if (productID.Count == 0)
                 {
-                productModel = new SaveProductDto
-                {
-                    ID = 0,
-                    CategoryID = userProductModel.CategoryID,
-                    BrandID = userProductModel.BrandID,
-                    Quantity = null,
-                    CreatedBy = userProductModel.CreatedBy
-                };
-                var result = await _productService.SaveProduct(productModel);
-                productID = await _productService.GetProductIdsByCategoryAndBrandAsync(userProductModel.CategoryID, userProductModel.BrandID);
+                    productModel = new SaveProductDto
+                    {
+                        ID = 0,
+                        CategoryID = userProductModel.CategoryID,
+                        BrandID = userProductModel.BrandID,
+                        Quantity = null,
+                        CreatedBy = userProductModel.CreatedBy
+                    };
+                    var result = await _productService.SaveProduct(productModel);
+                    productID = await _productService.GetProductIdsByCategoryAndBrandAsync(userProductModel.CategoryID, userProductModel.BrandID);
                 }
                 List<ProductByUserID> productByUserID = await _userProductRepository.GetProductListbyUserID(userProductModel.ID);
                 bool productExists = productByUserID.Any(product => product.ID == productID[0]);
+
+                var userProductMatch = await _userProductRepository.CheckUserProductCategoryMatchAsync(userProductModel.ID, userProductModel.CategoryID);
+
                 if (productExists)
                 {
                     return new Result($"Product is Already Assigned", "UserProducts.AssignedProduct", HttpStatusCode.BadRequest);
+                }
+                else if (userProductMatch.IsMatch)
+                {
+                    return new Result($"Product category is Already Assigned", "UserProducts.AssignedProductCategory", HttpStatusCode.BadRequest);
                 }
                 else
                 {
@@ -98,9 +105,9 @@ namespace AIMSV2.Services
                     };
                     userProduct = await _userProductRepository.SaveUserProducts(userProduct);
                     await _productService.ExecuteUpdateAvailableQuantityAndUseQuantity();
-                return new Result { ResultObject = userProduct };
+                    return new Result { ResultObject = userProduct };
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -140,6 +147,35 @@ namespace AIMSV2.Services
             catch (Exception ex)
             {
                 return new Result("An error occurred while fetching all user list by product id, ERROR: " + ex.Message, "Products.UnknownError", HttpStatusCode.InternalServerError, ex);
+            }
+        }
+
+        public async Task<Result> CheckUserProductCategoryMatchAsync(int userId, int categoryId)
+        {
+            try
+            {
+                // Get the result from the repository
+                var result = await _userProductRepository.CheckUserProductCategoryMatchAsync(userId, categoryId);
+
+                // Check if result is not null and return appropriate result
+                if (result != null)
+                {
+                    var isMatch = result.IsMatch == true; // True if match, false otherwise
+                    return new Result
+                    {
+                        Status = StatusType.Success,
+                        HttpStatusCode = HttpStatusCode.OK,
+                        Message = isMatch ? "Match found" : "No match found",
+                        ResultObject = isMatch // Pass the result (true/false) to ResultObject
+                    };
+                }
+
+                // Return failure result if no match found
+                return new Result("No result found for the provided UserID and CategoryID.", "Products.NoMatchFound", HttpStatusCode.NotFound);
+            }
+            catch (Exception ex)
+            {
+                return new Result("An error occurred while checking the user product category match. ERROR: " + ex.Message, "Products.UnknownError", HttpStatusCode.InternalServerError, ex);
             }
         }
 

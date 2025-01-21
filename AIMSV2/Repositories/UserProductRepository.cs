@@ -62,5 +62,16 @@ namespace AIMSAPI.Repositories
                 .FromSqlRaw("Exec usp_GetProductListbyUserID @UserID={0}", id)
                 .ToListAsync();
         }
+
+        public async Task<CheckUserProductCategoryMatchDto> CheckUserProductCategoryMatchAsync(int userId, int categoryId)
+        {
+            // Execute the stored procedure and return the result
+            var result = await _context.usp_CheckUserProductCategoryMatch
+                .FromSqlRaw("EXEC usp_CheckUserProductCategoryMatch @UserID = {0}, @CategoryID = {1}", userId, categoryId)
+                .ToListAsync(); // Ensure that the result is materialized
+
+            // If the result is not empty, return the first item, otherwise return null
+            return result.FirstOrDefault();
+        }
     }
 }

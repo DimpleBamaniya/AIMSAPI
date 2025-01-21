@@ -12,5 +12,6 @@ namespace AIMSV2.Services
         Task<bool> DeleteUserProductAsync(int id);
         Task<Result> SaveUserProducts(SaveUserProduct userProductModel);
         Task<Result> GetProductListByUserId(int id);
+        Task<Result> CheckUserProductCategoryMatchAsync(int userId, int categoryId);
     }
 }

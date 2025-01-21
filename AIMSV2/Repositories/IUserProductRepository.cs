@@ -11,5 +11,6 @@ namespace AIMSV2.Repositories
         Task<bool> DeleteUserProductAsync(int id);
         Task<UserProducts> SaveUserProducts(UserProducts userProducts);
         Task<List<ProductByUserID>> GetProductListbyUserID(int id);
+        Task<CheckUserProductCategoryMatchDto> CheckUserProductCategoryMatchAsync(int userId, int categoryId);
     }
 }

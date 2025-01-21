@@ -344,6 +344,27 @@
   },
   {
     "ContainingType": "AIMSV3.Controllers.UserProductController",
+    "Method": "CheckUserProductCategoryMatch",
+    "RelativePath": "api/UserProduct/check-user-product-category",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "categoryId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AIMSV3.Controllers.UserProductController",
     "Method": "DeleteUserProduct",
     "RelativePath": "api/UserProduct/DeleteUserProduct",
     "HttpMethod": "POST",

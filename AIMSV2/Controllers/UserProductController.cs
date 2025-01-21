@@ -63,6 +63,31 @@ namespace AIMSV3.Controllers
             Result result = await _userProductService.SaveUserProducts(userProductModel);
             return Ok(result.ApiResult);
         }
+
+        [HttpGet("check-user-product-category")]
+        public async Task<IActionResult> CheckUserProductCategoryMatch([FromQuery] int userId, [FromQuery] int categoryId)
+        {
+            try
+            {
+                // Call the service to check if the user and category match
+                var result = await _userProductService.CheckUserProductCategoryMatchAsync(userId, categoryId);
+
+                // Check if the service call was successful
+                if (result.Status == StatusType.Success)
+                {
+                    // Return Ok response with success status and match result
+                    return Ok(result.ApiResult); // Use ApiResult to return the response
+                }
+
+                // If there is no match or other failure, return the error details from the result
+                return StatusCode(result.StatusCode, result.ApiResult);
+            }
+            catch (Exception ex)
+            {
+                // Return a 500 error if an exception occurred
+                return StatusCode(500, new Result("An error occurred while processing your request.", "InternalServerError", HttpStatusCode.InternalServerError, ex).ApiResult);
+            }
+        }
     }
 }
 

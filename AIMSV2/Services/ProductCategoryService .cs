@@ -17,14 +17,23 @@ namespace AIMSV2.Services
 
         public IEnumerable<ProductCategoryDto> GetActiveProductCategories()
         {
-            _logger.LogInformation("Started ()");
+            try
+            {
+                _logger.LogInformation("Started GetActiveProductCategories()");
 
-            _logger.LogDebug("Started GetActiveProductCategories()");
-            var result = _productCategoryRepository.GetActiveProductCategories();
-            _logger.LogDebug("Completed GetActiveProductCategories()" + result);
+                _logger.LogDebug("Fetching active product categories from the repository.");
+                var result = _productCategoryRepository.GetActiveProductCategories();
+                _logger.LogDebug("Successfully fetched active product categories: {@Result}", result);
 
-            _logger.LogInformation("Completed ()");
-            return result;
+                _logger.LogInformation("Completed GetActiveProductCategories()");
+                return result;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while fetching active product categories.");
+                // Optionally, rethrow the exception or handle it as needed.
+                throw;
+            }
         }
 
     }

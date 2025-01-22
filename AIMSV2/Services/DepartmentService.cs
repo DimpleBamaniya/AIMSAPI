@@ -18,15 +18,23 @@ namespace AIMSV2.Services
 
         public async Task<IEnumerable<Departments>> GetAllDepartments()
         {
+            try
+            {
+                _logger.LogInformation("Started GetAllDepartments()");
 
-            _logger.LogInformation("Started GetAllDepartments()");
+                _logger.LogDebug("Fetching all departments from the repository.");
+                var result = await _departmentRepository.GetAllDepartments();
+                _logger.LogDebug("Successfully fetched all departments: {@Result}", result);
 
-            _logger.LogDebug("Started GetAllDepartments()");
-            var result = await _departmentRepository.GetAllDepartments();
-            _logger.LogDebug("Completed GetAllDepartments()" + result);
-
-            _logger.LogInformation("Completed GetAllDepartments()");
-            return result;
+                _logger.LogInformation("Completed GetAllDepartments()");
+                return result;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while fetching all departments.");
+                // Optionally, rethrow the exception or handle it as needed.
+                throw;
+            }
         }
     }
 }

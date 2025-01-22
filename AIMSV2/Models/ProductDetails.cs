@@ -15,6 +15,7 @@
         public int CreatedBy { get; set; }
         public DateOnly? Modified { get; set; }
         public int? ModifiedBy { get; set; }
+        public int? TotalRecords { get; set; }
     }
 
 }

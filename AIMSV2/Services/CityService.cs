@@ -17,14 +17,23 @@ namespace AIMSV2.Services
 
         public async Task<IEnumerable<Cities>> GetAllCities()
         {
-            _logger.LogInformation("Started GetAllCities()");
+            try
+            {
+                _logger.LogInformation("Started GetAllCities()");
 
-            _logger.LogDebug("Started GetAllCities()");
-            var result  = await _cityRepository.GetAllCities();
-            _logger.LogDebug("Completed GetAllCities()" + result);
+                _logger.LogDebug("Fetching all cities from the repository.");
+                var result = await _cityRepository.GetAllCities();
+                _logger.LogDebug("Successfully fetched all cities: {@Result}", result);
 
-            _logger.LogInformation("Completed GetAllCities()");
-            return result;
+                _logger.LogInformation("Completed GetAllCities()");
+                return result;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while fetching all cities.");
+                // Optionally, rethrow the exception or handle it as needed.
+                throw;
+            }
         }
     }
 }

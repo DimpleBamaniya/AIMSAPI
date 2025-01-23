@@ -292,8 +292,9 @@ namespace AIMSV2.Services
             {
                 _logger.LogInformation("Started CheckIfProductExistsAsync with CategoryID: {CategoryId}, BrandID: {BrandId}", categoryId, brandId);
 
-                _logger.LogDebug("Calling repository method to check if product exists for CategoryID: {CategoryId}, BrandID: {BrandId}", categoryId, brandId);
+                _logger.LogDebug("Started IsProductExistAsync for CategoryID: {CategoryId}, BrandID: {BrandId}", categoryId, brandId);
                 bool isProductExist = await _productRepository.IsProductExistAsync(categoryId, brandId);
+                _logger.LogDebug("Completed IsProductExistAsync ,isProductExist: {isProductExist}", isProductExist);
 
                 _logger.LogDebug("Repository method returned: {IsProductExist} for CategoryID: {CategoryId}, BrandID: {BrandId}", isProductExist, categoryId, brandId);
                 _logger.LogInformation("Completed CheckIfProductExistsAsync with CategoryID: {CategoryId}, BrandID: {BrandId}", categoryId, brandId);
@@ -313,10 +314,10 @@ namespace AIMSV2.Services
             {
                 _logger.LogInformation("Started ExecuteUpdateProductCodes.");
 
-                _logger.LogDebug("Calling repository method to update product codes.");
+                _logger.LogDebug("Started repository method to update product codes.");
                 await _productRepository.ExecuteUpdateProductCodes();
-
                 _logger.LogDebug("Product codes update completed successfully.");
+
                 _logger.LogInformation("Completed ExecuteUpdateProductCodes.");
 
                 return true;

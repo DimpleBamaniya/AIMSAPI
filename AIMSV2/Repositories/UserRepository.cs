@@ -78,6 +78,7 @@ namespace AIMSV2.Repositories
                 .ToListAsync();
         }
 
+
         public async Task<Users> DeleteUser(Users user)
         {
             DateTime utcNow = DateTime.UtcNow;

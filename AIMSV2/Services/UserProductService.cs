@@ -51,8 +51,8 @@ namespace AIMSV2.Services
 
                 _logger.LogDebug("Calling repository method to fetch all user products asynchronously.");
                 List<UserProducts> userProducts = await _userProductRepository.GetAllUserProductAsync();
-
                 _logger.LogDebug("Successfully fetched {UserProductsCount} user products asynchronously.", userProducts.Count);
+
                 _logger.LogInformation("Completed GetAllUserProductAsync");
 
                 return userProducts;
@@ -73,8 +73,8 @@ namespace AIMSV2.Services
 
                 _logger.LogDebug("Fetching product list for UserID: {UserID}", id);
                 List<ProductByUserID> productList = (await _userProductRepository.GetProductListbyUserID(id)).ToList();
-
                 _logger.LogDebug("Successfully fetched {ProductListCount} products for UserID: {UserID}", productList.Count, id);
+
                 _logger.LogInformation("Completed GetProductListbyUserID for UserID: {UserID}", id);
 
                 return new Result { ResultObject = productList };
@@ -92,8 +92,9 @@ namespace AIMSV2.Services
             {
                 _logger.LogInformation("Started DeleteUserProductAsync with UserProductID: {UserProductID}", id);
 
-                _logger.LogDebug("Calling repository method to delete user product with UserProductID: {UserProductID}", id);
+                _logger.LogDebug("Started repository method to delete user product with UserProductID: {UserProductID}", id);
                 bool result = await _userProductRepository.DeleteUserProductAsync(id);
+                _logger.LogDebug("Completed repository method to delete user product with UserProductID: {UserProductID}", result);
 
                 if (result)
                 {
@@ -124,8 +125,10 @@ namespace AIMSV2.Services
             {
                 _logger.LogInformation("Started SaveUserProducts with UserID: {UserID}", userProductModel.ID);
 
-                _logger.LogDebug("Validating fields for SaveUserProduct with UserID: {UserID}", userProductModel.ID);
+                _logger.LogDebug("Started Validating fields for SaveUserProduct with UserID: {UserID}", userProductModel.ID);
                 Result validationResult = await ValiadationFields(userProductModel);
+                _logger.LogDebug("Completed Validating fields for SaveUserProduct with UserID: {UserID}", userProductModel.ID);
+
                 if (validationResult.HasError && (HttpStatusCode)validationResult.StatusCode == HttpStatusCode.BadRequest)
                 {
                     _logger.LogWarning("Validation failed for SaveUserProduct with UserID: {UserID}", userProductModel.ID);
@@ -243,9 +246,7 @@ namespace AIMSV2.Services
 
                 // Log debug information before calling the repository
                 _logger.LogDebug("Calling repository method to get product list for UserID: {UserID}", id);
-
                 List<ProductByUserID> productList = (await _userProductRepository.GetProductListbyUserID(id)).ToList();
-
                 _logger.LogDebug("Fetched {ProductCount} products for UserID: {UserID}", productList.Count, id);
 
                 _logger.LogInformation("Completed fetching product list for UserID: {UserID}", id);
@@ -266,9 +267,9 @@ namespace AIMSV2.Services
                 _logger.LogInformation("Started checking user product category match for UserID: {UserID} and CategoryID: {CategoryID}", userId, categoryId);
 
                 // Log debug before calling repository
-                _logger.LogDebug("Calling repository method to check category match for UserID: {UserID} and CategoryID: {CategoryID}", userId, categoryId);
-
+                _logger.LogDebug("Started repository method to check category match for UserID: {UserID} and CategoryID: {CategoryID}", userId, categoryId);
                 var result = await _userProductRepository.CheckUserProductCategoryMatchAsync(userId, categoryId);
+                _logger.LogDebug("Completed repository method to check category match for UserID: {UserID} and CategoryID: {CategoryID}", userId, categoryId);
 
                 if (result != null)
                 {

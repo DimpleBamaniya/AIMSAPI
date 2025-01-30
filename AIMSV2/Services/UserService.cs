@@ -260,6 +260,7 @@ namespace AIMSV2.Services
                 _logger.LogDebug("Starting to save user. User ID = {UserID}", userModel.ID);
 
                 Users? user = null;
+                LoginDto? loginModel = null;
 
                 // Handle existing user
                 if (userModel.ID > 0)
@@ -278,6 +279,17 @@ namespace AIMSV2.Services
                 }
                 else
                 {
+                    loginModel = new LoginDto
+                    {
+                        EmailID = userModel.EmailID,
+                        Password = userModel.Password
+                    };
+                    Users userExist = await _userRepository.GetUserDetailByEmailID(loginModel.EmailID);
+                    if (userExist != null)
+                    {
+                        return new Result($"User is already exist.", "Accounts.UserExist", HttpStatusCode.BadRequest);
+                    }
+
                     // Handle new user
                     user = new Users
                     {

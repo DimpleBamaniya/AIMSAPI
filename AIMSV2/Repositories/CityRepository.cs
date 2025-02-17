@@ -15,7 +15,7 @@ namespace AIMSV2.Repositories
 
         public async Task<IEnumerable<Cities>> GetAllCities()
         {
-            return await _context.Cities.ToListAsync();
+            return await _context.Cities.AsNoTracking().ToListAsync();
         }
     }
 }

@@ -18,11 +18,11 @@ namespace AIMSAPI.Repositories
         //remove method
         public async Task<IEnumerable<UserProducts>> GetAllUserProduct()
         {
-            return await _context.UserProducts.ToListAsync();
+            return await _context.UserProducts.AsNoTracking().ToListAsync();
         }
         public async Task<List<UserProducts>> GetAllUserProductAsync()
         {
-            return await _context.vw_UserProducts.ToListAsync();
+            return await _context.vw_UserProducts.AsNoTracking().ToListAsync();
         }
 
         public async Task<bool> DeleteUserProductAsync(int id)
@@ -46,10 +46,9 @@ namespace AIMSAPI.Repositories
         public async Task<UserProducts> SaveUserProducts(UserProducts userProducts)
         {
             DateTime utcNow = DateTime.UtcNow;
-            DateOnly currentUtcDate = DateOnly.FromDateTime(utcNow);
             if (userProducts.ID == 0)
             {
-                userProducts.AssignedDate = currentUtcDate;
+                userProducts.AssignedDate = utcNow;
                 _context.UserProducts.Add(userProducts);
             }
             await _context.SaveChangesAsync();

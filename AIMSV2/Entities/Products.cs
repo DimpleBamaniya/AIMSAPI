@@ -9,12 +9,12 @@
         public int? UseQuantity { get; set; }
         public int? AvailableQuantity { get; set; }
         public string? Code { get; set; }
-        public DateOnly Created { get; set; }
+        public DateTime Created { get; set; }
         public int CreatedBy { get; set; }
-        public DateOnly? Modified { get; set; }
+        public DateTime? Modified { get; set; }
         public int? ModifiedBy { get; set; }
         public bool IsDeleted { get; set; } = false;
-        public DateOnly? Deleted { get; set; }
+        public DateTime? Deleted { get; set; }
         public int? DeletedBy { get; set; }
     }
 

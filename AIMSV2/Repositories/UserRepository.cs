@@ -45,15 +45,14 @@ namespace AIMSV2.Repositories
         public async Task<Users> SaveUser(Users user)
         {
             DateTime utcNow = DateTime.UtcNow;
-            DateOnly currentUtcDate = DateOnly.FromDateTime(utcNow);
             if (user.ID == 0)
             {
-                user.Created = currentUtcDate;
+                user.Created = utcNow;
                 _context.Users.Add(user);
             }
             else
             {
-                user.Modified = currentUtcDate;
+                user.Modified = utcNow;
                 _context.Users.Update(user);
             }
 
@@ -82,8 +81,7 @@ namespace AIMSV2.Repositories
         public async Task<Users> DeleteUser(Users user)
         {
             DateTime utcNow = DateTime.UtcNow;
-            DateOnly currentUtcDate = DateOnly.FromDateTime(utcNow);
-                user.Deleted = currentUtcDate;
+            user.Deleted = utcNow;
             user.IsDeleted = true;
                 _context.Users.Update(user);
 

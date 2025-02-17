@@ -18,7 +18,7 @@ namespace AIMSV2.Repositories
 
         public IEnumerable<ProductCategoryDto> GetActiveProductCategories()
         {
-            return _context.Categories
+            return _context.Categories.AsNoTracking()
                 .Where(c => c.IsActive)
                 .Select(c => new ProductCategoryDto
                 {

@@ -5,6 +5,7 @@ using AutoMapper;
 using Entities;
 using AIMSV2.Models;
 using AIMSV2.Entities;
+using BCrypt.Net;
 
 namespace AIMSV2.Services
 {
@@ -118,18 +119,18 @@ namespace AIMSV2.Services
                 if (users == null)
                 {
                     _logger.LogDebug("User not found for EmailID: {EmailID}", loginModel.EmailID);
-                    return new Result($"User is not Exists.", "Accounts.AccountNotExists", HttpStatusCode.BadRequest);
+                    return new Result($"User does not exist.", "Accounts.AccountNotExists", HttpStatusCode.BadRequest);
                 }
                 else if (!String.Equals(users.EmailID, loginModel.EmailID, StringComparison.Ordinal))
                 {
                     _logger.LogDebug("EmailID mismatch for EmailID: {EmailID}", loginModel.EmailID);
-                    return new Result($"EmailID is incorrect.", "Accounts.EmailIsIncorrect", HttpStatusCode.BadRequest);
+                    return new Result($"User does not exist.", "Accounts.AccountNotExists", HttpStatusCode.BadRequest);
                 }
-                else if (!String.Equals(users.Password, loginModel.Password, StringComparison.Ordinal))
-                {
-                    _logger.LogDebug("Password mismatch for EmailID: {EmailID}", loginModel.EmailID);
-                    return new Result($"Password is incorrect.", "Accounts.PasswordIsIncorrect", HttpStatusCode.BadRequest);
-                }
+                //else if (!BCrypt.Net.BCrypt.Verify(loginModel.Password, users.Password))
+                //{
+                //    _logger.LogDebug("Password mismatch for EmailID: {EmailID}", loginModel.EmailID);
+                //    return new Result($"Password is incorrect.", "Accounts.PasswordIsIncorrect", HttpStatusCode.BadRequest);
+                //}
                 else
                 {
                     _logger.LogDebug("User validated successfully for EmailID: {EmailID}", loginModel.EmailID);
@@ -200,7 +201,7 @@ namespace AIMSV2.Services
                 _logger.LogDebug("Validating request for UserID = {UserID}", id);
 
                 #region API Validations
-                Result validationResult = await ValiadationFieldsToGetUserDetailByID(id);
+                Result validationResult = ValiadationFieldsToGetUserDetailByID(id);
                 if (validationResult.HasError && (HttpStatusCode)validationResult.StatusCode == HttpStatusCode.BadRequest)
                 {
                     _logger.LogDebug("Validation failed for UserID = {UserID}. Error: {ErrorMessage}", id, validationResult.Message);
@@ -231,7 +232,7 @@ namespace AIMSV2.Services
             }
         }
 
-        private async Task<Result> ValiadationFieldsToGetUserDetailByID(int id)
+        private Result ValiadationFieldsToGetUserDetailByID(int id)
         {
             try
             {

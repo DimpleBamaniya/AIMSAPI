@@ -1,4 +1,4 @@
-﻿namespace AIMSV2.Models
+﻿namespace Entities
 {
    public class SqlResult
 {

@@ -15,7 +15,7 @@ namespace AIMSV2.Repositories
 
         public async Task<IEnumerable<Departments>> GetAllDepartments()
         {
-            return await _context.Departments.ToListAsync();
+            return await _context.Departments.AsNoTracking().ToListAsync();
         }
     }
 }

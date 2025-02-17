@@ -34,7 +34,7 @@ namespace AIMSV2.Repositories
 
         public async Task<Products> GetProductDetailByID(int id)
         {
-            return await _context.Products.FirstOrDefaultAsync(u => u.ID == id && !u.IsDeleted);
+            return await _context.Products.AsNoTracking().FirstOrDefaultAsync(u => u.ID == id && !u.IsDeleted);
         }
 
         public async Task<List<ProductDetails>> GetAllProductDetails(Pagination pagination)
@@ -51,15 +51,14 @@ namespace AIMSV2.Repositories
         public async Task<Products> SaveProduct(Products product)
         {
             DateTime utcNow = DateTime.UtcNow;
-            DateOnly currentUtcDate = DateOnly.FromDateTime(utcNow);
             if (product.ID == 0)
             {
-                product.Created = currentUtcDate;
+                product.Created = utcNow;
                 _context.Products.Add(product);
             }
             else
             {
-                product.Modified = currentUtcDate;
+                product.Modified = utcNow;
                 _context.Products.Update(product);
             }
 
@@ -98,10 +97,9 @@ namespace AIMSV2.Repositories
         public async Task<Products> DeleteProduct(Products product)
         {
             DateTime utcNow = DateTime.UtcNow;
-            DateOnly currentUtcDate = DateOnly.FromDateTime(utcNow);
             if (product.ID != 0 || product.ID != null)
             {
-                product.Deleted = currentUtcDate;
+                product.Deleted = utcNow;
                 product.IsDeleted = true;
                 _context.Products.Update(product);
             }
@@ -113,7 +111,7 @@ namespace AIMSV2.Repositories
         public async Task<List<int>> GetProductIdsByCategoryAndBrandAsync(int categoryId, int brandId)
         {
             // Query the view and filter by CategoryID and BrandID
-            return await _context.Products
+            return await _context.Products.AsNoTracking()
                                  .Where(p => p.CategoryID == categoryId && p.BrandID == brandId && p.IsDeleted == false)
                                  .Select(p => p.ID)
                                  .ToListAsync();

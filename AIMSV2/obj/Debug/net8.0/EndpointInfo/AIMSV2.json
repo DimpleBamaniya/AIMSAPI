@@ -909,7 +909,7 @@
           },
           "created": {
             "type": "string",
-            "format": "date",
+            "format": "date-time",
             "nullable": true
           },
           "createdBy": {
@@ -918,7 +918,7 @@
           },
           "modified": {
             "type": "string",
-            "format": "date",
+            "format": "date-time",
             "nullable": true
           },
           "modifiedBy": {
@@ -931,7 +931,7 @@
           },
           "deleted": {
             "type": "string",
-            "format": "date",
+            "format": "date-time",
             "nullable": true
           },
           "deletedBy": {

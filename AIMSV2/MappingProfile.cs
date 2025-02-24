@@ -1,17 +1,11 @@
-﻿using AIMSV2.Models;
-using AutoMapper;
-using Entities;
-
-namespace AIMSAPI.Api
+﻿namespace Api;
+public class MappingProfile : Profile
 {
-    public class MappingProfile : Profile
+    public MappingProfile()
     {
-        public MappingProfile()
-        {
-            AllowNullCollections = true;
-            AllowNullDestinationValues = true;
-            CreateMap<Users, UserDetails>().ReverseMap();
-            CreateMap<UserDetails, Users>().ReverseMap();
-        }
+        AllowNullCollections = true;
+        AllowNullDestinationValues = true;
+        CreateMap<Users, UserDetails>().ReverseMap();
+        CreateMap<UserDetails, Users>().ReverseMap();
     }
 }

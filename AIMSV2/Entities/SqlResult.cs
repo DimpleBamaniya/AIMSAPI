@@ -1,7 +1,5 @@
-﻿namespace Entities
+﻿namespace Entities;
+public class SqlResult
 {
-   public class SqlResult
-{
-    public bool Result { get; set; }
-}
+public bool Result { get; set; }
 }

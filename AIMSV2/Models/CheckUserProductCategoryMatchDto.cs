@@ -1,7 +1,5 @@
-﻿namespace AIMSV2.Models
+﻿namespace Models;
+public class CheckUserProductCategoryMatchDto
 {
-    public class CheckUserProductCategoryMatchDto
-    {
-        public bool IsMatch { get; set; }
-    }
+    public bool IsMatch { get; set; }
 }

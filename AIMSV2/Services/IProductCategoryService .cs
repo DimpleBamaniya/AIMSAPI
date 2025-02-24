@@ -1,10 +1,5 @@
-﻿using AIMSV2.Models;
-using AIMSV2.Utility;
-
-namespace AIMSV2.Services
+﻿namespace Services;
+public interface IProductCategoryService
 {
-    public interface IProductCategoryService
-    {
-        IEnumerable<ProductCategoryDto> GetActiveProductCategories();
-    }
+    Task<Result> GetActiveProductCategoriesAsync();
 }

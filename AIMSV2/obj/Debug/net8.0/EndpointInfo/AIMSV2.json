@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "AIMSV2",
-    "version": "1.0"
+    "title": "Employee Management",
+    "version": "v1"
   },
   "paths": {
     "/api/Brand/GetActiveBrands": {
@@ -18,6 +18,37 @@
       }
     },
     "/api/Brand/GetBrandsByCategoryID": {
+      "post": {
+        "tags": [
+          "Brand"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoryIdRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoryIdRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoryIdRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Brand/GetUnassignedBrandsByCategory": {
       "post": {
         "tags": [
           "Brand"
@@ -72,73 +103,6 @@
         }
       }
     },
-    "/api/Product/UpdateUseQuantity": {
-      "post": {
-        "tags": [
-          "Product"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Product/UpdateAvailableQuantity": {
-      "post": {
-        "tags": [
-          "Product"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Product/UpdateAvailableQuantityAndUseQuantity": {
-      "post": {
-        "tags": [
-          "Product"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Product/GetProductDetailByID": {
-      "post": {
-        "tags": [
-          "Product"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ProductIdRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ProductIdRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/ProductIdRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/Product/GetAllProductDetails": {
       "post": {
         "tags": [
@@ -163,36 +127,6 @@
             }
           }
         },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Product/CheckProductExists": {
-      "get": {
-        "tags": [
-          "Product"
-        ],
-        "parameters": [
-          {
-            "name": "categoryId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "brandId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -293,65 +227,10 @@
         }
       }
     },
-    "/api/Product/GetProductIds": {
-      "post": {
-        "tags": [
-          "Product"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ProductDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ProductDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/ProductDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/ProductCategory/GetActiveProductCategories": {
       "get": {
         "tags": [
           "ProductCategory"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/User/GetAllUsers": {
-      "post": {
-        "tags": [
-          "User"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/User/UpdateUserPermissions": {
-      "post": {
-        "tags": [
-          "User"
         ],
         "responses": {
           "200": {
@@ -384,18 +263,6 @@
             }
           }
         },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/User/ExecuteUpdateUserCodes": {
-      "post": {
-        "tags": [
-          "User"
-        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -527,30 +394,6 @@
         }
       }
     },
-    "/api/UserProduct/GetAllUserProduct": {
-      "get": {
-        "tags": [
-          "UserProduct"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/UserProduct/GetAllUserProduct1": {
-      "get": {
-        "tags": [
-          "UserProduct"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/UserProduct/GetProductListbyUserID": {
       "post": {
         "tags": [
@@ -644,36 +487,6 @@
         }
       }
     },
-    "/api/UserProduct/check-user-product-category": {
-      "get": {
-        "tags": [
-          "UserProduct"
-        ],
-        "parameters": [
-          {
-            "name": "userId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "categoryId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -732,10 +545,6 @@
           "id": {
             "type": "integer",
             "format": "int32"
-          },
-          "deletedBy": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -744,10 +553,6 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "deletedBy": {
             "type": "integer",
             "format": "int32"
           }
@@ -796,20 +601,6 @@
         },
         "additionalProperties": false
       },
-      "ProductDto": {
-        "type": "object",
-        "properties": {
-          "categoryID": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "brandID": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
       "ProductIdRequest": {
         "type": "object",
         "properties": {
@@ -843,11 +634,6 @@
           "createdBy": {
             "type": "integer",
             "format": "int32"
-          },
-          "modifiedBy": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -985,6 +771,19 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "Please enter a token",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }

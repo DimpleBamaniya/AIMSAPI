@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-
+﻿namespace Models; 
 public class Pagination
 {
     public int? PageNo { get; set; }

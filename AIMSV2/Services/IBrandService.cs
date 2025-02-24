@@ -1,11 +1,7 @@
-﻿using AIMSV2.Models;
-using AIMSV2.Utility;
-
-namespace AIMSV2.Services
+﻿namespace Services;
+public interface IBrandService
 {
-    public interface IBrandService
-    {
-        IEnumerable<BrandDto> GetActiveBrands();
-        Task<Result> GetBrandsByCategoryID(int categoryID);
-    }
+    Task<Result> GetActiveBrandsAsync();
+    Task<Result> GetBrandsByCategoryID(int categoryID);
+    Task<Result> GetUnassignedBrandsByCategory(int categoryID);
 }

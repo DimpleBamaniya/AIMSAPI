@@ -1,21 +1,18 @@
-﻿using AIMSV2.Data;
-using Entities;
-using Microsoft.EntityFrameworkCore;
-
-namespace AIMSV2.Repositories
+﻿namespace Repositories;
+public class CityRepository : ICityRepository
 {
-    public class CityRepository : ICityRepository
+    private readonly ApplicationDbContext _context;
+
+    public CityRepository(ApplicationDbContext context)
     {
-        private readonly ApplicationDbContext _context;
+        _context = context;
+    }
 
-        public CityRepository(ApplicationDbContext context)
-        {
-            _context = context;
-        }
-
-        public async Task<IEnumerable<Cities>> GetAllCities()
-        {
-            return await _context.Cities.AsNoTracking().ToListAsync();
-        }
+    public async Task<IEnumerable<Cities>> GetAllCitiesAsync()
+    {
+        return await _context.Cities.AsNoTracking()
+            .Where(c => c.IsActive)
+            .Select(c => new Cities { ID = c.ID, Name = c.Name })
+            .ToListAsync();
     }
 }

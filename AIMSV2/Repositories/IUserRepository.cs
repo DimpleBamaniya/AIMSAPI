@@ -1,19 +1,12 @@
-﻿using AIMSV2.Entities;
-using AIMSV2.Models;
-using Entities;
-
-namespace AIMSV2.Repositories
+﻿namespace Repositories;
+public interface IUserRepository
 {
-    public interface IUserRepository
-    {
-        Task<IEnumerable<Users>> GetAllUsers();
-        Task<Users> GetUserDetailByID(int id);
-        Task<Users> SaveUser(Users user);
-        Task<Users> GetUserDetailByEmailID(string emailID);
-        Task ExecuteUpdateUserPermissions();
-        Task ExecuteUpdateUserCodes();
-        Task<List<UserDetailsList>> GetAllUserDetails(Pagination pagination);
-        Task<Users> DeleteUser(Users user);
+    Task<Users> GetUserDetailByIDAsync(int id);
+    Task<Users> SaveUserAsync(Users user);
+    Task<Users> GetUserDetailByEmailIDAsync(string emailID);
+    Task ExecuteUpdateUserPermissions();
+    Task ExecuteUpdateUserCodes();
+    Task<List<UserDetailsList>> GetAllUserDetailsAsync(Pagination pagination);
+    Task<Users> DeleteUserAsync(Users user);
 
-    }
 }

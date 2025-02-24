@@ -1,9 +1,5 @@
-﻿using Entities;
-
-namespace AIMSV2.Services
+﻿namespace Services;
+public interface ICityService
 {
-    public interface ICityService
-    {
-        Task<IEnumerable<Cities>> GetAllCities();
-    }
+    Task<Result> GetAllCitiesAsync();
 }

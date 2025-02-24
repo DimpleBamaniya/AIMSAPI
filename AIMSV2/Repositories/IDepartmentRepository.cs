@@ -1,9 +1,5 @@
-﻿using Entities;
-
-namespace AIMSV2.Repositories
+﻿namespace Repositories;
+public interface IDepartmentRepository
 {
-    public interface IDepartmentRepository
-    {
-        Task<IEnumerable<Departments>> GetAllDepartments();
-    }
+    Task<IEnumerable<Departments>> GetAllDepartmentsAsync();
 }

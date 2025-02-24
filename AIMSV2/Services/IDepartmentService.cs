@@ -1,9 +1,5 @@
-﻿using Entities;
-
-namespace AIMSV2.Services
+﻿namespace Services;
+public interface IDepartmentService
 {
-    public interface IDepartmentService
-    {
-        Task<IEnumerable<Departments>> GetAllDepartments();
-    }
+    Task<Result> GetAllDepartmentsAsync();
 }

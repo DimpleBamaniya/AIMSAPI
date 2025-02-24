@@ -292,3 +292,5 @@ C:\Users\5038\OneDrive - Shivohm\Desktop\Inventory-Management\AIMSAPI\AIMSV2\bin
 C:\Users\5038\OneDrive - Shivohm\Desktop\Inventory-Management\AIMSAPI\AIMSV2\bin\Debug\net8.0\Serilog.Sinks.Async.dll
 C:\Users\5038\OneDrive - Shivohm\Desktop\Inventory-Management\AIMSAPI\AIMSV2\bin\Debug\net8.0\Serilog.Sinks.RollingFile.dll
 C:\Users\5038\OneDrive - Shivohm\Desktop\Inventory-Management\AIMSAPI\AIMSV2\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\5038\OneDrive - Shivohm\Desktop\Inventory-Management\AIMSAPI\AIMSV2\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\5038\OneDrive - Shivohm\Desktop\Inventory-Management\AIMSAPI\AIMSV2\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll

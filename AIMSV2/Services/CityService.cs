@@ -1,39 +1,41 @@
-﻿using AIMSV2.Repositories;
-using AutoMapper;
-using Entities;
+﻿using Entities;
 
-namespace AIMSV2.Services
+namespace Services;
+public class CityService : ICityService
 {
-    public class CityService : ICityService
+    private readonly ICityRepository _cityRepository;
+    private readonly ILogger<CityService> _logger;
+
+    public CityService(ICityRepository cityRepository, IMapper mapper, ILogger<CityService> logger)
     {
-        private readonly ICityRepository _cityRepository;
-        private readonly ILogger<CityService> _logger;
+        _cityRepository = cityRepository ?? throw new ArgumentNullException(nameof(cityRepository));
+        _logger = logger;
+    }
 
-        public CityService(ICityRepository cityRepository, IMapper mapper, ILogger<CityService> logger)
+    public async Task<Result> GetAllCitiesAsync()
+    {
+        _logger.LogInformation("Started GetAllCitiesAsync()");
+        try
         {
-            _cityRepository = cityRepository ?? throw new ArgumentNullException(nameof(cityRepository));
-            _logger = logger;
+            _logger.LogDebug("Fetching all cities from the repository.");
+            var cities = await _cityRepository.GetAllCitiesAsync();
+            _logger.LogDebug("Successfully fetched all cities: {@Result}", cities);
+
+            _logger.LogInformation("Completed GetAllCitiesAsync()");
+
+            return new Result
+            {
+                Status = StatusType.Success,
+                HttpStatusCode = HttpStatusCode.OK,
+                Message = "Active cities retrieved successfully.",
+                ResultObject = cities
+            };
         }
-
-        public async Task<IEnumerable<Cities>> GetAllCities()
+        catch (Exception ex)
         {
-            try
-            {
-                _logger.LogInformation("Started GetAllCities()");
-
-                _logger.LogDebug("Fetching all cities from the repository.");
-                var result = await _cityRepository.GetAllCities();
-                _logger.LogDebug("Successfully fetched all cities: {@Result}", result);
-
-                _logger.LogInformation("Completed GetAllCities()");
-                return result;
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "An error occurred while fetching all cities.");
-                // Optionally, rethrow the exception or handle it as needed.
-                throw;
-            }
+            _logger.LogError(ex, "An error occurred while fetching active cities.");
+            return new Result("An error occurred while retrieving active cities.", "ERROR_FETCHING_CITIES", HttpStatusCode.InternalServerError, ex);
         }
     }
+
 }

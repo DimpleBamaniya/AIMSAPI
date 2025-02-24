@@ -1,7 +1,5 @@
-﻿namespace AIMSV2.Models
+﻿namespace Models;
+public class ProductIdRequest
 {
-    public class ProductIdRequest
-    {
-        public int Id { get; set; }
-    }
+    public int Id { get; set; }
 }

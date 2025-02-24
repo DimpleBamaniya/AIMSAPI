@@ -1,6 +1,4 @@
-﻿using System.Net;
-
-namespace AIMSV2.Utility;
+﻿namespace Utility;
 
 /// <summary>
 ///     Custom api result object to provide generic way of communication

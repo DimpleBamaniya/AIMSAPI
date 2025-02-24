@@ -1,4 +1,4 @@
-﻿namespace AIMSV2.Models;
+﻿namespace Models;
 public class LoginDto
 {
     public string? EmailID { get; set; }

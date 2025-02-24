@@ -1,12 +1,7 @@
-﻿using AIMSV2.Entities;
-using AIMSV2.Models;
-using Entities;
-
-namespace AIMSV2.Repositories
+﻿namespace Repositories;
+public interface IBrandRepository
 {
-    public interface IBrandRepository
-    {
-        IEnumerable<BrandDto> GetActiveBrands();
-        Task<List<BrandDto>> GetBrandsByCategoryID(int categoryID);
-    }
+    Task<IEnumerable<BrandDto>> GetActiveBrandsAsync();
+    Task<List<BrandDto>> GetBrandsByCategoryIDAsync(int categoryID);
+    Task<List<BrandDto>> GetUnassignedBrandsByCategoryAsync(int categoryID);
 }

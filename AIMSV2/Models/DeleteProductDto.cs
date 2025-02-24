@@ -1,9 +1,5 @@
-﻿namespace AIMSV2.Models
+﻿namespace Models;
+public class DeleteProductDto
 {
-    public class DeleteProductDto
-   {
-        public int Id {get; set;}
-        public int DeletedBy {get; set;}
-    }
-
+    public int Id {get; set;}
 }

@@ -1,25 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using AIMSV2.Data;
-using AIMSV2.Services;
-using AIMSV2.Models;
+﻿using Microsoft.AspNetCore.Authorization;
 
-namespace AIMSV3.Controllers
+namespace Controllers;
+[Route("api/[controller]")]
+[ApiController]
+public class DepartmentController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class DepartmentController : ControllerBase
+    private readonly IDepartmentService _departmentService;
+    public DepartmentController(IDepartmentService departmentService)
     {
-        private readonly IDepartmentService _departmentService;
-        public DepartmentController(IDepartmentService departmentService)
-        {
-            _departmentService = departmentService ?? throw new ArgumentNullException(nameof(departmentService));
-        }
+        _departmentService = departmentService ?? throw new ArgumentNullException(nameof(departmentService));
+    }
 
-        [HttpPost("GetAllDepartments")]
-        public async Task<IActionResult> GetAllDepartments()
-        {
-            var cities = await _departmentService.GetAllDepartments();
-            return Ok(cities);
-        }
-    } 
-}
+    [HttpPost("GetAllDepartments")]
+    [Authorize]
+    public async Task<IActionResult> GetAllDepartments()
+    {
+        Result result = await _departmentService.GetAllDepartmentsAsync();
+        return Ok(result.ApiResult);
+    }
+} 

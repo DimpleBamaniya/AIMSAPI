@@ -1,8 +1,6 @@
-﻿namespace AIMSV2.Models
+﻿namespace Models;
+public class ProductCategoryDto
 {
-    public class ProductCategoryDto
-    {
-        public int Id { get; set; }
-        public string? Name { get; set; }
-    }
+    public int Id { get; set; }
+    public string? Name { get; set; }
 }

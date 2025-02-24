@@ -1,25 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using AIMSV2.Data;
-using AIMSV2.Services;
-using AIMSV2.Models;
+﻿using Microsoft.AspNetCore.Authorization;
 
-namespace AIMSV3.Controllers
+namespace Controllers;
+[Route("api/[controller]")]
+[ApiController]
+public class CityController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class CityController : ControllerBase
+    private readonly ICityService _cityService;
+    public CityController(ICityService cityService)
     {
-        private readonly ICityService _cityService;
-        public CityController(ICityService cityService)
-        {
-            _cityService = cityService ?? throw new ArgumentNullException(nameof(cityService));
-        }
+        _cityService = cityService ?? throw new ArgumentNullException(nameof(cityService));
+    }
 
-        [HttpPost("GetAllCities")]
-        public async Task<IActionResult> GetAllCities()
-        {
-            var cities = await _cityService.GetAllCities();
-            return Ok(cities);
-        }
-    } 
-}
+    [HttpPost("GetAllCities")]
+    [Authorize]
+    public async Task<IActionResult> GetAllCities()
+    {
+        Result result = await _cityService.GetAllCitiesAsync();
+        return Ok(result.ApiResult);
+    }
+} 

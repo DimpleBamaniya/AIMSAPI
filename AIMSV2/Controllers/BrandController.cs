@@ -1,47 +1,38 @@
-﻿using AIMSV2.Models;
-using AIMSV2.Services;
-using AIMSV2.Utility;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.AspNetCore.Authorization;
 
-namespace AIMSV2.Controllers
+namespace Controllers;
+[Route("api/[controller]")]
+[ApiController]
+public class BrandController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class BrandController : ControllerBase
+    private readonly IBrandService _brandService;
+
+    public BrandController(IBrandService brandService)
     {
-        private readonly IBrandService _brandService;
+        _brandService = brandService;
+    }
 
-        public BrandController(IBrandService brandService)
-        {
-            _brandService = brandService;
-        }
+    [HttpGet("GetActiveBrands")]
+    [Authorize]
+    public async Task<IActionResult> GetActiveBrands()
+    {
+        Result result = await _brandService.GetActiveBrandsAsync();
+        return Ok(result.ApiResult);
+    }
+    
+    [HttpPost("GetBrandsByCategoryID")]
+    [Authorize]
+    public async Task<IActionResult> GetBrandsByCategoryID([FromBody] CategoryIdRequest categoryIdRequest)
+    {
+        Result result = await _brandService.GetBrandsByCategoryID(categoryIdRequest.ID);
+        return Ok(result.ApiResult);
+    }
 
-        [HttpGet("GetActiveBrands")]
-        public IActionResult GetActiveBrands()
-        {
-
-            try
-            {
-                var brands = _brandService.GetActiveBrands();
-                if (!brands.Any())
-                {
-                    return NotFound("No active brands found.");
-                }
-                return Ok(brands);
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
-
-        }
-
-        [HttpPost("GetBrandsByCategoryID")]
-        public async Task<IActionResult> GetBrandsByCategoryID([FromBody] CategoryIdRequest categoryIdRequest)
-        {
-            Result result = await _brandService.GetBrandsByCategoryID(categoryIdRequest.ID);
-            return Ok(result.ApiResult);
-        }
+    [HttpPost("GetUnassignedBrandsByCategory")]
+    [Authorize]
+    public async Task<IActionResult> GetUnassignedBrandsByCategory([FromBody] CategoryIdRequest categoryIdRequest)
+    {
+        Result result = await _brandService.GetUnassignedBrandsByCategory(categoryIdRequest.ID);
+        return Ok(result.ApiResult);
     }
 }

@@ -1,21 +1,19 @@
-﻿using AIMSV2.Data;
-using Entities;
-using Microsoft.EntityFrameworkCore;
+﻿namespace Repositories;
 
-namespace AIMSV2.Repositories
+public class DepartmentRepository : IDepartmentRepository
 {
-    public class DepartmentRepository : IDepartmentRepository
+    private readonly ApplicationDbContext _context;
+
+    public DepartmentRepository(ApplicationDbContext context)
     {
-        private readonly ApplicationDbContext _context;
+        _context = context;
+    }
 
-        public DepartmentRepository(ApplicationDbContext context)
-        {
-            _context = context;
-        }
-
-        public async Task<IEnumerable<Departments>> GetAllDepartments()
-        {
-            return await _context.Departments.AsNoTracking().ToListAsync();
-        }
+    public async Task<IEnumerable<Departments>> GetAllDepartmentsAsync()
+    {
+        return await _context.Departments.AsNoTracking()
+            .Where(d => d.IsActive)
+            .Select(d => new Departments { ID = d.ID, Name = d.Name })
+            .ToListAsync();
     }
 }

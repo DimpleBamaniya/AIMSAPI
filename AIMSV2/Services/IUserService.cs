@@ -1,20 +1,13 @@
-﻿using AIMSV2.Entities;
-using AIMSV2.Models;
-using AIMSV2.Utility;
-using Entities;
-
-namespace AIMSV2.Services
+﻿namespace Services;
+public interface IUserService
 {
-    public interface IUserService
-    {
-        Task<IEnumerable<Users>> GetAllUsers();
-        Task<Result> GetUserDetailByEmailID(LoginDto loginRequest);
-        Task<Result> GetUserDetailByID(int id);
-        Task<Result> SaveUser(UserDto userModel);
-        Task<bool> ExecuteUpdateUserPermissions();
-        Task<bool> ExecuteUpdateUserCodes();
-        Task<Result> GetAllUserDetails(Pagination pagination);
-        Task<Result> DeleteUser(DeleteUserDto userModel);
+    Task<Result> GetUserDetailByEmailIDAsync(LoginDto loginRequest);
+    Task<Result> GetUserDetailByIDAsync(int id);
+    Task<Result> SaveUserAsync(UserDto userModel);
+    Task<bool> ExecuteUpdateUserPermissions();
+    Task<bool> ExecuteUpdateUserCodes();
+    Task<Result> GetAllUserDetailsAsync(Pagination pagination);
+    Task<Result> DeleteUserAsync(DeleteUserDto userModel);
 
-    }
+
 }

@@ -13639,3 +13639,835 @@ Exec usp_GetUsersWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @S
 2025-02-24 19:49:16.600 +05:30 [INF] Executed action Controllers.UserController.GetAllUserDetails (AIMSV2) in 34.7549ms
 2025-02-24 19:49:16.602 +05:30 [INF] Executed endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
 2025-02-24 19:49:16.613 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - 200 null application/json; charset=utf-8 64.4529ms
+2025-02-24 19:50:44.414 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/City/GetAllCities - null null
+2025-02-24 19:50:44.429 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/Department/GetAllDepartments - null null
+2025-02-24 19:50:44.435 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:50:44.438 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/City/GetAllCities - 204 null null 26.552ms
+2025-02-24 19:50:44.437 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:50:44.449 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/Department/GetAllDepartments - 204 null null 19.5775ms
+2025-02-24 19:50:44.455 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Department/GetAllDepartments - null 0
+2025-02-24 19:50:44.455 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/City/GetAllCities - null 0
+2025-02-24 19:50:44.460 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:50:44.463 +05:30 [INF] Executing endpoint 'Controllers.DepartmentController.GetAllDepartments (AIMSV2)'
+2025-02-24 19:50:44.465 +05:30 [INF] Route matched with {action = "GetAllDepartments", controller = "Department"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllDepartments() on controller Controllers.DepartmentController (AIMSV2).
+2025-02-24 19:50:44.463 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:50:44.467 +05:30 [INF] Started GetAllDepartments()
+2025-02-24 19:50:44.468 +05:30 [INF] Executing endpoint 'Controllers.CityController.GetAllCities (AIMSV2)'
+2025-02-24 19:50:44.481 +05:30 [INF] Route matched with {action = "GetAllCities", controller = "City"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCities() on controller Controllers.CityController (AIMSV2).
+2025-02-24 19:50:44.486 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[ID], [d].[Name]
+FROM [Departments] AS [d]
+WHERE [d].[IsActive] = CAST(1 AS bit)
+2025-02-24 19:50:44.544 +05:30 [INF] Started GetAllCitiesAsync()
+2025-02-24 19:50:44.546 +05:30 [INF] Completed GetAllDepartments()
+2025-02-24 19:50:44.550 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:50:44.552 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[ID], [c].[Name]
+FROM [Cities] AS [c]
+WHERE [c].[IsActive] = CAST(1 AS bit)
+2025-02-24 19:50:44.553 +05:30 [INF] Executed action Controllers.DepartmentController.GetAllDepartments (AIMSV2) in 85.6371ms
+2025-02-24 19:50:44.556 +05:30 [INF] Completed GetAllCitiesAsync()
+2025-02-24 19:50:44.560 +05:30 [INF] Executed endpoint 'Controllers.DepartmentController.GetAllDepartments (AIMSV2)'
+2025-02-24 19:50:44.561 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:50:44.563 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Department/GetAllDepartments - 200 null application/json; charset=utf-8 107.5908ms
+2025-02-24 19:50:44.568 +05:30 [INF] Executed action Controllers.CityController.GetAllCities (AIMSV2) in 24.3176ms
+2025-02-24 19:50:44.573 +05:30 [INF] Executed endpoint 'Controllers.CityController.GetAllCities (AIMSV2)'
+2025-02-24 19:50:44.581 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/City/GetAllCities - 200 null application/json; charset=utf-8 126.7637ms
+2025-02-24 19:50:57.751 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/User/saveUser - null null
+2025-02-24 19:50:57.758 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:50:57.760 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/User/saveUser - 204 null null 8.7499ms
+2025-02-24 19:50:57.769 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/User/saveUser - application/json 147
+2025-02-24 19:50:57.775 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:50:57.779 +05:30 [INF] Executing endpoint 'Controllers.UserController.SaveUser (AIMSV2)'
+2025-02-24 19:50:57.784 +05:30 [INF] Route matched with {action = "SaveUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveUser(Models.UserDto) on controller Controllers.UserController (AIMSV2).
+2025-02-24 19:50:57.817 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__emailID_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[ID], [u].[CityID], [u].[Created], [u].[CreatedBy], [u].[Deleted], [u].[DeletedBy], [u].[DepartmentID], [u].[EmailID], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Modified], [u].[ModifiedBy], [u].[Password], [u].[Permissions], [u].[UserCode]
+FROM [Users] AS [u]
+WHERE [u].[EmailID] = @__emailID_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-02-24 19:50:58.226 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (Size = 4000), @p10='?' (DbType = DateTime2), @p11='?' (DbType = Int32), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([CityID], [Created], [CreatedBy], [Deleted], [DeletedBy], [DepartmentID], [EmailID], [FirstName], [IsDeleted], [LastName], [Modified], [ModifiedBy], [Password], [Permissions], [UserCode])
+OUTPUT INSERTED.[ID]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2025-02-24 19:50:58.245 +05:30 [INF] Started executing user permissions update.
+2025-02-24 19:50:58.254 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC [dbo].[usp_UpdateUserPermissions]
+2025-02-24 19:50:58.258 +05:30 [INF] Completed user permissions update successfully.
+2025-02-24 19:50:58.259 +05:30 [INF] Started executing user codes update.
+2025-02-24 19:50:58.264 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC [dbo].[usp_UpdateUserCodes]
+2025-02-24 19:50:58.267 +05:30 [INF] Completed user codes update successfully.
+2025-02-24 19:50:58.270 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:50:58.273 +05:30 [INF] Executed action Controllers.UserController.SaveUser (AIMSV2) in 485.1342ms
+2025-02-24 19:50:58.276 +05:30 [INF] Executed endpoint 'Controllers.UserController.SaveUser (AIMSV2)'
+2025-02-24 19:50:58.277 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/User/saveUser - 200 null application/json; charset=utf-8 508.5717ms
+2025-02-24 19:50:58.299 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/User/GetAllUserDetails - null null
+2025-02-24 19:50:58.325 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:50:58.336 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/User/GetAllUserDetails - 204 null null 37.2998ms
+2025-02-24 19:50:58.358 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - application/json 80
+2025-02-24 19:50:58.363 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:50:58.365 +05:30 [INF] Executing endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:50:58.367 +05:30 [INF] Route matched with {action = "GetAllUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUserDetails(Models.Pagination) on controller Controllers.UserController (AIMSV2).
+2025-02-24 19:50:58.398 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetUsersWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:50:58.403 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:50:58.413 +05:30 [INF] Executed action Controllers.UserController.GetAllUserDetails (AIMSV2) in 38.9138ms
+2025-02-24 19:50:58.415 +05:30 [INF] Executed endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:50:58.417 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - 200 null application/json; charset=utf-8 58.5743ms
+2025-02-24 19:51:03.199 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/City/GetAllCities - null null
+2025-02-24 19:51:03.199 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/Department/GetAllDepartments - null null
+2025-02-24 19:51:03.201 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/UserProduct/GetProductListbyUserID - null null
+2025-02-24 19:51:03.208 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/User/GetUserDetailByID - null null
+2025-02-24 19:51:03.228 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:03.231 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:03.240 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/City/GetAllCities - 204 null null 41.1793ms
+2025-02-24 19:51:03.299 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Department/GetAllDepartments - null 0
+2025-02-24 19:51:03.234 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:03.239 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:03.304 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/User/GetUserDetailByID - 204 null null 95.3634ms
+2025-02-24 19:51:03.301 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:03.302 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/UserProduct/GetProductListbyUserID - 204 null null 101.5435ms
+2025-02-24 19:51:03.241 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/Department/GetAllDepartments - 204 null null 42.2135ms
+2025-02-24 19:51:03.308 +05:30 [INF] Executing endpoint 'Controllers.DepartmentController.GetAllDepartments (AIMSV2)'
+2025-02-24 19:51:03.310 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/User/GetUserDetailByID - application/json 11
+2025-02-24 19:51:03.313 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/UserProduct/GetProductListbyUserID - application/json 11
+2025-02-24 19:51:03.316 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/City/GetAllCities - null 0
+2025-02-24 19:51:03.318 +05:30 [INF] Route matched with {action = "GetAllDepartments", controller = "Department"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllDepartments() on controller Controllers.DepartmentController (AIMSV2).
+2025-02-24 19:51:03.321 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:03.325 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:03.330 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:03.334 +05:30 [INF] Started GetAllDepartments()
+2025-02-24 19:51:03.335 +05:30 [INF] Executing endpoint 'Controllers.UserController.GetUserDetailByID (AIMSV2)'
+2025-02-24 19:51:03.337 +05:30 [INF] Executing endpoint 'Controllers.CityController.GetAllCities (AIMSV2)'
+2025-02-24 19:51:03.336 +05:30 [INF] Executing endpoint 'Controllers.UserProductController.GetProductListbyUserID (AIMSV2)'
+2025-02-24 19:51:03.340 +05:30 [INF] Route matched with {action = "GetUserDetailByID", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDetailByID(Models.UserIdRequest) on controller Controllers.UserController (AIMSV2).
+2025-02-24 19:51:03.342 +05:30 [INF] Route matched with {action = "GetAllCities", controller = "City"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCities() on controller Controllers.CityController (AIMSV2).
+2025-02-24 19:51:03.344 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[ID], [d].[Name]
+FROM [Departments] AS [d]
+WHERE [d].[IsActive] = CAST(1 AS bit)
+2025-02-24 19:51:03.344 +05:30 [INF] Route matched with {action = "GetProductListbyUserID", controller = "UserProduct"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductListbyUserID(Models.UserIdRequest) on controller Controllers.UserProductController (AIMSV2).
+2025-02-24 19:51:03.349 +05:30 [INF] Started fetching user details for UserID = 46
+2025-02-24 19:51:03.351 +05:30 [INF] Started GetAllCitiesAsync()
+2025-02-24 19:51:03.355 +05:30 [INF] Completed GetAllDepartments()
+2025-02-24 19:51:03.358 +05:30 [INF] Started GetProductListbyUserIDAsync with UserID: 46
+2025-02-24 19:51:03.366 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:03.367 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[ID], [c].[Name]
+FROM [Cities] AS [c]
+WHERE [c].[IsActive] = CAST(1 AS bit)
+2025-02-24 19:51:03.368 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[ID], [u].[CityID], [u].[Created], [u].[CreatedBy], [u].[Deleted], [u].[DeletedBy], [u].[DepartmentID], [u].[EmailID], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Modified], [u].[ModifiedBy], [u].[Password], [u].[Permissions], [u].[UserCode]
+FROM [Users] AS [u]
+WHERE [u].[ID] = @__id_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-02-24 19:51:03.370 +05:30 [INF] Executed action Controllers.DepartmentController.GetAllDepartments (AIMSV2) in 35.4708ms
+2025-02-24 19:51:03.374 +05:30 [INF] Completed GetAllCitiesAsync()
+2025-02-24 19:51:03.381 +05:30 [INF] Successfully retrieved user details for UserID = 46
+2025-02-24 19:51:03.381 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetProductListbyUserID @UserID=@p0
+2025-02-24 19:51:03.382 +05:30 [INF] Executed endpoint 'Controllers.DepartmentController.GetAllDepartments (AIMSV2)'
+2025-02-24 19:51:03.384 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:03.396 +05:30 [INF] Executed action Controllers.CityController.GetAllCities (AIMSV2) in 44.2926ms
+2025-02-24 19:51:03.389 +05:30 [INF] Completed GetProductListbyUserIDAsync for UserID: 46
+2025-02-24 19:51:03.390 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Department/GetAllDepartments - 200 null application/json; charset=utf-8 91.243ms
+2025-02-24 19:51:03.385 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:03.403 +05:30 [INF] Executed endpoint 'Controllers.CityController.GetAllCities (AIMSV2)'
+2025-02-24 19:51:03.404 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:03.412 +05:30 [INF] Executed action Controllers.UserController.GetUserDetailByID (AIMSV2) in 63.9261ms
+2025-02-24 19:51:03.414 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/City/GetAllCities - 200 null application/json; charset=utf-8 97.4572ms
+2025-02-24 19:51:03.416 +05:30 [INF] Executed action Controllers.UserProductController.GetProductListbyUserID (AIMSV2) in 58.4273ms
+2025-02-24 19:51:03.418 +05:30 [INF] Executed endpoint 'Controllers.UserController.GetUserDetailByID (AIMSV2)'
+2025-02-24 19:51:03.425 +05:30 [INF] Executed endpoint 'Controllers.UserProductController.GetProductListbyUserID (AIMSV2)'
+2025-02-24 19:51:03.429 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/User/GetUserDetailByID - 200 null application/json; charset=utf-8 118.9247ms
+2025-02-24 19:51:03.431 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/UserProduct/GetProductListbyUserID - 200 null application/json; charset=utf-8 118.0481ms
+2025-02-24 19:51:10.548 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/User/saveUser - null null
+2025-02-24 19:51:10.556 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:10.559 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/User/saveUser - 204 null null 10.6778ms
+2025-02-24 19:51:10.565 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/User/saveUser - application/json 198
+2025-02-24 19:51:10.572 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:10.573 +05:30 [INF] Executing endpoint 'Controllers.UserController.SaveUser (AIMSV2)'
+2025-02-24 19:51:10.575 +05:30 [INF] Route matched with {action = "SaveUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveUser(Models.UserDto) on controller Controllers.UserController (AIMSV2).
+2025-02-24 19:51:10.582 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[ID], [u].[CityID], [u].[Created], [u].[CreatedBy], [u].[Deleted], [u].[DeletedBy], [u].[DepartmentID], [u].[EmailID], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Modified], [u].[ModifiedBy], [u].[Password], [u].[Permissions], [u].[UserCode]
+FROM [Users] AS [u]
+WHERE [u].[ID] = @__id_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-02-24 19:51:10.597 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p15='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (Size = 4000), @p10='?' (DbType = DateTime2), @p11='?' (DbType = Int32), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CityID] = @p0, [Created] = @p1, [CreatedBy] = @p2, [Deleted] = @p3, [DeletedBy] = @p4, [DepartmentID] = @p5, [EmailID] = @p6, [FirstName] = @p7, [IsDeleted] = @p8, [LastName] = @p9, [Modified] = @p10, [ModifiedBy] = @p11, [Password] = @p12, [Permissions] = @p13, [UserCode] = @p14
+OUTPUT 1
+WHERE [ID] = @p15;
+2025-02-24 19:51:10.606 +05:30 [INF] Started executing user permissions update.
+2025-02-24 19:51:10.609 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC [dbo].[usp_UpdateUserPermissions]
+2025-02-24 19:51:10.612 +05:30 [INF] Completed user permissions update successfully.
+2025-02-24 19:51:10.615 +05:30 [INF] Started executing user codes update.
+2025-02-24 19:51:10.618 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC [dbo].[usp_UpdateUserCodes]
+2025-02-24 19:51:10.621 +05:30 [INF] Completed user codes update successfully.
+2025-02-24 19:51:10.623 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:10.625 +05:30 [INF] Executed action Controllers.UserController.SaveUser (AIMSV2) in 46.8724ms
+2025-02-24 19:51:10.627 +05:30 [INF] Executed endpoint 'Controllers.UserController.SaveUser (AIMSV2)'
+2025-02-24 19:51:10.629 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/User/saveUser - 200 null application/json; charset=utf-8 64.059ms
+2025-02-24 19:51:10.639 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/User/GetUserDetailByID - null null
+2025-02-24 19:51:10.655 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:10.657 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/User/GetUserDetailByID - 204 null null 18.1622ms
+2025-02-24 19:51:10.664 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/User/GetUserDetailByID - application/json 11
+2025-02-24 19:51:10.670 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:10.671 +05:30 [INF] Executing endpoint 'Controllers.UserController.GetUserDetailByID (AIMSV2)'
+2025-02-24 19:51:10.673 +05:30 [INF] Route matched with {action = "GetUserDetailByID", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDetailByID(Models.UserIdRequest) on controller Controllers.UserController (AIMSV2).
+2025-02-24 19:51:10.678 +05:30 [INF] Started fetching user details for UserID = 46
+2025-02-24 19:51:10.682 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[ID], [u].[CityID], [u].[Created], [u].[CreatedBy], [u].[Deleted], [u].[DeletedBy], [u].[DepartmentID], [u].[EmailID], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Modified], [u].[ModifiedBy], [u].[Password], [u].[Permissions], [u].[UserCode]
+FROM [Users] AS [u]
+WHERE [u].[ID] = @__id_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-02-24 19:51:10.690 +05:30 [INF] Successfully retrieved user details for UserID = 46
+2025-02-24 19:51:10.692 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:10.696 +05:30 [INF] Executed action Controllers.UserController.GetUserDetailByID (AIMSV2) in 17.895ms
+2025-02-24 19:51:10.699 +05:30 [INF] Executed endpoint 'Controllers.UserController.GetUserDetailByID (AIMSV2)'
+2025-02-24 19:51:10.703 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/User/GetUserDetailByID - 200 null application/json; charset=utf-8 39.2064ms
+2025-02-24 19:51:14.240 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/User/GetAllUserDetails - null null
+2025-02-24 19:51:14.244 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:14.260 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/User/GetAllUserDetails - 204 null null 20.1066ms
+2025-02-24 19:51:14.267 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - application/json 80
+2025-02-24 19:51:14.273 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:14.275 +05:30 [INF] Executing endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:51:14.277 +05:30 [INF] Route matched with {action = "GetAllUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUserDetails(Models.Pagination) on controller Controllers.UserController (AIMSV2).
+2025-02-24 19:51:14.293 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetUsersWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:51:14.300 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:14.306 +05:30 [INF] Executed action Controllers.UserController.GetAllUserDetails (AIMSV2) in 24.3028ms
+2025-02-24 19:51:14.319 +05:30 [INF] Executed endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:51:14.324 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - 200 null application/json; charset=utf-8 56.8723ms
+2025-02-24 19:51:17.298 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/Product/GetAllProductDetails - null null
+2025-02-24 19:51:17.303 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/ProductCategory/GetActiveProductCategories - null null
+2025-02-24 19:51:17.305 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/Brand/GetActiveBrands - null null
+2025-02-24 19:51:17.327 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:17.333 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:17.336 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:17.337 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/Product/GetAllProductDetails - 204 null null 39.2186ms
+2025-02-24 19:51:17.338 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/ProductCategory/GetActiveProductCategories - 204 null null 34.8406ms
+2025-02-24 19:51:17.341 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/Brand/GetActiveBrands - 204 null null 36.0485ms
+2025-02-24 19:51:17.345 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - application/json 80
+2025-02-24 19:51:17.349 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/Brand/GetActiveBrands - null null
+2025-02-24 19:51:17.352 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/ProductCategory/GetActiveProductCategories - null null
+2025-02-24 19:51:17.358 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:17.361 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:17.362 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:17.363 +05:30 [INF] Executing endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:51:17.364 +05:30 [INF] Executing endpoint 'Controllers.BrandController.GetActiveBrands (AIMSV2)'
+2025-02-24 19:51:17.365 +05:30 [INF] Executing endpoint 'Controllers.ProductCategoryController.GetActiveProductCategories (AIMSV2)'
+2025-02-24 19:51:17.369 +05:30 [INF] Route matched with {action = "GetAllProductDetails", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProductDetails(Models.Pagination) on controller Controllers.ProductController (AIMSV2).
+2025-02-24 19:51:17.370 +05:30 [INF] Route matched with {action = "GetActiveBrands", controller = "Brand"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActiveBrands() on controller Controllers.BrandController (AIMSV2).
+2025-02-24 19:51:17.371 +05:30 [INF] Route matched with {action = "GetActiveProductCategories", controller = "ProductCategory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActiveProductCategories() on controller Controllers.ProductCategoryController (AIMSV2).
+2025-02-24 19:51:17.381 +05:30 [INF] Started GetActiveBrandsAsync()
+2025-02-24 19:51:17.385 +05:30 [INF] Started GetActiveProductCategoriesAsync()
+2025-02-24 19:51:17.405 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[ID] AS [Id], [c].[Name]
+FROM [Categories] AS [c]
+WHERE [c].[IsActive] = CAST(1 AS bit)
+2025-02-24 19:51:17.415 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[ID] AS [Id], [b].[Name]
+FROM [Brands] AS [b]
+WHERE [b].[IsActive] = CAST(1 AS bit)
+2025-02-24 19:51:17.418 +05:30 [INF] Completed GetActiveProductCategoriesAsync()
+2025-02-24 19:51:17.421 +05:30 [INF] Completed GetActiveBrandsAsync()
+2025-02-24 19:51:17.426 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:17.421 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:17.442 +05:30 [INF] Executed action Controllers.BrandController.GetActiveBrands (AIMSV2) in 64.5754ms
+2025-02-24 19:51:17.446 +05:30 [INF] Executed action Controllers.ProductCategoryController.GetActiveProductCategories (AIMSV2) in 63.4453ms
+2025-02-24 19:51:17.447 +05:30 [INF] Executed endpoint 'Controllers.BrandController.GetActiveBrands (AIMSV2)'
+2025-02-24 19:51:17.448 +05:30 [INF] Executed endpoint 'Controllers.ProductCategoryController.GetActiveProductCategories (AIMSV2)'
+2025-02-24 19:51:17.450 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/Brand/GetActiveBrands - 200 null application/json; charset=utf-8 100.8212ms
+2025-02-24 19:51:17.451 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/ProductCategory/GetActiveProductCategories - 200 null application/json; charset=utf-8 98.6014ms
+2025-02-24 19:51:17.546 +05:30 [INF] Started GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"ID","SortOrder":"ASC"}
+2025-02-24 19:51:17.587 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetProductsWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:51:17.618 +05:30 [INF] Completed GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"ID","SortOrder":"ASC"}
+2025-02-24 19:51:17.620 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:17.627 +05:30 [INF] Executed action Controllers.ProductController.GetAllProductDetails (AIMSV2) in 255.7304ms
+2025-02-24 19:51:17.629 +05:30 [INF] Executed endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:51:17.630 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - 200 null application/json; charset=utf-8 285.4281ms
+2025-02-24 19:51:23.550 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/Product/GetUserListByProductID - null null
+2025-02-24 19:51:23.554 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:23.555 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/Product/GetUserListByProductID - 204 null null 5.2732ms
+2025-02-24 19:51:23.562 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Product/GetUserListByProductID - application/json 9
+2025-02-24 19:51:23.570 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:23.571 +05:30 [INF] Executing endpoint 'Controllers.ProductController.GetUserListByProductID (AIMSV2)'
+2025-02-24 19:51:23.580 +05:30 [INF] Route matched with {action = "GetUserListByProductID", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserListByProductID(Models.ProductIdRequest) on controller Controllers.ProductController (AIMSV2).
+2025-02-24 19:51:23.601 +05:30 [INF] Started GetUserListByProductIDAsync with ProductID: 53
+2025-02-24 19:51:23.623 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_getUserListbyProductID @ProductID=@p0
+2025-02-24 19:51:23.627 +05:30 [INF] Completed GetUserListByProductIDAsync for ProductID: 53
+2025-02-24 19:51:23.628 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:23.636 +05:30 [INF] Executed action Controllers.ProductController.GetUserListByProductID (AIMSV2) in 41.2963ms
+2025-02-24 19:51:23.640 +05:30 [INF] Executed endpoint 'Controllers.ProductController.GetUserListByProductID (AIMSV2)'
+2025-02-24 19:51:23.642 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Product/GetUserListByProductID - 200 null application/json; charset=utf-8 80.6514ms
+2025-02-24 19:51:24.940 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/Product/DeleteProduct - null null
+2025-02-24 19:51:24.951 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:24.952 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/Product/DeleteProduct - 204 null null 11.6905ms
+2025-02-24 19:51:24.958 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Product/DeleteProduct - application/json 9
+2025-02-24 19:51:24.963 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:24.965 +05:30 [INF] Executing endpoint 'Controllers.ProductController.DeleteProduct (AIMSV2)'
+2025-02-24 19:51:24.970 +05:30 [INF] Route matched with {action = "DeleteProduct", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteProduct(Models.DeleteProductDto) on controller Controllers.ProductController (AIMSV2).
+2025-02-24 19:51:24.979 +05:30 [INF] Started DeleteProductAsync for ProductModel: {"Id":53,"$type":"DeleteProductDto"}
+2025-02-24 19:51:25.008 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ID], [p].[AvailableQuantity], [p].[BrandID], [p].[CategoryID], [p].[Code], [p].[Created], [p].[CreatedBy], [p].[Deleted], [p].[DeletedBy], [p].[IsDeleted], [p].[Modified], [p].[ModifiedBy], [p].[Quantity], [p].[UseQuantity]
+FROM [Products] AS [p]
+WHERE [p].[ID] = @__id_0 AND [p].[IsDeleted] = CAST(0 AS bit)
+2025-02-24 19:51:25.053 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p13='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTime2), @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Products] SET [AvailableQuantity] = @p0, [BrandID] = @p1, [CategoryID] = @p2, [Code] = @p3, [Created] = @p4, [CreatedBy] = @p5, [Deleted] = @p6, [DeletedBy] = @p7, [IsDeleted] = @p8, [Modified] = @p9, [ModifiedBy] = @p10, [Quantity] = @p11, [UseQuantity] = @p12
+OUTPUT 1
+WHERE [ID] = @p13;
+2025-02-24 19:51:25.059 +05:30 [INF] Started ExecuteUpdateAvailableQuantityAndUseQuantity()
+2025-02-24 19:51:25.071 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC [dbo].[usp_UpdateAvailableQuantityAndUseQuantity]
+2025-02-24 19:51:25.074 +05:30 [INF] Completed ExecuteUpdateAvailableQuantityAndUseQuantity()
+2025-02-24 19:51:25.076 +05:30 [INF] Started ExecuteUpdateProductCodes.
+2025-02-24 19:51:25.082 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC [dbo].[usp_UpdateProductCodes]
+2025-02-24 19:51:25.085 +05:30 [INF] Completed ExecuteUpdateProductCodes.
+2025-02-24 19:51:25.087 +05:30 [INF] Completed DeleteProductAsync for ProductId: 53
+2025-02-24 19:51:25.089 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:25.091 +05:30 [INF] Executed action Controllers.ProductController.DeleteProduct (AIMSV2) in 116.5814ms
+2025-02-24 19:51:25.094 +05:30 [INF] Executed endpoint 'Controllers.ProductController.DeleteProduct (AIMSV2)'
+2025-02-24 19:51:25.096 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Product/DeleteProduct - 200 null application/json; charset=utf-8 137.691ms
+2025-02-24 19:51:25.108 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/Product/GetAllProductDetails - null null
+2025-02-24 19:51:25.122 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:25.123 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/Product/GetAllProductDetails - 204 null null 15.0582ms
+2025-02-24 19:51:25.128 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - application/json 80
+2025-02-24 19:51:25.143 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:25.146 +05:30 [INF] Executing endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:51:25.151 +05:30 [INF] Route matched with {action = "GetAllProductDetails", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProductDetails(Models.Pagination) on controller Controllers.ProductController (AIMSV2).
+2025-02-24 19:51:25.155 +05:30 [INF] Started GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"ID","SortOrder":"ASC"}
+2025-02-24 19:51:25.161 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetProductsWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:51:25.168 +05:30 [INF] Completed GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"ID","SortOrder":"ASC"}
+2025-02-24 19:51:25.171 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:25.175 +05:30 [INF] Executed action Controllers.ProductController.GetAllProductDetails (AIMSV2) in 20.9234ms
+2025-02-24 19:51:25.178 +05:30 [INF] Executed endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:51:25.179 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - 200 null application/json; charset=utf-8 50.8662ms
+2025-02-24 19:51:26.858 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Product/GetUserListByProductID - application/json 9
+2025-02-24 19:51:26.862 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:26.864 +05:30 [INF] Executing endpoint 'Controllers.ProductController.GetUserListByProductID (AIMSV2)'
+2025-02-24 19:51:26.869 +05:30 [INF] Route matched with {action = "GetUserListByProductID", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserListByProductID(Models.ProductIdRequest) on controller Controllers.ProductController (AIMSV2).
+2025-02-24 19:51:26.872 +05:30 [INF] Started GetUserListByProductIDAsync with ProductID: 54
+2025-02-24 19:51:26.879 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_getUserListbyProductID @ProductID=@p0
+2025-02-24 19:51:26.885 +05:30 [INF] Completed GetUserListByProductIDAsync for ProductID: 54
+2025-02-24 19:51:26.887 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:26.889 +05:30 [INF] Executed action Controllers.ProductController.GetUserListByProductID (AIMSV2) in 17.4009ms
+2025-02-24 19:51:26.892 +05:30 [INF] Executed endpoint 'Controllers.ProductController.GetUserListByProductID (AIMSV2)'
+2025-02-24 19:51:26.893 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Product/GetUserListByProductID - 200 null application/json; charset=utf-8 34.9858ms
+2025-02-24 19:51:27.944 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Product/DeleteProduct - application/json 9
+2025-02-24 19:51:27.956 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:27.957 +05:30 [INF] Executing endpoint 'Controllers.ProductController.DeleteProduct (AIMSV2)'
+2025-02-24 19:51:27.958 +05:30 [INF] Route matched with {action = "DeleteProduct", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteProduct(Models.DeleteProductDto) on controller Controllers.ProductController (AIMSV2).
+2025-02-24 19:51:27.963 +05:30 [INF] Started DeleteProductAsync for ProductModel: {"Id":54,"$type":"DeleteProductDto"}
+2025-02-24 19:51:27.976 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ID], [p].[AvailableQuantity], [p].[BrandID], [p].[CategoryID], [p].[Code], [p].[Created], [p].[CreatedBy], [p].[Deleted], [p].[DeletedBy], [p].[IsDeleted], [p].[Modified], [p].[ModifiedBy], [p].[Quantity], [p].[UseQuantity]
+FROM [Products] AS [p]
+WHERE [p].[ID] = @__id_0 AND [p].[IsDeleted] = CAST(0 AS bit)
+2025-02-24 19:51:27.990 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p13='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTime2), @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Products] SET [AvailableQuantity] = @p0, [BrandID] = @p1, [CategoryID] = @p2, [Code] = @p3, [Created] = @p4, [CreatedBy] = @p5, [Deleted] = @p6, [DeletedBy] = @p7, [IsDeleted] = @p8, [Modified] = @p9, [ModifiedBy] = @p10, [Quantity] = @p11, [UseQuantity] = @p12
+OUTPUT 1
+WHERE [ID] = @p13;
+2025-02-24 19:51:27.996 +05:30 [INF] Started ExecuteUpdateAvailableQuantityAndUseQuantity()
+2025-02-24 19:51:28.044 +05:30 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC [dbo].[usp_UpdateAvailableQuantityAndUseQuantity]
+2025-02-24 19:51:28.059 +05:30 [INF] Completed ExecuteUpdateAvailableQuantityAndUseQuantity()
+2025-02-24 19:51:28.066 +05:30 [INF] Started ExecuteUpdateProductCodes.
+2025-02-24 19:51:28.076 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC [dbo].[usp_UpdateProductCodes]
+2025-02-24 19:51:28.082 +05:30 [INF] Completed ExecuteUpdateProductCodes.
+2025-02-24 19:51:28.097 +05:30 [INF] Completed DeleteProductAsync for ProductId: 54
+2025-02-24 19:51:28.103 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:28.111 +05:30 [INF] Executed action Controllers.ProductController.DeleteProduct (AIMSV2) in 148.5356ms
+2025-02-24 19:51:28.121 +05:30 [INF] Executed endpoint 'Controllers.ProductController.DeleteProduct (AIMSV2)'
+2025-02-24 19:51:28.127 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Product/DeleteProduct - 200 null application/json; charset=utf-8 182.6316ms
+2025-02-24 19:51:28.163 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - application/json 80
+2025-02-24 19:51:28.170 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:28.172 +05:30 [INF] Executing endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:51:28.173 +05:30 [INF] Route matched with {action = "GetAllProductDetails", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProductDetails(Models.Pagination) on controller Controllers.ProductController (AIMSV2).
+2025-02-24 19:51:28.177 +05:30 [INF] Started GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"ID","SortOrder":"ASC"}
+2025-02-24 19:51:28.213 +05:30 [INF] Executed DbCommand (33ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetProductsWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:51:28.219 +05:30 [INF] Completed GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"ID","SortOrder":"ASC"}
+2025-02-24 19:51:28.222 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:28.225 +05:30 [INF] Executed action Controllers.ProductController.GetAllProductDetails (AIMSV2) in 48.026ms
+2025-02-24 19:51:28.229 +05:30 [INF] Executed endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:51:28.235 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - 200 null application/json; charset=utf-8 71.9869ms
+2025-02-24 19:51:31.244 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/Product/GetUserListByProductID - null null
+2025-02-24 19:51:31.252 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:31.258 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/Product/GetUserListByProductID - 204 null null 14.5053ms
+2025-02-24 19:51:31.314 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Product/GetUserListByProductID - application/json 9
+2025-02-24 19:51:31.319 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:31.323 +05:30 [INF] Executing endpoint 'Controllers.ProductController.GetUserListByProductID (AIMSV2)'
+2025-02-24 19:51:31.324 +05:30 [INF] Route matched with {action = "GetUserListByProductID", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserListByProductID(Models.ProductIdRequest) on controller Controllers.ProductController (AIMSV2).
+2025-02-24 19:51:31.327 +05:30 [INF] Started GetUserListByProductIDAsync with ProductID: 41
+2025-02-24 19:51:31.346 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_getUserListbyProductID @ProductID=@p0
+2025-02-24 19:51:31.357 +05:30 [INF] Completed GetUserListByProductIDAsync for ProductID: 41
+2025-02-24 19:51:31.358 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:31.361 +05:30 [INF] Executed action Controllers.ProductController.GetUserListByProductID (AIMSV2) in 33.9381ms
+2025-02-24 19:51:31.363 +05:30 [INF] Executed endpoint 'Controllers.ProductController.GetUserListByProductID (AIMSV2)'
+2025-02-24 19:51:31.364 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Product/GetUserListByProductID - 200 null application/json; charset=utf-8 49.649ms
+2025-02-24 19:51:35.265 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Product/GetUserListByProductID - application/json 9
+2025-02-24 19:51:35.270 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:35.273 +05:30 [INF] Executing endpoint 'Controllers.ProductController.GetUserListByProductID (AIMSV2)'
+2025-02-24 19:51:35.280 +05:30 [INF] Route matched with {action = "GetUserListByProductID", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserListByProductID(Models.ProductIdRequest) on controller Controllers.ProductController (AIMSV2).
+2025-02-24 19:51:35.284 +05:30 [INF] Started GetUserListByProductIDAsync with ProductID: 18
+2025-02-24 19:51:35.289 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_getUserListbyProductID @ProductID=@p0
+2025-02-24 19:51:35.295 +05:30 [INF] Completed GetUserListByProductIDAsync for ProductID: 18
+2025-02-24 19:51:35.297 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:35.299 +05:30 [INF] Executed action Controllers.ProductController.GetUserListByProductID (AIMSV2) in 15.6712ms
+2025-02-24 19:51:35.302 +05:30 [INF] Executed endpoint 'Controllers.ProductController.GetUserListByProductID (AIMSV2)'
+2025-02-24 19:51:35.305 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Product/GetUserListByProductID - 200 null application/json; charset=utf-8 40.221ms
+2025-02-24 19:51:38.690 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/User/GetAllUserDetails - null null
+2025-02-24 19:51:38.705 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:38.706 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/User/GetAllUserDetails - 204 null null 15.9417ms
+2025-02-24 19:51:38.718 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - application/json 80
+2025-02-24 19:51:38.722 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:38.723 +05:30 [INF] Executing endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:51:38.724 +05:30 [INF] Route matched with {action = "GetAllUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUserDetails(Models.Pagination) on controller Controllers.UserController (AIMSV2).
+2025-02-24 19:51:38.756 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetUsersWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:51:38.764 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:38.767 +05:30 [INF] Executed action Controllers.UserController.GetAllUserDetails (AIMSV2) in 35.2264ms
+2025-02-24 19:51:38.771 +05:30 [INF] Executed endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:51:38.772 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - 200 null application/json; charset=utf-8 54.5676ms
+2025-02-24 19:51:40.538 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/City/GetAllCities - null null
+2025-02-24 19:51:40.538 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/Department/GetAllDepartments - null null
+2025-02-24 19:51:40.543 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/UserProduct/GetProductListbyUserID - null null
+2025-02-24 19:51:40.544 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/User/GetUserDetailByID - null null
+2025-02-24 19:51:40.565 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:40.568 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:40.572 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:40.581 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/UserProduct/GetProductListbyUserID - 204 null null 38.1876ms
+2025-02-24 19:51:40.578 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/Department/GetAllDepartments - 204 null null 39.7863ms
+2025-02-24 19:51:40.577 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/City/GetAllCities - 204 null null 39.1982ms
+2025-02-24 19:51:40.575 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:40.600 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Department/GetAllDepartments - null 0
+2025-02-24 19:51:40.605 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/UserProduct/GetProductListbyUserID - application/json 11
+2025-02-24 19:51:40.609 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/City/GetAllCities - null 0
+2025-02-24 19:51:40.610 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/User/GetUserDetailByID - 204 null null 66.5123ms
+2025-02-24 19:51:40.615 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:40.617 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:40.620 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:40.626 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/User/GetUserDetailByID - application/json 11
+2025-02-24 19:51:40.627 +05:30 [INF] Executing endpoint 'Controllers.DepartmentController.GetAllDepartments (AIMSV2)'
+2025-02-24 19:51:40.631 +05:30 [INF] Executing endpoint 'Controllers.UserProductController.GetProductListbyUserID (AIMSV2)'
+2025-02-24 19:51:40.639 +05:30 [INF] Route matched with {action = "GetProductListbyUserID", controller = "UserProduct"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductListbyUserID(Models.UserIdRequest) on controller Controllers.UserProductController (AIMSV2).
+2025-02-24 19:51:40.636 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:40.637 +05:30 [INF] Route matched with {action = "GetAllDepartments", controller = "Department"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllDepartments() on controller Controllers.DepartmentController (AIMSV2).
+2025-02-24 19:51:40.633 +05:30 [INF] Executing endpoint 'Controllers.CityController.GetAllCities (AIMSV2)'
+2025-02-24 19:51:40.642 +05:30 [INF] Started GetProductListbyUserIDAsync with UserID: 41
+2025-02-24 19:51:40.643 +05:30 [INF] Executing endpoint 'Controllers.UserController.GetUserDetailByID (AIMSV2)'
+2025-02-24 19:51:40.645 +05:30 [INF] Started GetAllDepartments()
+2025-02-24 19:51:40.650 +05:30 [INF] Route matched with {action = "GetAllCities", controller = "City"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCities() on controller Controllers.CityController (AIMSV2).
+2025-02-24 19:51:40.654 +05:30 [INF] Route matched with {action = "GetUserDetailByID", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDetailByID(Models.UserIdRequest) on controller Controllers.UserController (AIMSV2).
+2025-02-24 19:51:40.660 +05:30 [INF] Started GetAllCitiesAsync()
+2025-02-24 19:51:40.664 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[ID], [d].[Name]
+FROM [Departments] AS [d]
+WHERE [d].[IsActive] = CAST(1 AS bit)
+2025-02-24 19:51:40.665 +05:30 [INF] Started fetching user details for UserID = 41
+2025-02-24 19:51:40.672 +05:30 [INF] Completed GetAllDepartments()
+2025-02-24 19:51:40.676 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:40.678 +05:30 [INF] Executed action Controllers.DepartmentController.GetAllDepartments (AIMSV2) in 33.2117ms
+2025-02-24 19:51:40.680 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetProductListbyUserID @UserID=@p0
+2025-02-24 19:51:40.680 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[ID], [c].[Name]
+FROM [Cities] AS [c]
+WHERE [c].[IsActive] = CAST(1 AS bit)
+2025-02-24 19:51:40.680 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[ID], [u].[CityID], [u].[Created], [u].[CreatedBy], [u].[Deleted], [u].[DeletedBy], [u].[DepartmentID], [u].[EmailID], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Modified], [u].[ModifiedBy], [u].[Password], [u].[Permissions], [u].[UserCode]
+FROM [Users] AS [u]
+WHERE [u].[ID] = @__id_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-02-24 19:51:40.681 +05:30 [INF] Executed endpoint 'Controllers.DepartmentController.GetAllDepartments (AIMSV2)'
+2025-02-24 19:51:40.684 +05:30 [INF] Completed GetProductListbyUserIDAsync for UserID: 41
+2025-02-24 19:51:40.687 +05:30 [INF] Completed GetAllCitiesAsync()
+2025-02-24 19:51:40.691 +05:30 [INF] Successfully retrieved user details for UserID = 41
+2025-02-24 19:51:40.693 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Department/GetAllDepartments - 200 null application/json; charset=utf-8 92.364ms
+2025-02-24 19:51:40.694 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:40.697 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:40.700 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:40.707 +05:30 [INF] Executed action Controllers.UserProductController.GetProductListbyUserID (AIMSV2) in 65.0199ms
+2025-02-24 19:51:40.714 +05:30 [INF] Executed endpoint 'Controllers.UserProductController.GetProductListbyUserID (AIMSV2)'
+2025-02-24 19:51:40.711 +05:30 [INF] Executed action Controllers.UserController.GetUserDetailByID (AIMSV2) in 46.5825ms
+2025-02-24 19:51:40.709 +05:30 [INF] Executed action Controllers.CityController.GetAllCities (AIMSV2) in 48.9097ms
+2025-02-24 19:51:40.716 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/UserProduct/GetProductListbyUserID - 200 null application/json; charset=utf-8 111.7943ms
+2025-02-24 19:51:40.719 +05:30 [INF] Executed endpoint 'Controllers.UserController.GetUserDetailByID (AIMSV2)'
+2025-02-24 19:51:40.720 +05:30 [INF] Executed endpoint 'Controllers.CityController.GetAllCities (AIMSV2)'
+2025-02-24 19:51:40.725 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/User/GetUserDetailByID - 200 null application/json; charset=utf-8 98.8887ms
+2025-02-24 19:51:40.726 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/City/GetAllCities - 200 null application/json; charset=utf-8 117.4952ms
+2025-02-24 19:51:46.481 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/User/saveUser - null null
+2025-02-24 19:51:46.487 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:46.492 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/User/saveUser - 204 null null 11.2525ms
+2025-02-24 19:51:46.499 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/User/saveUser - application/json 194
+2025-02-24 19:51:46.506 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:46.508 +05:30 [INF] Executing endpoint 'Controllers.UserController.SaveUser (AIMSV2)'
+2025-02-24 19:51:46.510 +05:30 [INF] Route matched with {action = "SaveUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveUser(Models.UserDto) on controller Controllers.UserController (AIMSV2).
+2025-02-24 19:51:46.521 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[ID], [u].[CityID], [u].[Created], [u].[CreatedBy], [u].[Deleted], [u].[DeletedBy], [u].[DepartmentID], [u].[EmailID], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Modified], [u].[ModifiedBy], [u].[Password], [u].[Permissions], [u].[UserCode]
+FROM [Users] AS [u]
+WHERE [u].[ID] = @__id_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-02-24 19:51:46.532 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p15='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (Size = 4000), @p10='?' (DbType = DateTime2), @p11='?' (DbType = Int32), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CityID] = @p0, [Created] = @p1, [CreatedBy] = @p2, [Deleted] = @p3, [DeletedBy] = @p4, [DepartmentID] = @p5, [EmailID] = @p6, [FirstName] = @p7, [IsDeleted] = @p8, [LastName] = @p9, [Modified] = @p10, [ModifiedBy] = @p11, [Password] = @p12, [Permissions] = @p13, [UserCode] = @p14
+OUTPUT 1
+WHERE [ID] = @p15;
+2025-02-24 19:51:46.542 +05:30 [INF] Started executing user permissions update.
+2025-02-24 19:51:46.552 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC [dbo].[usp_UpdateUserPermissions]
+2025-02-24 19:51:46.556 +05:30 [INF] Completed user permissions update successfully.
+2025-02-24 19:51:46.557 +05:30 [INF] Started executing user codes update.
+2025-02-24 19:51:46.560 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC [dbo].[usp_UpdateUserCodes]
+2025-02-24 19:51:46.564 +05:30 [INF] Completed user codes update successfully.
+2025-02-24 19:51:46.566 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:46.569 +05:30 [INF] Executed action Controllers.UserController.SaveUser (AIMSV2) in 54.7113ms
+2025-02-24 19:51:46.572 +05:30 [INF] Executed endpoint 'Controllers.UserController.SaveUser (AIMSV2)'
+2025-02-24 19:51:46.574 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/User/saveUser - 200 null application/json; charset=utf-8 74.5949ms
+2025-02-24 19:51:46.583 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/User/GetUserDetailByID - null null
+2025-02-24 19:51:46.595 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:46.596 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/User/GetUserDetailByID - 204 null null 13.2673ms
+2025-02-24 19:51:46.610 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/User/GetUserDetailByID - application/json 11
+2025-02-24 19:51:46.614 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:46.622 +05:30 [INF] Executing endpoint 'Controllers.UserController.GetUserDetailByID (AIMSV2)'
+2025-02-24 19:51:46.623 +05:30 [INF] Route matched with {action = "GetUserDetailByID", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDetailByID(Models.UserIdRequest) on controller Controllers.UserController (AIMSV2).
+2025-02-24 19:51:46.629 +05:30 [INF] Started fetching user details for UserID = 41
+2025-02-24 19:51:46.633 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[ID], [u].[CityID], [u].[Created], [u].[CreatedBy], [u].[Deleted], [u].[DeletedBy], [u].[DepartmentID], [u].[EmailID], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Modified], [u].[ModifiedBy], [u].[Password], [u].[Permissions], [u].[UserCode]
+FROM [Users] AS [u]
+WHERE [u].[ID] = @__id_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-02-24 19:51:46.650 +05:30 [INF] Successfully retrieved user details for UserID = 41
+2025-02-24 19:51:46.655 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:46.661 +05:30 [INF] Executed action Controllers.UserController.GetUserDetailByID (AIMSV2) in 32.0211ms
+2025-02-24 19:51:46.664 +05:30 [INF] Executed endpoint 'Controllers.UserController.GetUserDetailByID (AIMSV2)'
+2025-02-24 19:51:46.666 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/User/GetUserDetailByID - 200 null application/json; charset=utf-8 56.049ms
+2025-02-24 19:51:53.598 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/User/GetAllUserDetails - null null
+2025-02-24 19:51:53.608 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:53.612 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/User/GetAllUserDetails - 204 null null 13.8702ms
+2025-02-24 19:51:53.622 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - application/json 80
+2025-02-24 19:51:53.629 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:53.630 +05:30 [INF] Executing endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:51:53.632 +05:30 [INF] Route matched with {action = "GetAllUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUserDetails(Models.Pagination) on controller Controllers.UserController (AIMSV2).
+2025-02-24 19:51:53.657 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetUsersWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:51:53.663 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:53.666 +05:30 [INF] Executed action Controllers.UserController.GetAllUserDetails (AIMSV2) in 30.0951ms
+2025-02-24 19:51:53.670 +05:30 [INF] Executed endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:51:53.672 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - 200 null application/json; charset=utf-8 49.1023ms
+2025-02-24 19:51:55.719 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - application/json 81
+2025-02-24 19:51:55.736 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:55.739 +05:30 [INF] Executing endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:51:55.741 +05:30 [INF] Route matched with {action = "GetAllUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUserDetails(Models.Pagination) on controller Controllers.UserController (AIMSV2).
+2025-02-24 19:51:55.748 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetUsersWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:51:55.753 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:55.755 +05:30 [INF] Executed action Controllers.UserController.GetAllUserDetails (AIMSV2) in 11.705ms
+2025-02-24 19:51:55.758 +05:30 [INF] Executed endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:51:55.759 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - 200 null application/json; charset=utf-8 39.9441ms
+2025-02-24 19:51:56.496 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - application/json 87
+2025-02-24 19:51:56.504 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:56.510 +05:30 [INF] Executing endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:51:56.514 +05:30 [INF] Route matched with {action = "GetAllUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUserDetails(Models.Pagination) on controller Controllers.UserController (AIMSV2).
+2025-02-24 19:51:56.521 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetUsersWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:51:56.524 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:56.527 +05:30 [INF] Executed action Controllers.UserController.GetAllUserDetails (AIMSV2) in 9.7004ms
+2025-02-24 19:51:56.531 +05:30 [INF] Executed endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:51:56.533 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - 200 null application/json; charset=utf-8 37.2519ms
+2025-02-24 19:51:57.135 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - application/json 88
+2025-02-24 19:51:57.143 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:57.152 +05:30 [INF] Executing endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:51:57.156 +05:30 [INF] Route matched with {action = "GetAllUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUserDetails(Models.Pagination) on controller Controllers.UserController (AIMSV2).
+2025-02-24 19:51:57.166 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetUsersWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:51:57.171 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:57.174 +05:30 [INF] Executed action Controllers.UserController.GetAllUserDetails (AIMSV2) in 14.3213ms
+2025-02-24 19:51:57.180 +05:30 [INF] Executed endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:51:57.182 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - 200 null application/json; charset=utf-8 47.6887ms
+2025-02-24 19:51:57.951 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - application/json 86
+2025-02-24 19:51:57.974 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:57.978 +05:30 [INF] Executing endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:51:57.983 +05:30 [INF] Route matched with {action = "GetAllUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUserDetails(Models.Pagination) on controller Controllers.UserController (AIMSV2).
+2025-02-24 19:51:57.992 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetUsersWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:51:57.997 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:58.003 +05:30 [INF] Executed action Controllers.UserController.GetAllUserDetails (AIMSV2) in 16.1265ms
+2025-02-24 19:51:58.009 +05:30 [INF] Executed endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:51:58.010 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - 200 null application/json; charset=utf-8 59.3099ms
+2025-02-24 19:51:58.624 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/User/GetAllUserDetails - null null
+2025-02-24 19:51:58.636 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:58.641 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/User/GetAllUserDetails - 204 null null 16.9846ms
+2025-02-24 19:51:58.645 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - application/json 87
+2025-02-24 19:51:58.649 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:58.650 +05:30 [INF] Executing endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:51:58.651 +05:30 [INF] Route matched with {action = "GetAllUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUserDetails(Models.Pagination) on controller Controllers.UserController (AIMSV2).
+2025-02-24 19:51:58.660 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetUsersWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:51:58.665 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:58.667 +05:30 [INF] Executed action Controllers.UserController.GetAllUserDetails (AIMSV2) in 11.1082ms
+2025-02-24 19:51:58.670 +05:30 [INF] Executed endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:51:58.671 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - 200 null application/json; charset=utf-8 26.785ms
+2025-02-24 19:51:59.351 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - application/json 86
+2025-02-24 19:51:59.357 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:59.358 +05:30 [INF] Executing endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:51:59.360 +05:30 [INF] Route matched with {action = "GetAllUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUserDetails(Models.Pagination) on controller Controllers.UserController (AIMSV2).
+2025-02-24 19:51:59.374 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetUsersWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:51:59.384 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:59.387 +05:30 [INF] Executed action Controllers.UserController.GetAllUserDetails (AIMSV2) in 20.9938ms
+2025-02-24 19:51:59.390 +05:30 [INF] Executed endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:51:59.394 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - 200 null application/json; charset=utf-8 42.4595ms
+2025-02-24 19:51:59.840 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - application/json 87
+2025-02-24 19:51:59.853 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:51:59.854 +05:30 [INF] Executing endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:51:59.856 +05:30 [INF] Route matched with {action = "GetAllUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUserDetails(Models.Pagination) on controller Controllers.UserController (AIMSV2).
+2025-02-24 19:51:59.866 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetUsersWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:51:59.870 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:51:59.872 +05:30 [INF] Executed action Controllers.UserController.GetAllUserDetails (AIMSV2) in 13.3184ms
+2025-02-24 19:51:59.875 +05:30 [INF] Executed endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:51:59.877 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - 200 null application/json; charset=utf-8 37.3876ms
+2025-02-24 19:52:00.591 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - application/json 92
+2025-02-24 19:52:00.605 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:52:00.606 +05:30 [INF] Executing endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:52:00.608 +05:30 [INF] Route matched with {action = "GetAllUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUserDetails(Models.Pagination) on controller Controllers.UserController (AIMSV2).
+2025-02-24 19:52:00.619 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetUsersWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:52:00.624 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:52:00.626 +05:30 [INF] Executed action Controllers.UserController.GetAllUserDetails (AIMSV2) in 15.3466ms
+2025-02-24 19:52:00.628 +05:30 [INF] Executed endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:52:00.630 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - 200 null application/json; charset=utf-8 38.7066ms
+2025-02-24 19:52:01.103 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - application/json 93
+2025-02-24 19:52:01.114 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:52:01.120 +05:30 [INF] Executing endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:52:01.123 +05:30 [INF] Route matched with {action = "GetAllUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUserDetails(Models.Pagination) on controller Controllers.UserController (AIMSV2).
+2025-02-24 19:52:01.131 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetUsersWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:52:01.140 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:52:01.143 +05:30 [INF] Executed action Controllers.UserController.GetAllUserDetails (AIMSV2) in 15.2929ms
+2025-02-24 19:52:01.146 +05:30 [INF] Executed endpoint 'Controllers.UserController.GetAllUserDetails (AIMSV2)'
+2025-02-24 19:52:01.148 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/User/GetAllUserDetails - 200 null application/json; charset=utf-8 44.8808ms
+2025-02-24 19:52:02.729 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/Product/GetAllProductDetails - null null
+2025-02-24 19:52:02.730 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/ProductCategory/GetActiveProductCategories - null null
+2025-02-24 19:52:02.732 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/Brand/GetActiveBrands - null null
+2025-02-24 19:52:02.756 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:52:02.759 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:52:02.763 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:52:02.764 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/Product/GetAllProductDetails - 204 null null 34.8731ms
+2025-02-24 19:52:02.766 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/ProductCategory/GetActiveProductCategories - 204 null null 35.6731ms
+2025-02-24 19:52:02.767 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/Brand/GetActiveBrands - 204 null null 34.9284ms
+2025-02-24 19:52:02.775 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - application/json 80
+2025-02-24 19:52:02.782 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/ProductCategory/GetActiveProductCategories - null null
+2025-02-24 19:52:02.789 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/Brand/GetActiveBrands - null null
+2025-02-24 19:52:02.793 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:52:02.798 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:52:02.803 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:52:02.804 +05:30 [INF] Executing endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:02.806 +05:30 [INF] Executing endpoint 'Controllers.ProductCategoryController.GetActiveProductCategories (AIMSV2)'
+2025-02-24 19:52:02.807 +05:30 [INF] Executing endpoint 'Controllers.BrandController.GetActiveBrands (AIMSV2)'
+2025-02-24 19:52:02.810 +05:30 [INF] Route matched with {action = "GetAllProductDetails", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProductDetails(Models.Pagination) on controller Controllers.ProductController (AIMSV2).
+2025-02-24 19:52:02.811 +05:30 [INF] Route matched with {action = "GetActiveProductCategories", controller = "ProductCategory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActiveProductCategories() on controller Controllers.ProductCategoryController (AIMSV2).
+2025-02-24 19:52:02.812 +05:30 [INF] Route matched with {action = "GetActiveBrands", controller = "Brand"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActiveBrands() on controller Controllers.BrandController (AIMSV2).
+2025-02-24 19:52:02.815 +05:30 [INF] Started GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"ID","SortOrder":"ASC"}
+2025-02-24 19:52:02.821 +05:30 [INF] Started GetActiveProductCategoriesAsync()
+2025-02-24 19:52:02.823 +05:30 [INF] Started GetActiveBrandsAsync()
+2025-02-24 19:52:02.837 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[ID] AS [Id], [b].[Name]
+FROM [Brands] AS [b]
+WHERE [b].[IsActive] = CAST(1 AS bit)
+2025-02-24 19:52:02.837 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[ID] AS [Id], [c].[Name]
+FROM [Categories] AS [c]
+WHERE [c].[IsActive] = CAST(1 AS bit)
+2025-02-24 19:52:02.840 +05:30 [INF] Completed GetActiveBrandsAsync()
+2025-02-24 19:52:02.844 +05:30 [INF] Completed GetActiveProductCategoriesAsync()
+2025-02-24 19:52:02.845 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:52:02.846 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:52:02.848 +05:30 [INF] Executed action Controllers.BrandController.GetActiveBrands (AIMSV2) in 25.3062ms
+2025-02-24 19:52:02.850 +05:30 [INF] Executed action Controllers.ProductCategoryController.GetActiveProductCategories (AIMSV2) in 29.7912ms
+2025-02-24 19:52:02.855 +05:30 [INF] Executed endpoint 'Controllers.BrandController.GetActiveBrands (AIMSV2)'
+2025-02-24 19:52:02.856 +05:30 [INF] Executed endpoint 'Controllers.ProductCategoryController.GetActiveProductCategories (AIMSV2)'
+2025-02-24 19:52:02.858 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/Brand/GetActiveBrands - 200 null application/json; charset=utf-8 69.5099ms
+2025-02-24 19:52:02.860 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/ProductCategory/GetActiveProductCategories - 200 null application/json; charset=utf-8 78.0657ms
+2025-02-24 19:52:02.886 +05:30 [INF] Executed DbCommand (61ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetProductsWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:52:02.894 +05:30 [INF] Completed GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"ID","SortOrder":"ASC"}
+2025-02-24 19:52:02.897 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:52:02.899 +05:30 [INF] Executed action Controllers.ProductController.GetAllProductDetails (AIMSV2) in 84.3987ms
+2025-02-24 19:52:02.915 +05:30 [INF] Executed endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:02.922 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - 200 null application/json; charset=utf-8 147.7239ms
+2025-02-24 19:52:03.760 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - application/json 81
+2025-02-24 19:52:03.766 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:52:03.773 +05:30 [INF] Executing endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:03.788 +05:30 [INF] Route matched with {action = "GetAllProductDetails", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProductDetails(Models.Pagination) on controller Controllers.ProductController (AIMSV2).
+2025-02-24 19:52:03.791 +05:30 [INF] Started GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"ID","SortOrder":"DESC"}
+2025-02-24 19:52:03.798 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetProductsWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:52:03.804 +05:30 [INF] Completed GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"ID","SortOrder":"DESC"}
+2025-02-24 19:52:03.807 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:52:03.809 +05:30 [INF] Executed action Controllers.ProductController.GetAllProductDetails (AIMSV2) in 17.9475ms
+2025-02-24 19:52:03.812 +05:30 [INF] Executed endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:03.814 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - 200 null application/json; charset=utf-8 54.5529ms
+2025-02-24 19:52:04.320 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - application/json 80
+2025-02-24 19:52:04.329 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:52:04.335 +05:30 [INF] Executing endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:04.346 +05:30 [INF] Route matched with {action = "GetAllProductDetails", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProductDetails(Models.Pagination) on controller Controllers.ProductController (AIMSV2).
+2025-02-24 19:52:04.358 +05:30 [INF] Started GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"ID","SortOrder":"ASC"}
+2025-02-24 19:52:04.365 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetProductsWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:52:04.376 +05:30 [INF] Completed GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"ID","SortOrder":"ASC"}
+2025-02-24 19:52:04.378 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:52:04.381 +05:30 [INF] Executed action Controllers.ProductController.GetAllProductDetails (AIMSV2) in 23.1965ms
+2025-02-24 19:52:04.384 +05:30 [INF] Executed endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:04.392 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - 200 null application/json; charset=utf-8 71.4175ms
+2025-02-24 19:52:04.905 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - application/json 90
+2025-02-24 19:52:04.908 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:52:04.913 +05:30 [INF] Executing endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:04.916 +05:30 [INF] Route matched with {action = "GetAllProductDetails", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProductDetails(Models.Pagination) on controller Controllers.ProductController (AIMSV2).
+2025-02-24 19:52:04.934 +05:30 [INF] Started GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"categoryName","SortOrder":"ASC"}
+2025-02-24 19:52:04.942 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetProductsWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:52:04.946 +05:30 [INF] Completed GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"categoryName","SortOrder":"ASC"}
+2025-02-24 19:52:04.948 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:52:04.951 +05:30 [INF] Executed action Controllers.ProductController.GetAllProductDetails (AIMSV2) in 17.0069ms
+2025-02-24 19:52:04.960 +05:30 [INF] Executed endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:04.962 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - 200 null application/json; charset=utf-8 57.8662ms
+2025-02-24 19:52:05.426 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - application/json 91
+2025-02-24 19:52:05.432 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:52:05.434 +05:30 [INF] Executing endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:05.437 +05:30 [INF] Route matched with {action = "GetAllProductDetails", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProductDetails(Models.Pagination) on controller Controllers.ProductController (AIMSV2).
+2025-02-24 19:52:05.446 +05:30 [INF] Started GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"categoryName","SortOrder":"DESC"}
+2025-02-24 19:52:05.458 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetProductsWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:52:05.468 +05:30 [INF] Completed GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"categoryName","SortOrder":"DESC"}
+2025-02-24 19:52:05.472 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:52:05.478 +05:30 [INF] Executed action Controllers.ProductController.GetAllProductDetails (AIMSV2) in 34.0012ms
+2025-02-24 19:52:05.483 +05:30 [INF] Executed endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:05.485 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - 200 null application/json; charset=utf-8 59.3578ms
+2025-02-24 19:52:06.264 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - application/json 87
+2025-02-24 19:52:06.268 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:52:06.285 +05:30 [INF] Executing endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:06.291 +05:30 [INF] Route matched with {action = "GetAllProductDetails", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProductDetails(Models.Pagination) on controller Controllers.ProductController (AIMSV2).
+2025-02-24 19:52:06.295 +05:30 [INF] Started GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"brandName","SortOrder":"ASC"}
+2025-02-24 19:52:06.301 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetProductsWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:52:06.314 +05:30 [INF] Completed GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"brandName","SortOrder":"ASC"}
+2025-02-24 19:52:06.316 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:52:06.318 +05:30 [INF] Executed action Controllers.ProductController.GetAllProductDetails (AIMSV2) in 23.699ms
+2025-02-24 19:52:06.322 +05:30 [INF] Executed endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:06.324 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - 200 null application/json; charset=utf-8 60.9599ms
+2025-02-24 19:52:06.778 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - application/json 88
+2025-02-24 19:52:06.784 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:52:06.785 +05:30 [INF] Executing endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:06.787 +05:30 [INF] Route matched with {action = "GetAllProductDetails", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProductDetails(Models.Pagination) on controller Controllers.ProductController (AIMSV2).
+2025-02-24 19:52:06.801 +05:30 [INF] Started GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"brandName","SortOrder":"DESC"}
+2025-02-24 19:52:06.811 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetProductsWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:52:06.815 +05:30 [INF] Completed GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"brandName","SortOrder":"DESC"}
+2025-02-24 19:52:06.817 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:52:06.819 +05:30 [INF] Executed action Controllers.ProductController.GetAllProductDetails (AIMSV2) in 19.289ms
+2025-02-24 19:52:06.823 +05:30 [INF] Executed endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:06.826 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - 200 null application/json; charset=utf-8 47.728ms
+2025-02-24 19:52:07.312 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - application/json 95
+2025-02-24 19:52:07.315 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:52:07.318 +05:30 [INF] Executing endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:07.320 +05:30 [INF] Route matched with {action = "GetAllProductDetails", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProductDetails(Models.Pagination) on controller Controllers.ProductController (AIMSV2).
+2025-02-24 19:52:07.335 +05:30 [INF] Started GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"availableQuantity","SortOrder":"ASC"}
+2025-02-24 19:52:07.341 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetProductsWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:52:07.347 +05:30 [INF] Completed GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"availableQuantity","SortOrder":"ASC"}
+2025-02-24 19:52:07.350 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:52:07.353 +05:30 [INF] Executed action Controllers.ProductController.GetAllProductDetails (AIMSV2) in 17.9366ms
+2025-02-24 19:52:07.357 +05:30 [INF] Executed endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:07.360 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - 200 null application/json; charset=utf-8 47.5971ms
+2025-02-24 19:52:07.871 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/Product/GetAllProductDetails - null null
+2025-02-24 19:52:07.878 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:52:07.880 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/Product/GetAllProductDetails - 204 null null 8.4104ms
+2025-02-24 19:52:07.899 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - application/json 96
+2025-02-24 19:52:07.905 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:52:07.908 +05:30 [INF] Executing endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:07.910 +05:30 [INF] Route matched with {action = "GetAllProductDetails", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProductDetails(Models.Pagination) on controller Controllers.ProductController (AIMSV2).
+2025-02-24 19:52:07.914 +05:30 [INF] Started GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"availableQuantity","SortOrder":"DESC"}
+2025-02-24 19:52:07.920 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetProductsWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:52:07.925 +05:30 [INF] Completed GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"availableQuantity","SortOrder":"DESC"}
+2025-02-24 19:52:07.929 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:52:07.931 +05:30 [INF] Executed action Controllers.ProductController.GetAllProductDetails (AIMSV2) in 17.8281ms
+2025-02-24 19:52:07.934 +05:30 [INF] Executed endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:07.936 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - 200 null application/json; charset=utf-8 36.6884ms
+2025-02-24 19:52:08.583 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - application/json 89
+2025-02-24 19:52:08.593 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:52:08.597 +05:30 [INF] Executing endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:08.611 +05:30 [INF] Route matched with {action = "GetAllProductDetails", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProductDetails(Models.Pagination) on controller Controllers.ProductController (AIMSV2).
+2025-02-24 19:52:08.615 +05:30 [INF] Started GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"useQuantity","SortOrder":"ASC"}
+2025-02-24 19:52:08.626 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetProductsWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:52:08.631 +05:30 [INF] Completed GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"useQuantity","SortOrder":"ASC"}
+2025-02-24 19:52:08.633 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:52:08.636 +05:30 [INF] Executed action Controllers.ProductController.GetAllProductDetails (AIMSV2) in 21.6537ms
+2025-02-24 19:52:08.638 +05:30 [INF] Executed endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:08.642 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - 200 null application/json; charset=utf-8 58.6172ms
+2025-02-24 19:52:09.112 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - application/json 90
+2025-02-24 19:52:09.118 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:52:09.120 +05:30 [INF] Executing endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:09.122 +05:30 [INF] Route matched with {action = "GetAllProductDetails", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProductDetails(Models.Pagination) on controller Controllers.ProductController (AIMSV2).
+2025-02-24 19:52:09.129 +05:30 [INF] Started GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"useQuantity","SortOrder":"DESC"}
+2025-02-24 19:52:09.139 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetProductsWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:52:09.145 +05:30 [INF] Completed GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"useQuantity","SortOrder":"DESC"}
+2025-02-24 19:52:09.148 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:52:09.151 +05:30 [INF] Executed action Controllers.ProductController.GetAllProductDetails (AIMSV2) in 22.5278ms
+2025-02-24 19:52:09.153 +05:30 [INF] Executed endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:09.155 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - 200 null application/json; charset=utf-8 42.2985ms
+2025-02-24 19:52:09.977 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - application/json 86
+2025-02-24 19:52:09.982 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:52:09.984 +05:30 [INF] Executing endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:09.990 +05:30 [INF] Route matched with {action = "GetAllProductDetails", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProductDetails(Models.Pagination) on controller Controllers.ProductController (AIMSV2).
+2025-02-24 19:52:10.003 +05:30 [INF] Started GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"quantity","SortOrder":"ASC"}
+2025-02-24 19:52:10.015 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetProductsWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:52:10.019 +05:30 [INF] Completed GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"quantity","SortOrder":"ASC"}
+2025-02-24 19:52:10.021 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:52:10.023 +05:30 [INF] Executed action Controllers.ProductController.GetAllProductDetails (AIMSV2) in 20.2425ms
+2025-02-24 19:52:10.027 +05:30 [INF] Executed endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:10.029 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - 200 null application/json; charset=utf-8 52.7166ms
+2025-02-24 19:52:10.497 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - application/json 87
+2025-02-24 19:52:10.502 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:52:10.504 +05:30 [INF] Executing endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:10.505 +05:30 [INF] Route matched with {action = "GetAllProductDetails", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProductDetails(Models.Pagination) on controller Controllers.ProductController (AIMSV2).
+2025-02-24 19:52:10.509 +05:30 [INF] Started GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"quantity","SortOrder":"DESC"}
+2025-02-24 19:52:10.521 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetProductsWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:52:10.528 +05:30 [INF] Completed GetAllProductDetailsAsync with Pagination: {"PageNo":1,"PageSize":10,"SearchString":"","SortColumn":"quantity","SortOrder":"DESC"}
+2025-02-24 19:52:10.531 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:52:10.534 +05:30 [INF] Executed action Controllers.ProductController.GetAllProductDetails (AIMSV2) in 25.9256ms
+2025-02-24 19:52:10.536 +05:30 [INF] Executed endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:10.537 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - 200 null application/json; charset=utf-8 40.4104ms
+2025-02-24 19:52:13.552 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5062/api/Product/GetAllProductDetails - null null
+2025-02-24 19:52:13.558 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:52:13.559 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5062/api/Product/GetAllProductDetails - 204 null null 7.1378ms
+2025-02-24 19:52:13.575 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - application/json 87
+2025-02-24 19:52:13.598 +05:30 [INF] CORS policy execution successful.
+2025-02-24 19:52:13.600 +05:30 [INF] Executing endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:13.601 +05:30 [INF] Route matched with {action = "GetAllProductDetails", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProductDetails(Models.Pagination) on controller Controllers.ProductController (AIMSV2).
+2025-02-24 19:52:13.605 +05:30 [INF] Started GetAllProductDetailsAsync with Pagination: {"PageNo":2,"PageSize":10,"SearchString":"","SortColumn":"quantity","SortOrder":"DESC"}
+2025-02-24 19:52:13.618 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[p0='?' (Size = 4000), p1='?' (DbType = Int32), p2='?' (DbType = Int32), p3='?' (Size = 4000), p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+Exec usp_GetProductsWithPagination @SearchString=@p0,@PageNo=@p1, @PageSize=@p2, @SortColumn=@p3, @SortOrder=@p4
+2025-02-24 19:52:13.626 +05:30 [INF] Completed GetAllProductDetailsAsync with Pagination: {"PageNo":2,"PageSize":10,"SearchString":"","SortColumn":"quantity","SortOrder":"DESC"}
+2025-02-24 19:52:13.632 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 19:52:13.635 +05:30 [INF] Executed action Controllers.ProductController.GetAllProductDetails (AIMSV2) in 30.4214ms
+2025-02-24 19:52:13.639 +05:30 [INF] Executed endpoint 'Controllers.ProductController.GetAllProductDetails (AIMSV2)'
+2025-02-24 19:52:13.641 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5062/api/Product/GetAllProductDetails - 200 null application/json; charset=utf-8 66.2049ms

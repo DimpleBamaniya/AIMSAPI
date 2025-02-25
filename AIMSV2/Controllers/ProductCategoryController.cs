@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 
 namespace Controllers;
-
-[Route("api/[controller]")]
 [ApiController]
+[Route("[controller]")]
 public class ProductCategoryController : ControllerBase
 {
     private readonly IProductCategoryService _productCategoryService;

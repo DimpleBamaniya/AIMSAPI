@@ -2,7 +2,7 @@
   {
     "ContainingType": "Controllers.BrandController",
     "Method": "GetActiveBrands",
-    "RelativePath": "api/Brand/GetActiveBrands",
+    "RelativePath": "Brand/GetActiveBrands",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -12,7 +12,7 @@
   {
     "ContainingType": "Controllers.BrandController",
     "Method": "GetBrandsByCategoryID",
-    "RelativePath": "api/Brand/GetBrandsByCategoryID",
+    "RelativePath": "Brand/GetBrandsByCategoryID",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -28,7 +28,7 @@
   {
     "ContainingType": "Controllers.BrandController",
     "Method": "GetUnassignedBrandsByCategory",
-    "RelativePath": "api/Brand/GetUnassignedBrandsByCategory",
+    "RelativePath": "Brand/GetUnassignedBrandsByCategory",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -44,7 +44,7 @@
   {
     "ContainingType": "Controllers.CityController",
     "Method": "GetAllCities",
-    "RelativePath": "api/City/GetAllCities",
+    "RelativePath": "City/GetAllCities",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -54,7 +54,7 @@
   {
     "ContainingType": "Controllers.DepartmentController",
     "Method": "GetAllDepartments",
-    "RelativePath": "api/Department/GetAllDepartments",
+    "RelativePath": "Department/GetAllDepartments",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -64,7 +64,7 @@
   {
     "ContainingType": "Controllers.ProductController",
     "Method": "DeleteProduct",
-    "RelativePath": "api/Product/DeleteProduct",
+    "RelativePath": "Product/DeleteProduct",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -80,7 +80,7 @@
   {
     "ContainingType": "Controllers.ProductController",
     "Method": "GetAllProductDetails",
-    "RelativePath": "api/Product/GetAllProductDetails",
+    "RelativePath": "Product/GetAllProductDetails",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -96,7 +96,7 @@
   {
     "ContainingType": "Controllers.ProductController",
     "Method": "GetUserListByProductID",
-    "RelativePath": "api/Product/GetUserListByProductID",
+    "RelativePath": "Product/GetUserListByProductID",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -112,7 +112,7 @@
   {
     "ContainingType": "Controllers.ProductController",
     "Method": "SaveProduct",
-    "RelativePath": "api/Product/SaveProduct",
+    "RelativePath": "Product/SaveProduct",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -128,7 +128,7 @@
   {
     "ContainingType": "Controllers.ProductCategoryController",
     "Method": "GetActiveProductCategories",
-    "RelativePath": "api/ProductCategory/GetActiveProductCategories",
+    "RelativePath": "ProductCategory/GetActiveProductCategories",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -138,7 +138,7 @@
   {
     "ContainingType": "Controllers.UserController",
     "Method": "DeleteUser",
-    "RelativePath": "api/User/DeleteUser",
+    "RelativePath": "User/DeleteUser",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -154,7 +154,7 @@
   {
     "ContainingType": "Controllers.UserController",
     "Method": "GetAllUserDetails",
-    "RelativePath": "api/User/GetAllUserDetails",
+    "RelativePath": "User/GetAllUserDetails",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -170,7 +170,7 @@
   {
     "ContainingType": "Controllers.UserController",
     "Method": "GetUserDetailByEmailID",
-    "RelativePath": "api/User/GetUserDetailByEmailID",
+    "RelativePath": "User/GetUserDetailByEmailID",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -186,7 +186,7 @@
   {
     "ContainingType": "Controllers.UserController",
     "Method": "GetUserDetailByID",
-    "RelativePath": "api/User/GetUserDetailByID",
+    "RelativePath": "User/GetUserDetailByID",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -202,7 +202,7 @@
   {
     "ContainingType": "Controllers.UserController",
     "Method": "SaveUser",
-    "RelativePath": "api/User/SaveUser",
+    "RelativePath": "User/SaveUser",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -218,7 +218,7 @@
   {
     "ContainingType": "Controllers.UserProductController",
     "Method": "DeleteUserProduct",
-    "RelativePath": "api/UserProduct/DeleteUserProduct",
+    "RelativePath": "UserProduct/DeleteUserProduct",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -234,7 +234,7 @@
   {
     "ContainingType": "Controllers.UserProductController",
     "Method": "GetProductListbyUserID",
-    "RelativePath": "api/UserProduct/GetProductListbyUserID",
+    "RelativePath": "UserProduct/GetProductListbyUserID",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -250,7 +250,7 @@
   {
     "ContainingType": "Controllers.UserProductController",
     "Method": "SaveUserProducts",
-    "RelativePath": "api/UserProduct/SaveUserProducts",
+    "RelativePath": "UserProduct/SaveUserProducts",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

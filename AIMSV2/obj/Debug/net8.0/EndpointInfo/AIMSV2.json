@@ -5,7 +5,7 @@
     "version": "v1"
   },
   "paths": {
-    "/api/Brand/GetActiveBrands": {
+    "/Brand/GetActiveBrands": {
       "get": {
         "tags": [
           "Brand"
@@ -17,7 +17,7 @@
         }
       }
     },
-    "/api/Brand/GetBrandsByCategoryID": {
+    "/Brand/GetBrandsByCategoryID": {
       "post": {
         "tags": [
           "Brand"
@@ -48,7 +48,7 @@
         }
       }
     },
-    "/api/Brand/GetUnassignedBrandsByCategory": {
+    "/Brand/GetUnassignedBrandsByCategory": {
       "post": {
         "tags": [
           "Brand"
@@ -79,7 +79,7 @@
         }
       }
     },
-    "/api/City/GetAllCities": {
+    "/City/GetAllCities": {
       "post": {
         "tags": [
           "City"
@@ -91,7 +91,7 @@
         }
       }
     },
-    "/api/Department/GetAllDepartments": {
+    "/Department/GetAllDepartments": {
       "post": {
         "tags": [
           "Department"
@@ -103,7 +103,7 @@
         }
       }
     },
-    "/api/Product/GetAllProductDetails": {
+    "/Product/GetAllProductDetails": {
       "post": {
         "tags": [
           "Product"
@@ -134,7 +134,7 @@
         }
       }
     },
-    "/api/Product/SaveProduct": {
+    "/Product/SaveProduct": {
       "post": {
         "tags": [
           "Product"
@@ -165,7 +165,7 @@
         }
       }
     },
-    "/api/Product/GetUserListByProductID": {
+    "/Product/GetUserListByProductID": {
       "post": {
         "tags": [
           "Product"
@@ -196,7 +196,7 @@
         }
       }
     },
-    "/api/Product/DeleteProduct": {
+    "/Product/DeleteProduct": {
       "post": {
         "tags": [
           "Product"
@@ -227,7 +227,7 @@
         }
       }
     },
-    "/api/ProductCategory/GetActiveProductCategories": {
+    "/ProductCategory/GetActiveProductCategories": {
       "get": {
         "tags": [
           "ProductCategory"
@@ -239,7 +239,7 @@
         }
       }
     },
-    "/api/User/GetUserDetailByEmailID": {
+    "/User/GetUserDetailByEmailID": {
       "post": {
         "tags": [
           "User"
@@ -270,7 +270,7 @@
         }
       }
     },
-    "/api/User/GetUserDetailByID": {
+    "/User/GetUserDetailByID": {
       "post": {
         "tags": [
           "User"
@@ -301,7 +301,7 @@
         }
       }
     },
-    "/api/User/SaveUser": {
+    "/User/SaveUser": {
       "post": {
         "tags": [
           "User"
@@ -332,7 +332,7 @@
         }
       }
     },
-    "/api/User/GetAllUserDetails": {
+    "/User/GetAllUserDetails": {
       "post": {
         "tags": [
           "User"
@@ -363,7 +363,7 @@
         }
       }
     },
-    "/api/User/DeleteUser": {
+    "/User/DeleteUser": {
       "post": {
         "tags": [
           "User"
@@ -394,7 +394,7 @@
         }
       }
     },
-    "/api/UserProduct/GetProductListbyUserID": {
+    "/UserProduct/GetProductListbyUserID": {
       "post": {
         "tags": [
           "UserProduct"
@@ -425,7 +425,7 @@
         }
       }
     },
-    "/api/UserProduct/DeleteUserProduct": {
+    "/UserProduct/DeleteUserProduct": {
       "post": {
         "tags": [
           "UserProduct"
@@ -456,7 +456,7 @@
         }
       }
     },
-    "/api/UserProduct/SaveUserProducts": {
+    "/UserProduct/SaveUserProducts": {
       "post": {
         "tags": [
           "UserProduct"

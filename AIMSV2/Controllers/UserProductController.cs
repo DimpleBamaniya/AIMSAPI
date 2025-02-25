@@ -2,8 +2,8 @@
 using Models;
 
 namespace Controllers;
-[Route("api/[controller]")]
 [ApiController]
+[Route("[controller]")]
 public class UserProductController : ControllerBase
 {
     private readonly ApplicationDbContext _context;
